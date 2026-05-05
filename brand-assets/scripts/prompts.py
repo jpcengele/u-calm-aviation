@@ -895,10 +895,26 @@ SECTIONS: List[Section] = [
         name="Domestic Interiors — Before and After",
         prompts=[
             Prompt(91, "interior-breakfast-tray.jpg", "Breakfast tray at the sash",
-                   "85mm. A linen-lined tray on a deep windowsill at 07:45 — a single porcelain cup "
-                   "of black coffee, a small dish of sliced pear, a folded cotton napkin, an "
-                   "unlabelled glass carafe of water. Overcast cool morning light through the sash; "
-                   "warm lamp light from inside. No print, no magazine.",
+                   "85mm. A linen-lined tray on a deep windowsill at 07:45 — appetising, generous, "
+                   "the kind of breakfast the viewer wants to sit down to. On the tray: a single "
+                   "porcelain cup of black coffee with a small porcelain pitcher of warm milk beside "
+                   "it; a flaky golden-brown all-butter croissant on a small porcelain plate (real "
+                   "lamination layers visible, real bakery texture, never plastic-shiny); a small "
+                   "porcelain ramekin of mixed fresh berries (raspberries, blueberries, blackberries "
+                   "— matte natural skin, real fruit, varied sizes, never sculpted/wooden/lacquered); "
+                   "a small porcelain dish with a slab of pale butter and a small unlabelled glass "
+                   "jar of honey with a wooden honey-dipper resting across its rim; a folded cotton "
+                   "napkin in oat-linen; an unlabelled glass carafe of still water. Overcast cool "
+                   "morning light through the sash window; warm lamp light from inside. The fruit "
+                   "colours read as RICH AND APPETISING — deep raspberry, dusted blueberry, near-"
+                   "black blackberry — naturally warm and inviting. No print, no magazine, no jam-"
+                   "jar labels, no bakery wrapping. "
+                   "PALETTE EXCEPTION (one-off, breakfast still-life only, granted by J-P 2026-05-05): "
+                   "naturally-coloured fresh fruit (raspberry-red, blueberry-purple, golden croissant) "
+                   "is permitted in this prompt and in #118 cabin-breakfast-late, exempt from the "
+                   "brand's no-red/no-orange palette rule. The exception is restricted to fresh "
+                   "edible food in breakfast still-lifes; everywhere else in the library, the no-red "
+                   "and no-orange rules continue to apply absolutely.",
                    "4:5"),
             Prompt(92, "interior-dressing-room.jpg", "Dressing room, before",
                    "35mm. A compact dressing room at 08:15 — a camel coat on a rail, a charcoal suit, "
@@ -1050,11 +1066,32 @@ SECTIONS: List[Section] = [
                    "clearly fits the aperture. Warm apron daylight beyond. No brand names on the bag.",
                    "16:9"),
             Prompt(118, "cabin-breakfast-late.jpg", "Mid-flight breakfast",
-                   "50mm. A walnut cabin table at 09:30 mid-flight — a linen-lined tray with a "
-                   "porcelain cup of black coffee, a small plate with a sliced pear (muted palette), "
-                   "a folded linen napkin. Cool mist-teal daylight from an oval window, warm LED "
-                   "cove light interior. No print, no menu, no logo.",
-                   "3:4"),
+                   "85mm. A walnut cabin table at 09:30 mid-flight — appetising, generous, the same "
+                   "calm breakfast as the residence tray at #91, deliberately rhyming with that "
+                   "composition so the viewer reads 'same morning, the cabin is just where the "
+                   "morning continued.' On the linen-lined tray on the walnut table: a single "
+                   "porcelain cup of black coffee with a small porcelain pitcher of warm milk beside "
+                   "it; a flaky golden-brown all-butter croissant on a small porcelain plate (real "
+                   "lamination layers visible, real bakery texture, never plastic-shiny); a small "
+                   "porcelain ramekin of mixed fresh berries (raspberries, blueberries, blackberries "
+                   "— matte natural skin, real fruit, varied sizes, never sculpted/wooden/lacquered); "
+                   "a small porcelain dish with a slab of pale butter and a small unlabelled glass "
+                   "jar of honey with a wooden honey-dipper resting across its rim; a folded cotton "
+                   "napkin in oat-linen; an unlabelled glass carafe of still water. Outside the oval "
+                   "window: REAL photographed cumulus clouds at cruise altitude — defined cumulus "
+                   "structure with depth and shadow, never flat CG-looking, never an indeterminate "
+                   "haze, never an over-stylised painted-blue sky. Daylight through the window reads "
+                   "cool mist-teal; interior cabin light reads warm champagne LED cove. Walnut grain "
+                   "on the table visible beneath the tray edge. No print, no menu, no logo, no "
+                   "boarding card, no rendered text of any kind. The fruit colours read as RICH AND "
+                   "APPETISING — deep raspberry, dusted blueberry, near-black blackberry — naturally "
+                   "warm and inviting. "
+                   "PALETTE EXCEPTION (one-off, breakfast still-life only, granted by J-P 2026-05-05, "
+                   "shared with #91): naturally-coloured fresh fruit (raspberry-red, blueberry-purple, "
+                   "golden croissant) is permitted, exempt from the brand's no-red/no-orange palette "
+                   "rule. The exception is restricted to fresh edible food in breakfast still-lifes; "
+                   "everywhere else in the library the no-red and no-orange rules continue to apply.",
+                   "4:5"),
         ],
     ),
     Section(

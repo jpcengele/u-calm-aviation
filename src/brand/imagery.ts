@@ -1906,8 +1906,8 @@ export const THREE_CITIES = {
  *  aviation half went.
  */
 export const HOME_EDITORIAL = {
-  one:  91,   // §9 Breakfast tray at the sash — Michael's verdict: "nice". Domestic morning in member's residence = the WEEK being held. Replaces #143 (Michael flagged "ehh feels fake" 2026-05-05).
-  two: 110,   // §10 Carafe on walnut cabin table — Michael's verdict: "lovely". The same calm tray-and-porcelain register, but at cruise altitude. Pairs with #91 to make the residence→cabin transition visible. Replaces #154 (was reserved for future band; now consumed in §2).
+  one:  91,   // §9 Breakfast tray at the sash — appetising residence breakfast at 07:45 (croissant + berries + honey + coffee). Regenerated 2026-05-05 with the breakfast palette exception so the tray actually reads as appetising; previously felt clinical. Pairs with #118.
+  two: 118,   // §10 Mid-flight breakfast on the walnut cabin table — the SAME breakfast, transposed to cruise altitude. Regenerated 2026-05-05 with the same palette exception + explicit composition rhyme with #91. Replaces #110 carafe (a water glass didn't carry the emotional weight of a real residence→cabin transition; the rhyme of two breakfasts does).
 } as const;
 
 /** Service-section imagery — keys match the imageSlot field on Service entries.
