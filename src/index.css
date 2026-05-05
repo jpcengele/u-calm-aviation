@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =============================================================
+   U-Calm Aviation — design system
+   Source of truth for all colour, typography, and motion tokens.
+   Tokens are HSL triplets (no wrapper, no commas) so they compose
+   with opacity via hsl(var(--token) / <alpha>).
+
+   Per Brand Book v2.1 (April 2026):
+   - Deep Teal #2A8A98 is PRIMARY (hero brand colour)
+   - Serene Teal #3BB5C7 is the brighter cousin (dark-mode primary,
+     decorative washes)
+   - Warm Champagne #BCB17A is the accent, never primary
+   - Ivory is the default background, NOT cloud white
+   - Never red (red belongs to Ascent sister brand)
+   ============================================================= */
+
+@layer base {
+  :root {
+    /* --- Surfaces ----------------------------------------------- */
+    --background: 36 40% 97%;          /* Ivory #FAF7F2 — default page bg */
+    --background-cloud: 210 25% 99%;   /* Cloud White #FBFCFD — alt surface */
+    --foreground: 211 34% 17%;         /* Still Navy #1C2B3A */
+
+    --card: 0 0% 100%;
+    --card-foreground: 211 34% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 211 34% 17%;
+
+    --linen: 44 23% 93%;               /* Linen #F3F1EA — alt section/card fill */
+
+    /* --- Primary: Deep Teal (the brand's hero) ----------------- */
+    --primary: 187 56% 38%;            /* Deep Teal #2A8A98 — hero, U mark, CTAs */
+    --primary-foreground: 0 0% 100%;
+    --primary-deep: 187 56% 38%;       /* Alias kept for u-calm-concierge compatibility */
+    --primary-hero: 189 55% 51%;       /* Serene Teal #3BB5C7 — brighter, dark-mode */
+    --primary-soft: 187 48% 83%;       /* Mist Teal #BEE3E9 — washes */
+    --primary-light: 189 55% 65%;
+    --primary-glow: 189 55% 75%;
+
+    /* --- Secondary: Warm Champagne (decorative only) ----------- */
+    --secondary: 48 37% 61%;           /* Warm Champagne #BCB17A */
+    --secondary-foreground: 211 34% 17%;
+    --secondary-light: 48 44% 82%;     /* Champagne Mist #E4DDBE */
+
+    /* --- Accent — champagne alias for layout continuity -------- */
+    --accent: 48 37% 61%;
+    --accent-foreground: 211 34% 17%;
+    --accent-light: 48 44% 82%;
+
+    /* --- Gold — maps to champagne on U-Calm Aviation ----------- */
+    --gold: 48 37% 61%;
+    --gold-foreground: 211 34% 17%;
+
+    /* --- Forest — tinted Navy for overlays --------------------- */
+    --forest: 211 34% 17%;
+
+    /* --- Champagne for explicit name access -------------------- */
+    --champagne: 48 37% 61%;
+
+    /* --- Text hierarchy ---------------------------------------- */
+    --muted: 210 14% 92%;
+    --muted-foreground: 213 11% 47%;   /* Harbour Grey #6B7785 */
+
+    /* --- System ------------------------------------------------ */
+    --destructive: 8 56% 63%;          /* Soft Terracotta */
+    --destructive-foreground: 0 0% 100%;
+    --success: 144 17% 58%;            /* Quiet Sage */
+    --warning: 38 47% 60%;             /* Muted Amber */
+
+    --border: 210 14% 92%;             /* Whisper #E6EAEE */
+    --input: 210 14% 92%;
+    --ring: 187 56% 38%;               /* Deep Teal — focus ring */
+
+    --radius: 14px;
+
+    /* --- Gradients --------------------------------------------- */
+    --gradient-primary:   linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-hero)) 100%);
+    --gradient-champagne: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-light)) 100%);
+    --gradient-calm:      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(187 50% 96%) 100%);
+    --gradient-horizon:   linear-gradient(180deg,
+                            hsl(var(--primary-soft)) 0%,
+                            hsl(var(--background)) 60%,
+                            hsl(var(--linen)) 100%);
+    /* 4-stop gradient — strengthened top so white eyebrow + headline don't fight
+       a bright sky in the hero photograph (same fix Ascent applied per Nadine
+       review 2026-04-25). Top 0.7, mid soft 0.4, lower mid 0.65, bottom 0.9. */
+    --gradient-overlay:   linear-gradient(180deg,
+                            hsl(var(--foreground) / 0.7) 0%,
+                            hsl(var(--foreground) / 0.4) 35%,
+                            hsl(var(--foreground) / 0.65) 75%,
+                            hsl(var(--foreground) / 0.9) 100%);
+
+    /* --- Shadows (always soft, champagne-tinted gold for member surfaces) -- */
+    --shadow-calm:    0 10px 40px -10px hsl(var(--primary) / 0.15);
+    --shadow-float:   0 20px 60px -20px hsl(211 34% 17% / 0.12);
+    --shadow-whisper: 0 2px 8px hsl(211 34% 17% / 0.04);
+    --shadow-gold:    0 10px 30px -10px hsl(var(--secondary) / 0.25);
+
+    /* --- Motion (concierge breathing rhythm; slower than Ascent) --- */
+    --transition-calm: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-soft: all 0.3s ease-out;
+  }
+
+  .dark {
+    --background: 210 46% 10%;         /* Deep Night #0E1A26 */
+    --foreground: 210 27% 96%;
+    --card: 210 38% 14%;
+    --card-foreground: 210 27% 96%;
+    --popover: 210 38% 14%;
+    --popover-foreground: 210 27% 96%;
+    --linen: 210 25% 22%;
+
+    --primary: 189 55% 51%;            /* Serene Teal becomes primary in dark mode */
+    --primary-foreground: 210 46% 10%;
+    --primary-deep: 187 56% 38%;
+    --primary-hero: 189 55% 51%;
+    --primary-soft: 187 48% 25%;
+    --primary-light: 189 55% 60%;
+    --primary-glow: 189 55% 70%;
+
+    --secondary: 48 37% 61%;           /* Champagne holds constant in dark mode */
+    --secondary-foreground: 210 46% 10%;
+    --secondary-light: 48 28% 30%;
+
+    --accent: 48 37% 61%;
+    --accent-foreground: 210 46% 10%;
+    --accent-light: 48 28% 30%;
+
+    --gold: 48 37% 61%;
+    --gold-foreground: 210 46% 10%;
+
+    --forest: 211 34% 17%;
+    --champagne: 48 37% 61%;
+
+    --muted: 210 25% 22%;
+    --muted-foreground: 210 14% 70%;
+
+    --destructive: 8 56% 63%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 25% 22%;
+    --input: 210 25% 22%;
+    --ring: 189 55% 51%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Gill Sans Nova', 'Seravek', 'Lato', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1, "liga" 1;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', 'Didot', Georgia, serif;
+    letter-spacing: -0.005em;
+    line-height: 1.15;
+  }
+  h1 { font-weight: 300; }
+  h2 { font-weight: 400; }
+  h3 { font-weight: 500; }
+}

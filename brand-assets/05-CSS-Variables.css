@@ -1,0 +1,415 @@
+/* ==========================================================================
+   U-Calm Aviation — CSS Custom Properties
+   --------------------------------------------------------------------------
+   Drop-in stylesheet for Claude Design / Claude Artifacts / any static build.
+
+   Pair with:
+   - 04-Design-Tokens.json  (same values, machine-readable)
+   - 06-Tailwind-Config.ts  (maps these vars to Tailwind tokens)
+
+   Conventions:
+   - HSL triplets so we can compose alpha: hsl(var(--primary) / 0.5)
+   - Radix/shadcn-compatible naming (DEFAULT / foreground)
+   - Named aliases kept in Tailwind config for readability
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+/* Gill Sans is not on Google Fonts. We fall back to Inter as a near-match. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  /* ----- Colour system — HSL triplets ------------------------------------ */
+  --primary:           187 56% 38%;  /* Deep Teal   #2A8A98 */
+  --primary-hero:      189 55% 51%;  /* Serene Teal #3BB5C7 */
+  --primary-soft:      187 48% 83%;  /* Mist Teal   #BEE3E9 */
+  --primary-foreground: 210 25% 99%; /* Cloud White */
+
+  --secondary:         48 37% 61%;   /* Warm Champagne #BCB17A */
+  --secondary-soft:    48 44% 82%;   /* Champagne Mist #E4DDBE */
+  --secondary-foreground: 211 34% 17%; /* Still Navy */
+
+  --foreground:        211 34% 17%;  /* Still Navy #1C2B3A */
+  --foreground-muted:  213 11% 47%;  /* Harbour Grey #6B7785 */
+
+  --background:        36 40% 97%;   /* Ivory #FAF7F2 */
+  --background-cloud:  210 25% 99%;  /* Cloud White #FBFCFD */
+  --surface:           44 23% 93%;   /* Linen #F3F1EA */
+  --border:            210 14% 92%;  /* Whisper #E6EAEE */
+  --input:             210 14% 92%;
+  --ring:              187 56% 38%;
+
+  --success: 152 45% 45%;
+  --warning: 38 95% 55%;
+  --error:   0 65% 52%;
+  --info:    200 70% 50%;
+
+  /* ----- Gradients ------------------------------------------------------- */
+  --gradient-primary:   linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-hero)) 100%);
+  --gradient-champagne: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-soft)) 100%);
+  --gradient-calm:      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(187 30% 96%) 100%);
+  --gradient-horizon:   linear-gradient(180deg, hsl(var(--primary-soft)) 0%, hsl(var(--background)) 60%, hsl(var(--surface)) 100%);
+
+  /* ----- Typography ------------------------------------------------------ */
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans:  'Gill Sans', 'Gill Sans Nova', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-hero:    clamp(3.5rem, 6vw, 5.5rem);
+  --fs-h1:      clamp(2.5rem, 4.5vw, 4rem);
+  --fs-h2:      clamp(2.25rem, 4vw, 3.5rem);
+  --fs-h3:      clamp(1.75rem, 2.5vw, 2.5rem);
+  --fs-h4:      1.5rem;
+  --fs-h5:      1.25rem;
+  --fs-h6:      1rem;
+  --fs-body-lg: 1.1875rem;
+  --fs-body:    1.0625rem;
+  --fs-small:   0.875rem;
+  --fs-caption: 0.8125rem;
+  --fs-nav:     0.875rem;
+  --fs-eyebrow: 0.75rem;
+  --fs-button:  0.9375rem;
+
+  /* ----- Radius ---------------------------------------------------------- */
+  --radius-sm:  8px;
+  --radius:     14px;
+  --radius-lg:  20px;
+  --radius-pill: 999px;
+
+  /* ----- Shadow ---------------------------------------------------------- */
+  --shadow-whisper: 0 2px 8px rgba(28, 43, 58, 0.04);
+  --shadow-calm:    0 10px 40px -10px rgba(42, 138, 152, 0.15);
+  --shadow-float:   0 20px 60px -20px rgba(28, 43, 58, 0.12);
+  --shadow-gold:    0 10px 30px -10px rgba(188, 177, 122, 0.25);
+
+  /* ----- Motion ---------------------------------------------------------- */
+  --ease-calm:     cubic-bezier(0.25, 0.8, 0.25, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast:     300ms;
+  --duration-standard: 500ms;
+  --duration-slow:     800ms;
+  --duration-breathe:  4000ms;
+
+  /* ----- Layout ---------------------------------------------------------- */
+  --container-max: 1280px;
+  --container-pad: 2.5rem;
+  --section-pad:   6rem;
+}
+
+/* =========================================================================
+   Dark mode — Deep Night
+   ========================================================================= */
+.dark,
+[data-theme='dark'] {
+  --background:        210 46% 10%;  /* Deep Night #0E1A26 */
+  --background-cloud:  210 37% 13%;  /* Deep Night surface */
+  --surface:           210 37% 13%;
+  --border:            210 25% 22%;
+  --input:             210 25% 22%;
+
+  --foreground:        210 25% 96%;  /* Cloud White as text */
+  --foreground-muted:  213 11% 70%;
+
+  --primary:           189 55% 51%;  /* Serene Teal as dark-mode primary */
+  --primary-hero:      187 56% 38%;
+  --primary-soft:      187 48% 25%;
+  --primary-foreground: 210 46% 10%;
+
+  /* Champagne holds constant — it's the warm anchor in dark mode too */
+}
+
+/* =========================================================================
+   Base typography
+   ========================================================================= */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, .h1 { font-family: var(--font-serif); font-size: var(--fs-h1); font-weight: 300; line-height: 1.15; letter-spacing: -0.01em; }
+h2, .h2 { font-family: var(--font-serif); font-size: var(--fs-h2); font-weight: 400; line-height: 1.2;  letter-spacing: -0.005em; }
+h3, .h3 { font-family: var(--font-serif); font-size: var(--fs-h3); font-weight: 500; line-height: 1.25; }
+h4, .h4 { font-family: var(--font-sans);  font-size: var(--fs-h4); font-weight: 600; line-height: 1.3; }
+h5, .h5 { font-family: var(--font-sans);  font-size: var(--fs-h5); font-weight: 600; line-height: 1.4; }
+h6, .h6 { font-family: var(--font-sans);  font-size: var(--fs-h6); font-weight: 600; line-height: 1.5; }
+
+p, .body    { font-size: var(--fs-body); line-height: 1.7; }
+.body-lg    { font-size: var(--fs-body-lg); line-height: 1.65; }
+small, .small { font-size: var(--fs-small); color: hsl(var(--foreground-muted)); }
+.caption    { font-size: var(--fs-caption); color: hsl(var(--foreground-muted)); }
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+
+.tagline {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: hsl(var(--primary));
+  font-style: italic;
+}
+
+/* =========================================================================
+   Buttons
+   ========================================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 14px 28px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-button);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: transform var(--duration-standard) var(--ease-calm),
+              box-shadow var(--duration-standard) var(--ease-calm),
+              background-color var(--duration-standard) var(--ease-calm),
+              color var(--duration-standard) var(--ease-calm),
+              border-color var(--duration-standard) var(--ease-calm);
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn:hover { transform: scale(1.02); box-shadow: var(--shadow-calm); }
+.btn:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: hsl(var(--primary-foreground));
+  box-shadow: var(--shadow-whisper);
+}
+.btn-primary:hover { box-shadow: var(--shadow-calm); }
+
+.btn-secondary {
+  background: transparent;
+  color: hsl(var(--primary));
+  border-color: hsl(var(--primary));
+}
+.btn-secondary:hover {
+  background: hsl(var(--primary-soft) / 0.5);
+  box-shadow: var(--shadow-whisper);
+}
+
+.btn-champagne {
+  background: var(--gradient-champagne);
+  color: hsl(var(--foreground));
+  box-shadow: var(--shadow-whisper);
+}
+.btn-champagne:hover { box-shadow: var(--shadow-gold); }
+
+.btn-tertiary {
+  background: transparent;
+  color: hsl(var(--primary));
+  padding: 8px 0;
+  border: none;
+}
+.btn-tertiary:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transform: none;
+  box-shadow: none;
+}
+
+/* =========================================================================
+   Cards
+   ========================================================================= */
+.card {
+  background: hsl(var(--background-cloud));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-whisper);
+  transition: box-shadow var(--duration-standard) var(--ease-calm),
+              transform var(--duration-standard) var(--ease-calm);
+}
+.card:hover { box-shadow: var(--shadow-calm); transform: translateY(-2px); }
+
+.card-linen {
+  background: hsl(var(--surface));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.card-member {
+  background: var(--gradient-champagne);
+  color: hsl(var(--foreground));
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-gold);
+}
+
+/* =========================================================================
+   Hero surfaces
+   ========================================================================= */
+.hero {
+  background: hsl(var(--background));
+  padding: var(--section-pad) 0;
+}
+
+.hero-calm {
+  background: var(--gradient-calm);
+  padding: var(--section-pad) 0;
+}
+
+.hero-horizon {
+  background: var(--gradient-horizon);
+  padding: var(--section-pad) 0;
+}
+
+.hero-photo {
+  position: relative;
+  color: hsl(var(--primary-foreground));
+  padding: var(--section-pad) 0;
+}
+.hero-photo::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(14, 26, 38, 0.45) 0%, rgba(14, 26, 38, 0.65) 100%);
+  pointer-events: none;
+}
+.hero-photo > * { position: relative; z-index: 1; }
+
+/* =========================================================================
+   Form elements
+   ========================================================================= */
+.input, .textarea, .select {
+  width: 100%;
+  background: hsl(var(--surface));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  color: hsl(var(--foreground));
+  transition: border-color var(--duration-standard) var(--ease-calm),
+              box-shadow var(--duration-standard) var(--ease-calm);
+}
+.input:focus, .textarea:focus, .select:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 4px hsl(var(--primary) / 0.12);
+}
+.input::placeholder, .textarea::placeholder { color: hsl(var(--foreground-muted)); }
+
+.label {
+  display: block;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: hsl(var(--foreground-muted));
+  margin-bottom: 0.5rem;
+}
+
+/* =========================================================================
+   Dividers, rules, eyebrows
+   ========================================================================= */
+.rule-hairline {
+  border: 0;
+  border-top: 1px solid hsl(var(--border));
+  margin: 3rem 0;
+}
+
+.rule-champagne {
+  border: 0;
+  height: 2px;
+  background: hsl(var(--secondary) / 0.6);
+  width: 48px;
+  margin: 1.5rem 0;
+}
+
+/* =========================================================================
+   Tags
+   ========================================================================= */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: hsl(var(--secondary-soft));
+  color: hsl(var(--foreground-muted));
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-caption);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================================
+   Keyframes
+   ========================================================================= */
+@keyframes fade-soft {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.015); }
+}
+
+@keyframes drift {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-24px); }
+}
+
+.animate-fade-soft { animation: fade-soft 1s var(--ease-calm) both; }
+.animate-slide-up  { animation: slide-up 0.8s var(--ease-calm) both; }
+.animate-breathe   { animation: breathe var(--duration-breathe) var(--ease-calm) infinite; }
+.animate-drift     { animation: drift 8s linear infinite alternate; }
+
+/* =========================================================================
+   Reduced motion — honoured
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .btn:hover { transform: none; }
+  .card:hover { transform: none; }
+}
+
+/* =========================================================================
+   Utilities
+   ========================================================================= */
+.container-ucalm {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+@media (max-width: 768px) {
+  .container-ucalm { padding-left: 1.25rem; padding-right: 1.25rem; }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

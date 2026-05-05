@@ -1,0 +1,60 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build artefacts
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Generated imagery pipeline — see brand-assets/scripts/ + IMAGERY_RUNBOOK.md
+# Both _incoming-imagery and generated land local-only; only curated jpgs
+# in /public/brand/ get committed.
+brand-assets/_incoming-imagery/
+brand-assets/generated/
+brand-assets/scripts/.venv/
+brand-assets/scripts/__pycache__/
+brand-assets/scripts/*.pyc
+
+# Python virtual environment used by the imagery pipeline (root-level)
+.venv/
+__pycache__/
+
+# Claude design intake/pack artefacts — keep local, not in repo
+claude-design-intake/
+claude-design-pack/
+U-Calm-Aviation-Claude-Design-*.zip
+
+# Supabase CLI local artefacts
+supabase/.branches/
+supabase/.temp/
+
+# Local environment + caches
+.env.local
+.env.*.local
+.i18n-cache.json
+vite.config.ts.timestamp-*
+*.save
+
+# OS files
+Thumbs.db
+
+# Favicon-build intermediates (cairosvg leftovers — delete via Finder when convenient)
+public/_fav_*.png

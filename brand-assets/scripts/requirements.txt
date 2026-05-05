@@ -1,0 +1,2 @@
+# image_size support (1K/2K/4K on ImageConfig) requires google-genai 1.x.
+google-genai>=1.0.0

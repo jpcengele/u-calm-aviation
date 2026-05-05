@@ -1,0 +1,38 @@
+# U-Calm Aviation — robots.txt
+#
+# A small, member-referral-oriented public surface. All routes are
+# legitimately indexable; the sitemap pointer below is what search
+# engines actually need. AI-scraping bots with a record of ignoring
+# nofollow are explicitly disallowed.
+
+User-agent: *
+Allow: /
+
+# Citation-friendly bots (Perplexity, ChatGPT search results, Google
+# AI Overviews) cite back to the source — allowed via wildcard above.
+# Mass scrapers that retrain on text without citation are blocked.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+Sitemap: https://u-calmaviation.com/sitemap.xml

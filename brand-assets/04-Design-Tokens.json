@@ -1,0 +1,169 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "brand": {
+    "$description": "U-Calm Aviation — concierge-wrapped aviation service of the U-CALM house. Shares visual language with U-CALM parent; deliberately distinct from Ascent Aviation sister brand.",
+    "name": {
+      "$value": "U-Calm Aviation",
+      "$type": "string"
+    },
+    "tagline": {
+      "$value": "Aviation, arranged.",
+      "$type": "string"
+    },
+    "parent": {
+      "$value": "U-CALM",
+      "$type": "string",
+      "$description": "U-CALM is the parent concierge house. Visible to members; not an external marketing identity."
+    },
+    "sisterBrand": {
+      "$value": "Ascent Aviation",
+      "$type": "string",
+      "$description": "Internal only. Never surface externally. See 10-Parent-and-Sister-Brand.md."
+    },
+    "voice": {
+      "$value": "Concierge register — warm, anticipatory, continuous. British English. No exclamation marks. No emojis. No superlatives without citation.",
+      "$type": "string"
+    }
+  },
+  "color": {
+    "primary": {
+      "deepTeal": { "$value": "#2A8A98", "$type": "color", "$description": "Hero brand colour. Use on ivory. HSL 187 56% 38%." },
+      "sereneTeal": { "$value": "#3BB5C7", "$type": "color", "$description": "Brighter teal. Decorative washes and dark-mode primary. HSL 189 55% 51%." },
+      "mistTeal": { "$value": "#BEE3E9", "$type": "color", "$description": "Section washes, card hovers, subtle dividers. HSL 187 48% 83%." }
+    },
+    "secondary": {
+      "warmChampagne": { "$value": "#BCB17A", "$type": "color", "$description": "AVIATION wordmark colour, member surfaces. HSL 48 37% 61%." },
+      "champagneMist": { "$value": "#E4DDBE", "$type": "color", "$description": "Soft member surfaces, dividers. HSL 48 44% 82%." }
+    },
+    "text": {
+      "stillNavy": { "$value": "#1C2B3A", "$type": "color", "$description": "All body and heading text on light surfaces. HSL 211 34% 17%." },
+      "harbourGrey": { "$value": "#6B7785", "$type": "color", "$description": "Captions, metadata, subdued supporting text. HSL 213 11% 47%." }
+    },
+    "surface": {
+      "ivory": { "$value": "#FAF7F2", "$type": "color", "$description": "Default page background. Shared with U-CALM parent. HSL 36 40% 97%." },
+      "cloudWhite": { "$value": "#FBFCFD", "$type": "color", "$description": "Alt surface, cooler than ivory; useful for digital product. HSL 210 25% 99%." },
+      "linen": { "$value": "#F3F1EA", "$type": "color", "$description": "Alt section, card background, form fill. HSL 44 23% 93%." },
+      "whisper": { "$value": "#E6EAEE", "$type": "color", "$description": "Borders, inputs, dividers. HSL 210 14% 92%." }
+    },
+    "dark": {
+      "deepNight": { "$value": "#0E1A26", "$type": "color", "$description": "Dark-mode background. HSL 210 46% 10%." },
+      "deepNightSurface": { "$value": "#152230", "$type": "color", "$description": "Dark-mode card surface. HSL 210 37% 13%." },
+      "deepNightText": { "$value": "#F1F5F8", "$type": "color", "$description": "Dark-mode body text. HSL 210 25% 96%." }
+    },
+    "forbidden": {
+      "$value": ["any red", "any orange", "navy as fill (navy is text only)", "neon green or cyan-saturated", "pure #000 (use stillNavy or deepNight)", "pure #FFF (use ivory or cloudWhite)", "pastels outside the mistTeal / champagneMist range"],
+      "$type": "array",
+      "$description": "Never use these in U-Calm Aviation work. Red belongs to Ascent Aviation sister brand."
+    }
+  },
+  "gradient": {
+    "primary": { "$value": "linear-gradient(135deg, #2A8A98 0%, #3BB5C7 100%)", "$type": "string", "$description": "Primary CTAs, teal surfaces." },
+    "champagne": { "$value": "linear-gradient(135deg, #BCB17A 0%, #E4DDBE 100%)", "$type": "string", "$description": "Member and premium surfaces." },
+    "calm": { "$value": "linear-gradient(180deg, #FAF7F2 0%, #EEF6F7 100%)", "$type": "string", "$description": "Subtle section transitions on ivory." },
+    "horizon": { "$value": "linear-gradient(180deg, #BEE3E9 0%, #FAF7F2 60%, #F3F1EA 100%)", "$type": "string", "$description": "Hero washes evoking a soft dawn." }
+  },
+  "typography": {
+    "family": {
+      "serif": {
+        "$value": "'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif",
+        "$type": "fontFamily",
+        "$description": "Display typeface. Shared with U-CALM parent."
+      },
+      "sans": {
+        "$value": "'Gill Sans', 'Gill Sans Nova', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        "$type": "fontFamily",
+        "$description": "Body typeface. Gill Sans primary; Inter as web fallback."
+      }
+    },
+    "weight": {
+      "light": { "$value": 300, "$type": "fontWeight" },
+      "regular": { "$value": 400, "$type": "fontWeight" },
+      "medium": { "$value": 500, "$type": "fontWeight" },
+      "semibold": { "$value": 600, "$type": "fontWeight" }
+    },
+    "scale": {
+      "hero":   { "$value": { "size": "clamp(3.5rem, 6vw, 5.5rem)", "lineHeight": 1.15, "letterSpacing": "-0.01em", "weight": 300 }, "$type": "typography" },
+      "h1":     { "$value": { "size": "clamp(2.5rem, 4.5vw, 4rem)", "lineHeight": 1.15, "letterSpacing": "-0.01em", "weight": 300 }, "$type": "typography" },
+      "h2":     { "$value": { "size": "clamp(2.25rem, 4vw, 3.5rem)", "lineHeight": 1.2, "letterSpacing": "-0.005em", "weight": 400 }, "$type": "typography" },
+      "h3":     { "$value": { "size": "clamp(1.75rem, 2.5vw, 2.5rem)", "lineHeight": 1.25, "weight": 500 }, "$type": "typography" },
+      "h4":     { "$value": { "size": "1.5rem", "lineHeight": 1.3, "weight": 600 }, "$type": "typography" },
+      "h5":     { "$value": { "size": "1.25rem", "lineHeight": 1.4, "weight": 600 }, "$type": "typography" },
+      "h6":     { "$value": { "size": "1rem", "lineHeight": 1.5, "weight": 600 }, "$type": "typography" },
+      "bodyLg": { "$value": { "size": "1.1875rem", "lineHeight": 1.65, "weight": 400 }, "$type": "typography" },
+      "body":   { "$value": { "size": "1.0625rem", "lineHeight": 1.7, "weight": 400 }, "$type": "typography" },
+      "small":  { "$value": { "size": "0.875rem", "lineHeight": 1.5, "weight": 400 }, "$type": "typography" },
+      "caption":{ "$value": { "size": "0.8125rem", "lineHeight": 1.5, "weight": 400 }, "$type": "typography" },
+      "nav":    { "$value": { "size": "0.875rem", "lineHeight": 1, "weight": 500 }, "$type": "typography" },
+      "eyebrow":{ "$value": { "size": "0.75rem", "lineHeight": 1, "weight": 500, "letterSpacing": "0.12em", "textTransform": "uppercase" }, "$type": "typography" },
+      "button": { "$value": { "size": "0.9375rem", "lineHeight": 1, "weight": 500 }, "$type": "typography" }
+    }
+  },
+  "radius": {
+    "none": { "$value": "0", "$type": "dimension" },
+    "sm":   { "$value": "8px", "$type": "dimension" },
+    "default": { "$value": "14px", "$type": "dimension" },
+    "md":   { "$value": "14px", "$type": "dimension" },
+    "lg":   { "$value": "20px", "$type": "dimension" },
+    "pill": { "$value": "999px", "$type": "dimension" }
+  },
+  "shadow": {
+    "whisper": { "$value": "0 2px 8px rgba(28, 43, 58, 0.04)", "$type": "shadow" },
+    "calm":    { "$value": "0 10px 40px -10px rgba(42, 138, 152, 0.15)", "$type": "shadow" },
+    "float":   { "$value": "0 20px 60px -20px rgba(28, 43, 58, 0.12)", "$type": "shadow" },
+    "gold":    { "$value": "0 10px 30px -10px rgba(188, 177, 122, 0.25)", "$type": "shadow" }
+  },
+  "motion": {
+    "duration": {
+      "fast":     { "$value": "300ms", "$type": "duration" },
+      "standard": { "$value": "500ms", "$type": "duration", "$description": "Slower than Ascent's 300ms — human breathing rhythm." },
+      "slow":     { "$value": "800ms", "$type": "duration" },
+      "breathe":  { "$value": "4000ms", "$type": "duration", "$description": "Signature breathe keyframe — U mark, hero only." }
+    },
+    "easing": {
+      "calm":     { "$value": "cubic-bezier(0.25, 0.8, 0.25, 1)", "$type": "cubicBezier" },
+      "standard": { "$value": "cubic-bezier(0.4, 0, 0.2, 1)", "$type": "cubicBezier" }
+    },
+    "hoverScale": { "$value": 1.02, "$type": "number", "$description": "Maximum hover scale. Never exceed 1.02." },
+    "reducedMotion": { "$value": true, "$type": "boolean", "$description": "prefers-reduced-motion is honoured — non-essential animation disabled." }
+  },
+  "layout": {
+    "container": { "$value": "1280px", "$type": "dimension", "$description": "Max container width. Narrower than Ascent's 1400px." },
+    "containerPaddingDesktop": { "$value": "2.5rem", "$type": "dimension" },
+    "containerPaddingMobile": { "$value": "1.25rem", "$type": "dimension" },
+    "sectionPaddingDesktop": { "$value": "6rem", "$type": "dimension" },
+    "sectionPaddingMobile": { "$value": "3.5rem", "$type": "dimension" },
+    "gridGutterCards": { "$value": "32px", "$type": "dimension" },
+    "gridGutterSections": { "$value": "48px", "$type": "dimension" },
+    "baselineGrid": { "$value": "8px", "$type": "dimension" }
+  },
+  "logo": {
+    "primary": {
+      "$value": "logos/u-calm-logo.svg",
+      "$type": "string",
+      "$description": "Two-tone lockup — deep teal U + CALM, champagne AVIATION."
+    },
+    "variants": {
+      "$value": ["two-tone (default)", "all-teal", "all-champagne (member surfaces)", "all-white (dark backgrounds)"],
+      "$type": "array"
+    },
+    "minimumSize": {
+      "$value": "72px lockup, 48px U-mark alone",
+      "$type": "string"
+    },
+    "clearSpace": {
+      "$value": "Equal to cap-height of AVIATION on all sides.",
+      "$type": "string"
+    }
+  },
+  "iconography": {
+    "library": { "$value": "Lucide (or equivalent thin-line set)", "$type": "string" },
+    "strokeWeight": { "$value": "1.5px at 24px icon size", "$type": "string" },
+    "defaultColour": { "$value": "#1C2B3A", "$type": "color", "$description": "Still Navy default; Deep Teal for affirmative action states; Champagne for decorative only." }
+  },
+  "accessibility": {
+    "minBodyContrast": { "$value": 4.5, "$type": "number" },
+    "bodyOnIvoryContrast": { "$value": 13, "$type": "number", "$description": "Still Navy on Ivory — AAA." },
+    "focusRing": { "$value": "2px solid #2A8A98, offset 2px", "$type": "string" },
+    "reducedMotionHonoured": { "$value": true, "$type": "boolean" }
+  }
+}

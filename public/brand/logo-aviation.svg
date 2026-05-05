@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="U-Calm Aviation">
+  <!--
+    U-Calm Aviation logo — placeholder rebuild of the supplied master.
+    Layout matches the supplied PNG: black square ground, slim airy U mark on top
+    in Serene Teal, two-tone CALM wordmark (C and M teal, AL champagne),
+    AVIATION wordmark below in champagne. Replace this file when the vector
+    master is supplied.
+  -->
+  <rect width="512" height="512" fill="#000000"/>
+
+  <!-- Tall airy U mark, Serene Teal #3BB5C7 -->
+  <g fill="none" stroke="#3BB5C7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="206" y1="76" x2="206" y2="290"/>
+    <line x1="306" y1="76" x2="306" y2="290"/>
+    <path d="M 206 290 C 206 360, 306 360, 306 290"/>
+  </g>
+
+  <!-- CALM — two-tone: C teal, AL champagne, M teal -->
+  <text text-anchor="middle" x="256" y="418"
+        font-family="'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif"
+        font-size="100" font-weight="400" letter-spacing="9">
+    <tspan fill="#3BB5C7">C</tspan><tspan fill="#BCB17A">AL</tspan><tspan fill="#3BB5C7">M</tspan>
+  </text>
+
+  <!-- AVIATION in champagne -->
+  <text text-anchor="middle" x="256" y="486"
+        font-family="'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif"
+        font-size="56" font-weight="400" letter-spacing="6"
+        fill="#BCB17A">AVIATION</text>
+</svg>
