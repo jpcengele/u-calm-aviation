@@ -531,7 +531,7 @@ const Home = () => {
               // Place-register cards (residence/coast/hall/lake), distinct from
               // the aviation-coded "first light" register used in §3 Three Cities.
               { name: "Lugano", country: "Switzerland", id: 25 },     // Villa terrace, 06:45 — Raf must-keep, residence on Lugano lake.
-              { name: "St. Moritz", country: "Switzerland", id: 43 }, // St Moritz lake, 16:00 — literal city match. Replaces #5 (Gstaad chalet — wrong city).
+              { name: "St. Moritz", country: "Switzerland", id: 37 }, // §4 Gstaad window, snow — Michael "Lovely". Alpine winter through a window. Replaces #43 (figure on impossibly cracked ice; Michael flagged 2026-05-05).
               { name: "London", country: "United Kingdom", id: 23 },  // §2 Garden window, cloud-morning — London townhouse register, no figures. (Replaced #11 Knightsbridge hall — background figure issue.)
               { name: "Monaco", country: "Principality", id: 49 },    // Monte Carlo balcony — direct Monaco-place. Replaces #8 (cabin window, not Monaco).
             ].map((d) => (

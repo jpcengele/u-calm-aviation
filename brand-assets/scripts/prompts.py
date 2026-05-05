@@ -95,7 +95,18 @@ PEOPLE — the discipline of the face-out-of-frame:
   deep teal knitwear. Never corporate-blue-suit-white-shirt cliché, never the boardroom-stock pose.
 - Skin must read as real skin — pores, small asymmetries, the warmth of a living body. Hands must
   read as real hands: five fingers, correct knuckles, nail texture, no fused or elongated digits.
-- No visible tattoos on the hands, forearms, or neck. No loud watches. No phones held to ears.
+- BODY ALWAYS IMPLIED OFF-FRAME — never bisected at the wrist or forearm. Any visible hand or
+  forearm entering the frame must have a cuff or jacket-sleeve visible at its end, anchoring the
+  limb to a body that continues out of view. Floating disembodied hands, decapitated cuffs, or
+  arms that simply terminate in mid-air are disqualified. (Michael's Round-2 reinforcement
+  2026-05-05 — repeated regen flag across §10 cabin, §11 hands, §12 textures.)
+- WATCHES — when a wrist is in frame, render strap and back-of-watch only; the dial face is
+  never visible. No numerals, no watch hands, no subsidiary dials, no brand wordmark, no logo
+  of any kind. The crown side may sit at the very edge of frame; preferred composition is
+  back-of-watch facing camera (the "reverse watch" read), or the strap alone with the dial
+  rotated to the inside of the wrist. The brand is not a watch company. (Michael's Round-2
+  reinforcement 2026-05-05 — repeated regen flag across §3, §6, §11.)
+- No visible tattoos on the hands, forearms, or neck. No phones held to ears.
 
 LIKENESSES: any visible profile, silhouette, or fragment must not resemble any real public figure —
 politician, actor, musician, athlete, journalist, royal, executive, or member of an identifiable
@@ -309,9 +320,11 @@ SECTIONS: List[Section] = [
             Prompt(5, "hero-gstaad-chalet.jpg", "Chalet morning, Gstaad",
                    "35mm interior. A weathered-wood chalet room in Saanenland at 07:15 — alpine first "
                    "light just beginning to pass through linen-curtained windows, a deep-teal-ticking "
-                   "eiderdown folded at the end of a bed, a pair of grey wool socks on an oak floor, a "
-                   "leather overnight bag half-visible in the left edge of frame. Triad: champagne wool, "
-                   "oak, deep teal. No people, no text.",
+                   "eiderdown folded at the end of a bed, a leather overnight bag half-visible in the "
+                   "left edge of frame, a single linen pillow turned at the head of the bed. The oak "
+                   "floor is bare — no clothing, no socks, no scattered items. Triad: champagne wool, "
+                   "oak, deep teal. No people, no text. (Round-2 fix: removed socks per Michael's "
+                   "feedback 2026-05-05 — 'Socks are weirdly placed'.)",
                    "4:5"),
             Prompt(6, "hero-monaco-balcony.jpg", "Monaco balcony, 17:30",
                    "24mm. A shaded balcony in Monte Carlo at late afternoon, looking out across a slate "
@@ -584,9 +597,13 @@ SECTIONS: List[Section] = [
                    "4:5"),
             Prompt(45, "alpine-morning-coffee.jpg", "Morning coffee, balcony",
                    "85mm. A small teak balcony at 07:45 above Saanen — a tray with a single dark "
-                   "porcelain cup of coffee, a small dish with a single pear, a folded linen napkin. "
-                   "Mist-teal morning valley beyond. Warm champagne light just catching the tray edge. "
-                   "No hands, no text.",
+                   "porcelain cup of coffee, a small porcelain dish holding a small handful of walnuts "
+                   "still in their shells (matte natural shell texture, soft-brown patina, undeniably "
+                   "real food, never wooden or sculpted), a folded linen napkin. Mist-teal morning "
+                   "valley beyond. Warm champagne light just catching the tray edge. No hands, no text. "
+                   "(Round-2 fix: replaced wooden-toy-looking pear with walnuts in shell per Michael's "
+                   "feedback 2026-05-05 — 'Is that a pear or a wooden toy? Change the fruit'. Fruit "
+                   "alternatives like apple/pomegranate disqualified by the no-red palette rule.)",
                    "1:1"),
             Prompt(46, "alpine-skihold-macro.jpg", "Ski bag, threshold",
                    "35mm. A single charcoal ski bag laid along a stone chalet threshold at 08:00 — "
@@ -771,15 +788,21 @@ SECTIONS: List[Section] = [
                    "16:9"),
             Prompt(75, "provence-kitchen-terracotta.jpg", "Farmhouse kitchen, quiet",
                    "50mm. A rustic Provençal kitchen at 09:15 — thick oak table, a linen runner, an "
-                   "olive-wood board with a single pear, a porcelain cup of coffee. Warm champagne "
-                   "light from a small window. A glass carafe of water. No jars with legible labels, "
-                   "no recipe card.",
+                   "olive-wood board with a small handful of walnuts in shell (matte natural shell "
+                   "texture, soft-brown patina, undeniably real food never sculpted), a porcelain cup "
+                   "of coffee. Warm champagne light from a small window. A glass carafe of water. "
+                   "No jars with legible labels, no recipe card. (Round-2 fix: replaced wooden-toy-"
+                   "looking pear with walnuts per Michael's feedback 2026-05-05 — 'Wooden pear "
+                   "strikes again'.)",
                    "4:5"),
             Prompt(76, "tuscany-villa-loggia.jpg", "Tuscan loggia",
                    "28mm. The low shaded loggia of a Tuscan farmhouse at 17:30 — pale plastered wall "
                    "in warm champagne, deep teal shadow, a single pair of linen-cushioned chairs, a "
                    "weathered oak table. Olive trees receding into mist-teal distance. No hotel "
-                   "signage.",
+                   "signage. The frame is empty of figures and limbs — no arms, no hands, no sleeves, "
+                   "no shoulder, no body fragment of any kind. The composition rests on architecture, "
+                   "linen, and olive grove only. (Round-2 fix: removed the body fragment per Michael's "
+                   "feedback 2026-05-05 — 'Weird arm, remove. All else is lovely'.)",
                    "16:9"),
             Prompt(77, "provence-garden-path.jpg", "Garden path, afternoon",
                    "35mm. A narrow gravel path between low lavender (muted) and rosemary in a Provence "
@@ -1072,10 +1095,16 @@ SECTIONS: List[Section] = [
                    "cloud-white walls.",
                    "16:9"),
             Prompt(125, "hand-at-car-door.jpg", "Hand at the car door",
-                   "50mm. A hand in a dark wool cuff reaching toward the open rear door of a matte-"
-                   "black saloon at a London mews curb at 07:45 — the door half-open, cream leather "
-                   "interior visible, deep teal shadow inside. Only the hand, cuff, and door edge in "
-                   "frame.",
+                   "50mm. A hand in a dark charcoal wool cuff reaching toward the open rear door of a "
+                   "matte-black saloon at a London mews curb at 07:45 — the door half-open, the rear-"
+                   "passenger interior reading clearly: pale cream leather upholstery on a single "
+                   "rear seat, a walnut door panel inset visible at the door's interior face, the "
+                   "near floor in deep navy carpet. The interior must be coherent and architecturally "
+                   "plausible — not a muddy shadow, not an indeterminate shape, not a non-Euclidean "
+                   "space. Only the hand, cuff, door edge and the near interior surfaces in frame; "
+                   "no second occupant, no driver visible. Body implied off-camera left, full sleeve "
+                   "and shirt-cuff visible, never a floating limb. (Round-2 fix per Michael's "
+                   "feedback 2026-05-05 — 'what is the interior? seems weird'.)",
                    "16:9"),
             Prompt(126, "profile-out-of-focus.jpg", "Profile, deeply out of focus",
                    "85mm, f/1.8. A figure at a cool casement window at 08:00 — the profile turned "

@@ -531,7 +531,7 @@ export const BRAND_IMAGES: readonly BrandImage[] = [
     aspect: "4:5",
     src: "/brand/04-gstaad-alpine/stmoritz-lobby-window.jpg",
     alt: "Engadin window seat — Gstaad, St Moritz and Alpine Quiet",
-    enabled: true,
+    enabled: false, // Disabled 2026-05-05 — Michael: "Really weird see through room, no thanks"
   },
   {
     id: 45,
@@ -1396,7 +1396,7 @@ export const BRAND_IMAGES: readonly BrandImage[] = [
     aspect: "1:1",
     src: "/brand/11-hands-and-vignettes/cuff-sill.jpg",
     alt: "Wool cuff on sill — Hands-only Vignettes and Human Fragments",
-    enabled: true,
+    enabled: false, // Disabled 2026-05-05 — Michael: "decapitated hand no thanks"
   },
   {
     id: 123,
@@ -1484,7 +1484,7 @@ export const BRAND_IMAGES: readonly BrandImage[] = [
     aspect: "1:1",
     src: "/brand/11-hands-and-vignettes/hand-porcelain-cup.jpg",
     alt: "Hand, porcelain cup — Hands-only Vignettes and Human Fragments",
-    enabled: true,
+    enabled: false, // Disabled 2026-05-05 — Michael: "completely senseless unless we're selling prosthesis"
   },
   {
     id: 131,
@@ -1897,7 +1897,7 @@ export const THREE_CITIES = {
 
 /** Home editorial — paired-image continuity bands on the Home page. */
 export const HOME_EDITORIAL = {
-  one: 143,   // §12 Garment bag, hall chair — "the concierge who arranges your week" → the WEEK being arranged (preparation, not aviation). Replaces #107 (too on-the-nose-cabin for a "your week" copy block).
+  one:  91,   // §9 Breakfast tray at the sash — Michael's verdict: "nice". Domestic morning in member's residence = the WEEK being held. Replaces #143 (Michael flagged "ehh feels fake" 2026-05-05).
   two: 154,   // §13 Lake Como villa terrace 06:45 — Milan-axis arrival (concierge has zero Lake Como). Reserved for future band.
 } as const;
 
@@ -1924,7 +1924,7 @@ export const ABOUT_SCENES = {
   founding2013:  27,   // §3 Lake jetty, morning mist — Raf must-keep. Lugano + dawn + slow-time = perfect fit for "founded in Lugano 2013, quietly over years." Replaces #156 (Navigli is Milan, not founding-coded).
   calmAcronym:  133,   // §12 textures-linen-weave — vignette accent (80×80 frame). Linen = continuity texture beside "the same hand, from breakfast to wheels-up."
   household:    158,   // §13 Mayfair-coded study with Linate haze — Raf must-keep. Single most apt image in the library for "Aviation, inside U-CALM" (a member's study with aviation visible through the window). Replaces #160 (now reserved for Membership service).
-  team:         129,   // §11 Forearm, alpine rail — Raf must-keep. Team rendered as fragments without showing faces; differentiates from concierge's #119 use. Replaces #119.
+  team:         127,   // §11 Reflected silhouette in glass — Michael's verdict: "like it". Team rendered indirectly without faces. Replaces #129 (Michael flagged "weird hand placement, where is the body?" 2026-05-05).
 } as const;
 
 export const CONTACT_EDITORIAL = {

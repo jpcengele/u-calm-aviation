@@ -58,7 +58,7 @@ const FEATURED_DESTINATIONS = [
       "Engadin chalet network",
       "Restaurant tables held under member preference",
     ],
-    imageId: 43, // St Moritz lake, 16:00 — literal city match. Replaces #5 (Chalet morning, GSTAAD — wrong city).
+    imageId: 37, // §4 Gstaad window, snow — Michael's verdict "Lovely". Generic alpine winter through a window; reads as winter-destination without Michael's "person walking on impossibly cracked ice" complaint about #43. Replaces #43 stmoritz-lake-afternoon.
   },
   {
     name: "Monaco",
@@ -87,7 +87,7 @@ const FEATURED_DESTINATIONS = [
       "Yacht and tender coordination",
       "Restaurant continuity at the quieter coves",
     ],
-    imageId: 7, // §1 Mykonos, white and teal — Raf must-keep (flagged twice).
+    imageId: 60, // §6 Mykonos threshold, open door — Michael: "Also perfect". Replaces #7 (Michael: "Lovely but the shoulder cutting off is weird" 2026-05-05).
   },
   {
     name: "Tuscany",
