@@ -1895,10 +1895,19 @@ export const THREE_CITIES = {
   milanEnglishSpeaker: 157,   // §13 English kitchen + Italian shutters — strategic visual rhyme
 } as const;
 
-/** Home editorial — paired-image continuity bands on the Home page. */
+/** Home editorial — paired-image continuity bands on the Home page.
+ *
+ *  Index §2 ("The concierge who arranges your week, now arranges the
+ *  aircraft.") renders BOTH `one` and `two` stacked in the left column
+ *  so the photograph mirrors the transition the copy describes:
+ *  residence → cabin, same calm tray-and-porcelain register on both
+ *  sides of the move. Updated 2026-05-05 after live-site review:
+ *  showing only the residence half left readers asking where the
+ *  aviation half went.
+ */
 export const HOME_EDITORIAL = {
   one:  91,   // §9 Breakfast tray at the sash — Michael's verdict: "nice". Domestic morning in member's residence = the WEEK being held. Replaces #143 (Michael flagged "ehh feels fake" 2026-05-05).
-  two: 154,   // §13 Lake Como villa terrace 06:45 — Milan-axis arrival (concierge has zero Lake Como). Reserved for future band.
+  two: 110,   // §10 Carafe on walnut cabin table — Michael's verdict: "lovely". The same calm tray-and-porcelain register, but at cruise altitude. Pairs with #91 to make the residence→cabin transition visible. Replaces #154 (was reserved for future band; now consumed in §2).
 } as const;
 
 /** Service-section imagery — keys match the imageSlot field on Service entries.

@@ -245,10 +245,22 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 2. The continuity proposition */}
+      {/* 2. The continuity proposition — two images stacked on the left to mirror
+            the transition the copy describes (residence → cabin, same register). */}
       <section className="bg-linen">
         <div className="container py-24 grid md:grid-cols-2 gap-12 items-center">
-          <BrandImage id={HOME_EDITORIAL.one} className="w-full rounded-lg overflow-hidden" />
+          <div className="space-y-6">
+            <BrandImage
+              id={HOME_EDITORIAL.one}
+              className="w-full rounded-lg overflow-hidden"
+              alt="Breakfast tray at the sash window in a member's residence — the week being held."
+            />
+            <BrandImage
+              id={HOME_EDITORIAL.two}
+              className="w-full rounded-lg overflow-hidden"
+              alt="Carafe on the walnut cabin table at cruise altitude — the same register, in the air."
+            />
+          </div>
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
               Inside the relationship
