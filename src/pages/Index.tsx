@@ -9,6 +9,7 @@ import {
   Receipt,
 } from "lucide-react";
 import { BrandImage } from "@/components/brand/BrandImage";
+import { HeroVideo } from "@/components/brand/HeroVideo";
 import {
   PAGE_HEROES,
   HOME_EDITORIAL,
@@ -168,10 +169,19 @@ const Home = () => {
 
   return (
     <>
-      {/* 1. Hero */}
+      {/* 1. Hero — autoplay video by default, static image fallback for
+            reduced-motion users + slow connections + load failures. The
+            video file lives at /public/brand/hero/cabin-window-cumulus.mp4
+            (Veo-generated, ~10s seamless loop of cumulus clouds drifting
+            past an oval cabin window at cruise altitude). */}
       <section className="relative">
         <div className="absolute inset-0 overflow-hidden">
-          <BrandImage id={PAGE_HEROES.home} priority className="w-full h-full object-cover" />
+          <HeroVideo
+            videoSrc="/brand/hero/cabin-window-cumulus.mp4"
+            posterImageId={PAGE_HEROES.home}
+            className="w-full h-full object-cover"
+            alt="Cumulus clouds drifting past an oval cabin window at cruise altitude"
+          />
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-overlay" />
         </div>
 
