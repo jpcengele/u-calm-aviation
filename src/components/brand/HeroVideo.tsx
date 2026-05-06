@@ -61,6 +61,41 @@ export function HeroVideo({
     }
   }, [muted]);
 
+  // Mobile-friendly explicit play(). Mobile Safari + Chrome respect an
+  // explicit programmatic play() call more reliably than the `autoplay`
+  // attribute alone. If the call rejects (Low Power Mode, Data Saver,
+  // strict autoplay policies), the poster image stays visible and the
+  // first user interaction with the page will let it play. This is
+  // graceful-degradation, not a hard failure.
+  useEffect(() => {
+    if (reducedMotion) return;
+    const v = videoRef.current;
+    if (!v) return;
+
+    const tryPlay = () => {
+      const promise = v.play();
+      if (promise && typeof promise.catch === "function") {
+        promise.catch(() => {
+          // Autoplay blocked. Wait for first user interaction anywhere on
+          // the page, then try again. This is what mobile Safari needs.
+          const onceUserGestures = () => {
+            v.play().catch(() => {
+              /* still blocked — the poster will keep showing */
+            });
+            window.removeEventListener("touchstart", onceUserGestures);
+            window.removeEventListener("click", onceUserGestures);
+            window.removeEventListener("scroll", onceUserGestures);
+          };
+          window.addEventListener("touchstart", onceUserGestures, { passive: true, once: true });
+          window.addEventListener("click", onceUserGestures, { once: true });
+          window.addEventListener("scroll", onceUserGestures, { passive: true, once: true });
+        });
+      }
+    };
+
+    tryPlay();
+  }, [reducedMotion]);
+
   const toggleMuted = () => {
     setMuted((prev) => !prev);
   };
@@ -83,7 +118,7 @@ export function HeroVideo({
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         poster={posterSrc}
         aria-label={alt}
         className={className}
