@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { brand } from "@/brand/config";
 import { buttonVariants } from "@/components/ui/button";
 import { BrandImage } from "@/components/brand/BrandImage";
@@ -18,6 +19,7 @@ import { cn } from "@/lib/utils";
  * Tagline appears once, italic, in serif. No marketing copy in the legal strip.
  */
 const Footer = () => {
+  const { t } = useTranslation();
   const year = new Date().getFullYear();
 
   return (
@@ -43,15 +45,15 @@ const Footer = () => {
       <section className="bg-foreground text-background">
         <div className="container py-20 md:py-24 text-center">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-champagne">
-            {brand.shortName}
+            {t("brand.shortName")}
           </p>
 
           <p className="mt-10 font-serif italic text-2xl md:text-3xl text-background/95">
-            {brand.strapline}
+            {t("brand.strapline")}
           </p>
 
           <p className="mt-8 max-w-xl mx-auto text-background/75 leading-relaxed">
-            {brand.description}
+            {t("brand.description")}
           </p>
 
           <div className="mt-10">
@@ -62,7 +64,7 @@ const Footer = () => {
                 "rounded-full bg-primary hover:bg-primary-hero text-primary-foreground shadow-lg",
               )}
             >
-              Speak with your concierge
+              {t("cta.speakSpecialist")}
             </Link>
           </div>
         </div>
@@ -73,26 +75,26 @@ const Footer = () => {
         <div className="container py-14 grid grid-cols-2 md:grid-cols-4 gap-10">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="inline-block mb-4" aria-label="U-Calm Aviation home">
+            <Link to="/" className="inline-block mb-4" aria-label={t("footer.homeAriaLabel")}>
               <img
                 src="/brand/logo-aviation.jpg"
-                alt="U-Calm Aviation"
+                alt={t("footer.logoAlt")}
                 className="h-[5.4rem] w-auto"
                 draggable={false}
               />
             </Link>
             <p className="font-serif italic text-foreground/85 text-sm mb-2">
-              {brand.expansion}
+              {t("brand.expansion")}
             </p>
             <p className="text-xs text-muted-foreground leading-relaxed max-w-xs">
-              The aviation service line inside U-CALM, the concierge house. Lugano · Milan · London.
+              {t("footer.blurb")}
             </p>
           </div>
 
           {/* Services column */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-primary-deep mb-4">
-              Services
+              {t("footer.services")}
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
@@ -100,7 +102,7 @@ const Footer = () => {
                   to="/services/bespoke-charter"
                   className="text-foreground/75 hover:text-primary-deep transition-colors"
                 >
-                  Bespoke charter
+                  {t("services.catalogue.bespokeCharter.title")}
                 </Link>
               </li>
               <li>
@@ -108,7 +110,7 @@ const Footer = () => {
                   to="/services/on-demand"
                   className="text-foreground/75 hover:text-primary-deep transition-colors"
                 >
-                  On-demand
+                  {t("services.catalogue.onDemand.title")}
                 </Link>
               </li>
               <li>
@@ -116,7 +118,7 @@ const Footer = () => {
                   to="/services/membership"
                   className="text-foreground/75 hover:text-primary-deep transition-colors"
                 >
-                  Membership
+                  {t("services.catalogue.membership.title")}
                 </Link>
               </li>
               <li>
@@ -124,7 +126,7 @@ const Footer = () => {
                   to="/services/group-charter"
                   className="text-foreground/75 hover:text-primary-deep transition-colors"
                 >
-                  Group charter
+                  {t("services.catalogue.groupCharter.title")}
                 </Link>
               </li>
               <li>
@@ -132,7 +134,7 @@ const Footer = () => {
                   to="/services/destination-management"
                   className="text-foreground/75 hover:text-primary-deep transition-colors"
                 >
-                  Destination management
+                  {t("services.catalogue.destinationManagement.title")}
                 </Link>
               </li>
               <li>
@@ -140,7 +142,7 @@ const Footer = () => {
                   to="/services/executive-protection"
                   className="text-foreground/75 hover:text-primary-deep transition-colors"
                 >
-                  Executive protection
+                  {t("services.catalogue.executiveProtection.title")}
                 </Link>
               </li>
               <li className="pt-2">
@@ -148,7 +150,7 @@ const Footer = () => {
                   to="/services"
                   className="text-primary-deep hover:underline font-medium"
                 >
-                  See all services →
+                  {t("cta.seeAllServices")} →
                 </Link>
               </li>
             </ul>
@@ -157,42 +159,42 @@ const Footer = () => {
           {/* Explore column */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-primary-deep mb-4">
-              Explore
+              {t("footer.explore")}
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link to="/destinations" className="text-foreground/75 hover:text-primary-deep transition-colors">
-                  Destinations
+                  {t("footer.destinationsLabel")}
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="text-foreground/75 hover:text-primary-deep transition-colors">
-                  About the house
+                  {t("footer.aboutLabel")}
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-foreground/75 hover:text-primary-deep transition-colors">
-                  Contact the desk
+                  {t("footer.contactLabel")}
                 </Link>
               </li>
             </ul>
 
             <h3 className="mt-8 text-xs font-bold uppercase tracking-[0.15em] text-primary-deep mb-4">
-              Languages
+              {t("footer.languages")}
             </h3>
             <p className="text-sm text-foreground/75 leading-relaxed">
-              English · Italiano · Français · Deutsch
+              {t("footer.languagesList")}
             </p>
           </div>
 
           {/* Practical column */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-[0.15em] text-primary-deep mb-4">
-              Practical
+              {t("footer.practical")}
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <span className="block text-xs text-muted-foreground uppercase tracking-wider mb-0.5">Inquiries</span>
+                <span className="block text-xs text-muted-foreground uppercase tracking-wider mb-0.5">{t("footer.inquiries")}</span>
                 <a
                   href={`mailto:${brand.inquiryEmail}`}
                   className="text-foreground/85 hover:text-primary-deep transition-colors break-all"
@@ -201,22 +203,22 @@ const Footer = () => {
                 </a>
               </li>
               <li className="pt-1">
-                <span className="block text-xs text-muted-foreground uppercase tracking-wider mb-0.5">Hours</span>
-                <span className="text-foreground/85">24 / 7 · 365</span>
+                <span className="block text-xs text-muted-foreground uppercase tracking-wider mb-0.5">{t("footer.hours")}</span>
+                <span className="text-foreground/85">{t("footer.hoursValue")}</span>
               </li>
               <li className="pt-1">
-                <span className="block text-xs text-muted-foreground uppercase tracking-wider mb-0.5">Desk</span>
-                <span className="text-foreground/85">Lugano, Switzerland</span>
+                <span className="block text-xs text-muted-foreground uppercase tracking-wider mb-0.5">{t("footer.desk")}</span>
+                <span className="text-foreground/85">{t("footer.deskValue")}</span>
               </li>
             </ul>
 
             <h3 className="mt-8 text-xs font-bold uppercase tracking-[0.15em] text-primary-deep mb-4">
-              Legal
+              {t("footer.legal")}
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link to="/legal/privacy" className="text-foreground/75 hover:text-primary-deep transition-colors">
-                  Privacy notice
+                  {t("footer.privacyNotice")}
                 </Link>
               </li>
             </ul>
@@ -226,8 +228,8 @@ const Footer = () => {
         {/* Bottom legal strip */}
         <div className="border-t border-border">
           <div className="container py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-muted-foreground">
-            <p>© {year} {brand.name}. A U-CALM house brand.</p>
-            <p className="font-serif italic">{brand.expansion}</p>
+            <p>{t("footer.copyright", { year, name: brand.name })}</p>
+            <p className="font-serif italic">{t("brand.expansion")}</p>
           </div>
         </div>
       </div>

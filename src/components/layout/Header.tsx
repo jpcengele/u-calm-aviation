@@ -113,7 +113,7 @@ const Header = () => {
       <div className="border-t border-border/40 bg-background/60">
         <div className="container py-2 text-center">
           <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-primary-deep">
-            Aviation, arranged.
+            {t("brand.strapline")}
           </p>
         </div>
       </div>

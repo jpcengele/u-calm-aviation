@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { BrandImage } from "@/components/brand/BrandImage";
 import { PAGE_HEROES, ABOUT_SCENES } from "@/brand/imagery";
 import { buttonVariants } from "@/components/ui/button";
@@ -29,11 +30,27 @@ import {
  *   7. The handshake — onboarding overview
  *   8. The soul + CTA
  */
+const PRINCIPLE_KEYS = [
+  "continuity",
+  "restraint",
+  "independence",
+  "privacy",
+  "standards",
+  "honesty",
+] as const;
+
+const HANDSHAKE_STEPS = [
+  { key: "step1", numeral: "i." },
+  { key: "step2", numeral: "ii." },
+  { key: "step3", numeral: "iii." },
+  { key: "step4", numeral: "iv." },
+] as const;
+
 const About = () => {
+  const { t } = useTranslation();
   useDocumentMeta({
-    title: "About — A concierge house, extended | U-Calm Aviation",
-    description:
-      "U-Calm Aviation is the aviation service line inside U-CALM, founded in Lugano in 2013. Aviation, inside the concierge relationship — unseparated. Named four-language specialists, vetted operator panel, twenty-four-hour reachability through the same desk that holds the rest of the member's arrangements.",
+    title: t("about.meta.title"),
+    description: t("about.meta.description"),
     canonical: canonical("/about"),
     jsonLd: [
       ORGANIZATION_JSONLD,
@@ -57,13 +74,13 @@ const About = () => {
         </div>
         <div className="relative container min-h-[60vh] flex flex-col justify-end py-20">
           <p className="text-xs font-bold uppercase tracking-[0.15em] text-champagne">
-            The house
+            {t("about.hero.eyebrow")}
           </p>
           <h1 className="mt-3 font-serif text-4xl md:text-6xl font-light text-background">
-            A concierge house, extended.
+            {t("about.hero.headline")}
           </h1>
           <p className="mt-6 text-lg text-background/90 max-w-2xl">
-            U-Calm Aviation is the aviation service line inside U-CALM — the way the house's existing members fly.
+            {t("about.hero.body")}
           </p>
         </div>
       </section>
@@ -72,16 +89,16 @@ const About = () => {
       <section className="bg-background">
         <div className="container py-20 max-w-3xl">
           <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-            The founding question
+            {t("about.founding.eyebrow")}
           </p>
           <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-            Can aviation disappear into the concierge relationship our members already trust?
+            {t("about.founding.headline")}
           </h2>
           <p className="mt-8 text-foreground/85 leading-relaxed">
-            Members of U-CALM are used to calling one person, or sending one email, to have something arranged — a restaurant, a driver, a household, a school run, a birthday table. Private aviation, in most members' lives, was the one category that broke that pattern. They had to switch to another brand, another login, another broker, another tone of voice, another invoice.
+            {t("about.founding.p1")}
           </p>
           <p className="mt-6 text-foreground/85 leading-relaxed">
-            U-Calm Aviation is the answer to that discontinuity. The member does not learn an aviation brand; the aviation service simply shows up in the concierge relationship, wearing the same face, speaking the same voice, billing on the same statement.
+            {t("about.founding.p2")}
           </p>
 
           {/* Small editorial vignette — detail accent + caption */}
@@ -89,8 +106,8 @@ const About = () => {
             <div className="relative w-20 h-20 md:w-24 md:h-24 overflow-hidden rounded-sm shadow-whisper flex-shrink-0">
               <BrandImage id={ABOUT_SCENES.calmAcronym} className="w-full h-full object-cover" />
             </div>
-            <p className="text-xs tracking-[0.16em] uppercase text-muted-foreground leading-relaxed">
-              The same hand, from breakfast to wheels-up.<br />A continuous arrangement, kept quiet.
+            <p className="text-xs tracking-[0.16em] uppercase text-muted-foreground leading-relaxed whitespace-pre-line">
+              {t("about.founding.vignette")}
             </p>
           </div>
         </div>
@@ -102,19 +119,19 @@ const About = () => {
           <BrandImage id={ABOUT_SCENES.founding2013} className="w-full rounded-lg overflow-hidden" />
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              How it came about
+              {t("about.history.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              Quietly, over a number of years.
+              {t("about.history.headline")}
             </h2>
             <p className="mt-6 text-foreground/85 leading-relaxed">
-              U-CALM was founded in Lugano, in 2013, around a single proposition: that the membership relationship between a member and their concierge should be the only relationship a member has to think about. From the first months, members asked the desk to arrange aircraft alongside everything else — and for a long time, the desk did so quietly, on a one-by-one basis, working with carefully chosen operators in the background.
+              {t("about.history.p1")}
             </p>
             <p className="mt-4 text-foreground/85 leading-relaxed">
-              Over the years that arrangement became formal. The aviation desk was constituted as its own service line, with its own specialists, its own vetted operator panel, and its own standards documentation — but always, deliberately, inside U-CALM. It was never spun out as a separate brand, because the entire point was that members shouldn't have to deal with a separate brand.
+              {t("about.history.p2")}
             </p>
             <p className="mt-4 text-foreground/85 leading-relaxed">
-              U-Calm Aviation, today, is the public name for that long-running internal arrangement. The voice the member hears is the same as it has always been; what stands behind it has simply been brought into clearer view.
+              {t("about.history.p3")}
             </p>
           </div>
         </div>
@@ -128,19 +145,19 @@ const About = () => {
           </div>
           <div className="md:order-1">
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              The architecture
+              {t("about.architecture.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              Aviation, inside U-CALM.
+              {t("about.architecture.headline")}
             </h2>
             <p className="mt-6 text-foreground/85 leading-relaxed">
-              U-CALM is the concierge and lifestyle-management house. U-Calm Aviation is a service line inside U-CALM, served to existing members. We do not market aviation to strangers; we extend a concierge relationship into the air.
+              {t("about.architecture.p1")}
             </p>
             <p className="mt-4 text-foreground/85 leading-relaxed">
-              The operation behind the voice is held to full aviation-house standards — verified operators, four working languages, twenty-four-hour coverage, named specialists, signature-destination expertise. The voice is concierge. The operation is aviation. The member never has to notice the seam, because there isn't one.
+              {t("about.architecture.p2")}
             </p>
             <p className="mt-4 text-foreground/85 leading-relaxed">
-              When a member sends a one-line note about a Friday flight to Cannes, the response that returns — within the hour, in the same voice, on the same thread — already contains the aircraft option, the cars at both ends, the FBO, the table at supper. The member has not been escalated to a second team; the second team has been quietly woven in.
+              {t("about.architecture.p3")}
             </p>
           </div>
         </div>
@@ -152,19 +169,19 @@ const About = () => {
           <BrandImage id={ABOUT_SCENES.team} className="w-full rounded-lg overflow-hidden" />
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              The team
+              {t("about.team.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              Named, four-language, on file.
+              {t("about.team.headline")}
             </h2>
             <p className="mt-6 text-foreground/85 leading-relaxed">
-              The aviation desk operates from Lugano, with named aviation specialists working in English, Italian, French, and German. Each member is held by a primary specialist; the desk runs in shifts so that twenty-four-hour reachability is genuine, not theoretical.
+              {t("about.team.p1")}
             </p>
             <p className="mt-4 text-foreground/85 leading-relaxed">
-              The destination-management desk operates alongside, with its own four-language coverage and named local fixers in every signature destination. The protection desk is held in partnership with a single carefully chosen operator, used across every U-CALM service line for consistency of standards and discretion.
+              {t("about.team.p2")}
             </p>
             <p className="mt-4 text-foreground/85 leading-relaxed">
-              The principle, on every desk, is the same: the member knows the person they are speaking to, the person they are speaking to knows the file, and the file holds everything that has ever been arranged. There is never a queue, never a stranger, never a request to "fill out the form".
+              {t("about.team.p3")}
             </p>
           </div>
         </div>
@@ -175,52 +192,25 @@ const About = () => {
         <div className="container py-20">
           <div className="max-w-2xl mb-12">
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              What we hold ourselves to
+              {t("about.principles.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              The principles, written quietly.
+              {t("about.principles.headline")}
             </h2>
             <p className="mt-6 text-foreground/85 leading-relaxed">
-              U-Calm Aviation operates against a small set of internal standards that the desk is invited, and expected, to hold against the member's interest at every turn. None of this has to surface to the member; all of it is true in the background.
+              {t("about.principles.intro")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Continuity",
-                body:
-                  "The aviation arrangement does not break the concierge relationship. The same voice, on the same thread, against the same file. Hand-offs are internal, not member-facing.",
-              },
-              {
-                title: "Restraint",
-                body:
-                  "We propose at most three options on most missions; we do not flood the member with comparison spreadsheets. Restraint is itself a service.",
-              },
-              {
-                title: "Independence",
-                body:
-                  "We do not own aircraft, and the desk does not benefit from steering members toward any particular operator. The aircraft chosen is the right aircraft for the day, not the most lucrative.",
-              },
-              {
-                title: "Privacy",
-                body:
-                  "Members are held under non-disclosure across the operator panel, and identifying information is filed only where aviation authority compliance requires.",
-              },
-              {
-                title: "Standards",
-                body:
-                  "Operators meet ARGUS Platinum, Wyvern Wingman, or IS-BAO Stage 2 equivalent; insurance levels sit at the upper bound of industry practice; crew currency is verified before each flight.",
-              },
-              {
-                title: "Honesty about lead time",
-                body:
-                  "We say what is genuinely possible, not what closes the conversation. A 24-hour ask into a slot-restricted European field gets the honest answer first; the workaround follows if there is one.",
-              },
-            ].map((p) => (
-              <article key={p.title} className="rounded-lg border border-border bg-card p-8 shadow-whisper">
-                <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary-deep">{p.title}</p>
-                <p className="mt-4 text-foreground/85 leading-relaxed">{p.body}</p>
+            {PRINCIPLE_KEYS.map((key) => (
+              <article key={key} className="rounded-lg border border-border bg-card p-8 shadow-whisper">
+                <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary-deep">
+                  {t(`about.principles.${key}.title`)}
+                </p>
+                <p className="mt-4 text-foreground/85 leading-relaxed">
+                  {t(`about.principles.${key}.body`)}
+                </p>
               </article>
             ))}
           </div>
@@ -231,52 +221,29 @@ const About = () => {
       <section className="bg-linen">
         <div className="container py-20 max-w-4xl">
           <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-            The handshake
+            {t("about.handshake.eyebrow")}
           </p>
           <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-            How a referral becomes a journey.
+            {t("about.handshake.headline")}
           </h2>
           <p className="mt-6 text-foreground/85 leading-relaxed">
-            New members come through introduction, not advertising. The path from a quiet word with the house to the first flight is short, considered, and almost entirely handled by the concierge — never by a sales process.
+            {t("about.handshake.intro")}
           </p>
 
           <ol className="mt-12 space-y-8">
-            <li className="grid grid-cols-[auto_1fr] gap-6 items-start">
-              <span className="font-serif text-3xl text-primary-deep leading-none">i.</span>
-              <div>
-                <h3 className="font-serif text-xl text-foreground">A conversation</h3>
-                <p className="mt-2 text-foreground/85 leading-relaxed">
-                  Most new members are introduced by an existing member or by an introducer the house already knows. The first conversation is short, in person or on a quiet call, and is about whether the relationship is a fit for both sides — never about closing a deal.
-                </p>
-              </div>
-            </li>
-            <li className="grid grid-cols-[auto_1fr] gap-6 items-start">
-              <span className="font-serif text-3xl text-primary-deep leading-none">ii.</span>
-              <div>
-                <h3 className="font-serif text-xl text-foreground">The file</h3>
-                <p className="mt-2 text-foreground/85 leading-relaxed">
-                  If we proceed, the member is set up on the U-CALM file: household, preferences, the people in the family, the patterns of the year. Aviation preferences sit in the same file — the cabin temperature, the catering, the seat by the window, the bag arrangements at the FBO.
-                </p>
-              </div>
-            </li>
-            <li className="grid grid-cols-[auto_1fr] gap-6 items-start">
-              <span className="font-serif text-3xl text-primary-deep leading-none">iii.</span>
-              <div>
-                <h3 className="font-serif text-xl text-foreground">The named specialist</h3>
-                <p className="mt-2 text-foreground/85 leading-relaxed">
-                  A primary aviation specialist is named to the member, working in the language the member prefers, on the desk that holds the rest of the member's arrangements. The member is given the specialist's direct line, alongside the always-available concierge desk.
-                </p>
-              </div>
-            </li>
-            <li className="grid grid-cols-[auto_1fr] gap-6 items-start">
-              <span className="font-serif text-3xl text-primary-deep leading-none">iv.</span>
-              <div>
-                <h3 className="font-serif text-xl text-foreground">The first journey</h3>
-                <p className="mt-2 text-foreground/85 leading-relaxed">
-                  The first journey is, deliberately, treated like the hundredth. The same operational arc, the same restraint, the same single statement at month-end. After it, the member usually goes quiet — which is the indicator the house is looking for that everything has gone as it ought.
-                </p>
-              </div>
-            </li>
+            {HANDSHAKE_STEPS.map(({ key, numeral }) => (
+              <li key={key} className="grid grid-cols-[auto_1fr] gap-6 items-start">
+                <span className="font-serif text-3xl text-primary-deep leading-none">{numeral}</span>
+                <div>
+                  <h3 className="font-serif text-xl text-foreground">
+                    {t(`about.handshake.${key}.title`)}
+                  </h3>
+                  <p className="mt-2 text-foreground/85 leading-relaxed">
+                    {t(`about.handshake.${key}.body`)}
+                  </p>
+                </div>
+              </li>
+            ))}
           </ol>
         </div>
       </section>
@@ -285,13 +252,13 @@ const About = () => {
       <section className="bg-background">
         <div className="container py-20 max-w-3xl mx-auto text-center">
           <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-            The one idea that governs everything
+            {t("about.soul.eyebrow")}
           </p>
           <h2 className="mt-4 font-serif text-3xl md:text-5xl font-light text-foreground italic">
-            Aviation, inside the concierge relationship. Unseparated.
+            {t("about.soul.headline")}
           </h2>
           <p className="mt-10 text-foreground/85 leading-relaxed max-w-2xl mx-auto">
-            If the work makes a member feel they have had to leave the concierge to get on a plane, we have failed. If the work makes a member feel the flight was arranged by the same person who arranged last Friday's dinner, we have succeeded.
+            {t("about.soul.body")}
           </p>
           <div className="mt-10">
             <Link
@@ -301,7 +268,7 @@ const About = () => {
                 "rounded-full bg-primary hover:bg-primary-deep text-primary-foreground",
               )}
             >
-              Speak with your concierge
+              {t("cta.speakSpecialist")}
             </Link>
           </div>
         </div>

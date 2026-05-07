@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import {
   ArrowRight,
   UserCheck,
@@ -7,6 +8,7 @@ import {
   ShieldCheck,
   Languages,
   Receipt,
+  type LucideIcon,
 } from "lucide-react";
 import { BrandImage } from "@/components/brand/BrandImage";
 import { HeroVideo } from "@/components/brand/HeroVideo";
@@ -33,65 +35,51 @@ import {
  * Per Brand Book v2.1 + 2026-05-03 Ascent benchmark direction.
  *
  * Sections (top to bottom):
- *   1. Hero — full-bleed photograph + double CTA + 4-number proof strip
+ *   1. Hero — full-bleed video + double CTA + 4-number proof strip
  *   2. The continuity proposition (editorial pair)
- *   3. Three Cities — Lugano · Milan · London (J-P decision: capture wealthy
- *      English-speakers in Milan via visible English-language coverage)
+ *   3. Three Cities — Lugano · Milan · London
  *   4. How a journey is held — 4-stage operational arc
  *   5. Six service cards — links to /services/:slug detail pages
- *   6. Why us — 6-icon grid (named, notice, airports, protection, languages, billing)
+ *   6. Why us — 6-icon grid
  *   7. Standards held — short narrative reinforcement
  *   8. Destinations preview — 4-card link to /destinations
  *   9. Quiet questions — restrained 6-item FAQ
  *  10. Closing soul + CTA
+ *
+ * After the i18n refactor (2026-05-07), all copy is sourced through
+ * `t()` calls into `home.*`. The structural arrays below hold only the
+ * Lucide icon references and i18n key suffixes; copy lives in
+ * `src/i18n/locales/<lng>.json`.
  */
 
-const WHY_ITEMS = [
-  {
-    Icon: UserCheck,
-    title: "A named specialist",
-    body:
-      "Every member is held by a primary aviation specialist who knows the file. The desk runs in shifts so the same names cover twenty-four hours a day, every day.",
-  },
-  {
-    Icon: Clock3,
-    title: "A four-hour notice window",
-    body:
-      "Enrolled members hold a four-hour notice window on eligible aircraft. For the day that did not go as planned, we are already moving while the call is still on the line.",
-  },
-  {
-    Icon: Globe2,
-    title: "Two-hundred-plus destinations",
-    body:
-      "Twelve regions, named local fixers in every signature destination, partner desks for the further-afield places. Aircraft can land almost anywhere; the desk holds the day after.",
-  },
-  {
-    Icon: ShieldCheck,
-    title: "Vetted operators only",
-    body:
-      "ARGUS Platinum, Wyvern Wingman, or IS-BAO Stage 2 equivalent. Annual review, re-confirmation before each flight, insurance at the upper bound of practice.",
-  },
-  {
-    Icon: Languages,
-    title: "Four working languages",
-    body:
-      "English, Italian, French, German held in-house — with Spanish and Arabic available through named partner desks. The English-speaking community is held by an English-speaking specialist.",
-  },
-  {
-    Icon: Receipt,
-    title: "One monthly statement",
-    body:
-      "Aviation appears on the same U-CALM monthly statement as the rest of the member's arrangements. Pass-through costs itemised. No second invoice. No promotional pricing. No surprises.",
-  },
+const WHY_ITEMS: ReadonlyArray<{ Icon: LucideIcon; key: string }> = [
+  { Icon: UserCheck, key: "namedSpecialist" },
+  { Icon: Clock3, key: "noticeWindow" },
+  { Icon: Globe2, key: "destinations" },
+  { Icon: ShieldCheck, key: "operators" },
+  { Icon: Languages, key: "languages" },
+  { Icon: Receipt, key: "billing" },
 ];
 
+const JOURNEY_STEPS = [
+  { key: "step1", number: "01" },
+  { key: "step2", number: "02" },
+  { key: "step3", number: "03" },
+  { key: "step4", number: "04" },
+] as const;
+
+const FAQ_KEYS = ["q1", "q2", "q3", "q4", "q5", "q6"] as const;
+
 const Home = () => {
+  const { t } = useTranslation();
+
   // Per-page SEO. The FAQPage block on Home is real schema-valid markup
   // that lets Google show the FAQ rich result for U-Calm Aviation queries.
+  // Schema.org items are pulled from the active locale so localized
+  // versions of the home page emit localized FAQs to crawlers.
   useDocumentMeta({
-    title: "U-Calm Aviation — Aviation, arranged. Lugano · Milan · London",
-    description:
-      "The aviation service line inside U-CALM, the concierge house. Bespoke charter, on-demand, membership, group, destination management, and executive protection — held in the same English voice from Lugano, Milan, and London.",
+    title: t("home.meta.title"),
+    description: t("home.meta.description"),
     canonical: canonical("/"),
     jsonLd: [
       ORGANIZATION_JSONLD,
@@ -107,93 +95,41 @@ const Home = () => {
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "How do I become a member?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text:
-                "U-Calm Aviation is the aviation service line inside U-CALM. New members come through introduction — typically from an existing member, an introducer the house knows, or a quiet conversation directly with us. We do not run a sign-up form, and we do not advertise.",
-            },
+        mainEntity: FAQ_KEYS.map((key) => ({
+          "@type": "Question",
+          name: t(`home.faq.${key}.q`),
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: t(`home.faq.${key}.a`),
           },
-          {
-            "@type": "Question",
-            name: "What lead time do I need?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text:
-                "Twenty-four to seventy-two hours is preferred for most charter flights, particularly into slot-restricted European fields. Enrolled members hold a four-hour notice window on eligible aircraft for unforeseen days.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How is this different from a charter broker?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text:
-                "A broker sells the flight. We arrange it inside a relationship. The flight, the cars at both ends, the household at the far end, the table at supper — all coordinated by the same concierge against the same file.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Are there membership tiers?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text:
-                "No. There is one membership in U-CALM, and aviation is included in it. We do not publish a tiered catalogue, because the work is bespoke to the member.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do you do empty legs?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text:
-                "On request, where the route and aircraft genuinely fit the mission. We do not push them as a category — empty-leg pricing carries scheduling risk that does not always sit well with concierge-grade arrangements.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How is billing done?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text:
-                "Aviation appears on the same monthly U-CALM statement as the rest of the member's arrangements. Pass-through operator costs are itemised; coordination is absorbed into membership.",
-            },
-          },
-        ],
+        })),
       },
     ],
   });
 
   return (
     <>
-      {/* 1. Hero — autoplay video by default, static image fallback for
-            reduced-motion users + slow connections + load failures. The
-            video file lives at /public/brand/hero/cabin-window-cumulus.mp4
-            (Veo-generated, ~10s seamless loop of cumulus clouds drifting
-            past an oval cabin window at cruise altitude). */}
+      {/* 1. Hero */}
       <section className="relative">
         <div className="absolute inset-0 overflow-hidden">
           <HeroVideo
             videoSrc="/brand/hero/cabin-window-cumulus.mp4"
             posterImageId={PAGE_HEROES.home}
             className="w-full h-full object-cover"
-            alt="Cumulus clouds drifting past an oval cabin window at cruise altitude"
+            alt={t("home.hero.videoAlt")}
           />
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-overlay" />
         </div>
 
         <div className="relative container min-h-[88vh] flex flex-col justify-end py-24 animate-fade-soft">
           <p className="text-xs font-bold uppercase tracking-[0.15em] text-champagne">
-            Lugano · Milan · London
+            {t("home.hero.eyebrow")}
           </p>
           <h1 className="mt-4 font-serif text-4xl md:text-6xl lg:text-7xl font-light text-background max-w-3xl">
-            Aviation, arranged.
+            {t("home.hero.headline")}
           </h1>
           <p className="mt-6 text-lg md:text-xl text-background/90 max-w-2xl">
-            The aviation service line inside U-CALM. Your existing concierge arranges the flight, the ground, and the itinerary. One relationship. One statement.
+            {t("home.hero.body")}
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -204,7 +140,7 @@ const Home = () => {
                 "rounded-full bg-primary hover:bg-primary-deep text-primary-foreground shadow-lg",
               )}
             >
-              Speak with your concierge
+              {t("cta.speakSpecialist")}
             </Link>
             <Link
               to="/services"
@@ -213,210 +149,129 @@ const Home = () => {
                 "rounded-full bg-champagne hover:bg-champagne/90 text-foreground shadow-lg",
               )}
             >
-              Explore the arrangement
+              {t("cta.exploreArrangement")}
             </Link>
           </div>
 
-          {/* Hero proof-point strip — concrete numbers, ported from Ascent */}
+          {/* Hero proof-point strip */}
           <dl className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-3xl border-t border-background/15 pt-8">
-            <div>
-              <dt className="text-[0.7rem] tracking-[0.16em] uppercase text-background/65 mb-1">
-                Cities
-              </dt>
-              <dd className="text-lg md:text-xl font-serif text-background">
-                Lugano · Milan · London
-              </dd>
-            </div>
-            <div>
-              <dt className="text-[0.7rem] tracking-[0.16em] uppercase text-background/65 mb-1">
-                Notice window
-              </dt>
-              <dd className="text-lg md:text-xl font-serif text-background">
-                4 hours
-              </dd>
-            </div>
-            <div>
-              <dt className="text-[0.7rem] tracking-[0.16em] uppercase text-background/65 mb-1">
-                Destinations
-              </dt>
-              <dd className="text-lg md:text-xl font-serif text-background">
-                200+ across 12 regions
-              </dd>
-            </div>
-            <div>
-              <dt className="text-[0.7rem] tracking-[0.16em] uppercase text-background/65 mb-1">
-                Concierge desk
-              </dt>
-              <dd className="text-lg md:text-xl font-serif text-background">
-                24 / 7 · 365
-              </dd>
-            </div>
+            {(["cities", "notice", "destinations", "desk"] as const).map((key) => (
+              <div key={key}>
+                <dt className="text-[0.7rem] tracking-[0.16em] uppercase text-background/65 mb-1">
+                  {t(`home.proof.${key}.label`)}
+                </dt>
+                <dd className="text-lg md:text-xl font-serif text-background">
+                  {t(`home.proof.${key}.value`)}
+                </dd>
+              </div>
+            ))}
           </dl>
         </div>
       </section>
 
-      {/* 2. The continuity proposition — two images stacked on the left to mirror
-            the transition the copy describes (residence → cabin, same register). */}
+      {/* 2. The continuity proposition */}
       <section className="bg-linen">
         <div className="container py-24 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <BrandImage
               id={HOME_EDITORIAL.one}
               className="w-full rounded-lg overflow-hidden"
-              alt="Breakfast tray at the sash window in a member's residence — the week being held."
+              alt={t("home.continuity.imageAlt1")}
             />
             <BrandImage
               id={HOME_EDITORIAL.two}
               className="w-full rounded-lg overflow-hidden"
-              alt="Carafe on the walnut cabin table at cruise altitude — the same register, in the air."
+              alt={t("home.continuity.imageAlt2")}
             />
           </div>
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              Inside the relationship
+              {t("home.continuity.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              The concierge who arranges your week, now arranges the aircraft.
+              {t("home.continuity.headline")}
             </h2>
             <p className="mt-6 text-foreground/85 leading-relaxed">
-              U-Calm Aviation is how U-CALM members fly. It is not a separate brand to join, a new app to learn, or a second inbox to manage. The concierge who arranges your week arranges the aircraft. The preferences held on file are the preferences the cabin receives. Ground is coordinated on the same itinerary. Billing appears on the same statement. Aviation, arranged, inside the relationship the member already has.
+              {t("home.continuity.p1")}
             </p>
             <p className="mt-4 text-foreground/85 leading-relaxed">
-              The operational house behind the voice is held to full aviation standards — vetted operator panel, four working languages, twenty-four-hour coverage, named specialists who know the member by file. None of that has to surface to the member. It is, in the older sense of the word, kept.
+              {t("home.continuity.p2")}
             </p>
           </div>
         </div>
       </section>
 
-      {/* 3. Three Cities — Lugano / Milan / London */}
+      {/* 3. Three Cities */}
       <section className="bg-background">
         <div className="container py-24">
           <div className="max-w-2xl mb-16">
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              Where we are
+              {t("home.threeCities.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              Lugano, Milan, and London — held in the same English voice.
+              {t("home.threeCities.headline")}
             </h2>
             <p className="mt-6 text-foreground/85 leading-relaxed">
-              The desk is based in Lugano, with a strong reach into Milan and London. The same English-speaking specialists who hold a London arrangement hold a Milan arrangement; the file does not change shape across borders.
+              {t("home.threeCities.intro")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">
-            {/* Lugano */}
-            <div>
-              <div className="relative overflow-hidden rounded-lg aspect-[4/5] mb-6 shadow-whisper">
-                <BrandImage id={THREE_CITIES.lugano} className="w-full h-full object-cover" />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(28,43,58,0) 60%, rgba(28,43,58,0.55) 100%)",
-                  }}
-                  aria-hidden="true"
-                />
+            {(["lugano", "milan", "london"] as const).map((city) => (
+              <div key={city}>
+                <div className="relative overflow-hidden rounded-lg aspect-[4/5] mb-6 shadow-whisper">
+                  <BrandImage id={THREE_CITIES[city]} className="w-full h-full object-cover" />
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        "linear-gradient(180deg, rgba(28,43,58,0) 60%, rgba(28,43,58,0.55) 100%)",
+                    }}
+                    aria-hidden="true"
+                  />
+                </div>
+                <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary-deep">
+                  {t(`home.threeCities.${city}.country`)}
+                </p>
+                <h3 className="mt-2 font-serif text-2xl md:text-3xl text-foreground">
+                  {t(`home.threeCities.${city}.name`)}
+                </h3>
+                <p className="mt-4 text-foreground/85 leading-relaxed">
+                  {t(`home.threeCities.${city}.body`)}
+                </p>
               </div>
-              <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary-deep">
-                Switzerland
-              </p>
-              <h3 className="mt-2 font-serif text-2xl md:text-3xl text-foreground">Lugano</h3>
-              <p className="mt-4 text-foreground/85 leading-relaxed">
-                The desk's base. Lugano-Agno (LSZA) is the only Swiss city with a private FBO inside its own valley, with direct light- and mid-jet access from London, Paris, Frankfurt, and Madrid. Helicopter into the lake-side residences of Castagnola and Morcote in the same hour. Four-language ground in thirty minutes.
-              </p>
-            </div>
-
-            {/* Milan */}
-            <div>
-              <div className="relative overflow-hidden rounded-lg aspect-[4/5] mb-6 shadow-whisper">
-                <BrandImage id={THREE_CITIES.milan} className="w-full h-full object-cover" />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(28,43,58,0) 60%, rgba(28,43,58,0.55) 100%)",
-                  }}
-                  aria-hidden="true"
-                />
-              </div>
-              <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary-deep">
-                Italy
-              </p>
-              <h3 className="mt-2 font-serif text-2xl md:text-3xl text-foreground">Milan</h3>
-              <p className="mt-4 text-foreground/85 leading-relaxed">
-                An English-speaking concierge desk for an English-speaking community that has chosen to make Italy home. Linate (LIML) for short-haul, Malpensa (LIMC) for transcontinental. Direct calls to Milan are taken in English by a named specialist; ground, restaurants, and household held with the same continuity members expect of London.
-              </p>
-            </div>
-
-            {/* London */}
-            <div>
-              <div className="relative overflow-hidden rounded-lg aspect-[4/5] mb-6 shadow-whisper">
-                <BrandImage id={THREE_CITIES.london} className="w-full h-full object-cover" />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(28,43,58,0) 60%, rgba(28,43,58,0.55) 100%)",
-                  }}
-                  aria-hidden="true"
-                />
-              </div>
-              <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary-deep">
-                United Kingdom
-              </p>
-              <h3 className="mt-2 font-serif text-2xl md:text-3xl text-foreground">London</h3>
-              <p className="mt-4 text-foreground/85 leading-relaxed">
-                Held through the U-CALM concierge house's broader reach. Farnborough and London City handle most member arrivals; Biggin Hill for short-notice; Luton when cabin scale or helicopter shuttle to Battersea requires it. Mayfair concierge integration via the parent house.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 4. How a journey is held — operational arc */}
+      {/* 4. How a journey is held */}
       <section className="bg-linen">
         <div className="container py-24">
           <div className="max-w-2xl mb-16">
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              How a journey is held
+              {t("home.journey.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              From the first note to wheels-up, four quiet stages.
+              {t("home.journey.headline")}
             </h2>
             <p className="mt-6 text-foreground/85 leading-relaxed">
-              Most members never see the operational arc; that is the point. Below is what is happening, on the member's behalf, between the first note to the concierge and the door of the cabin closing.
+              {t("home.journey.intro")}
             </p>
           </div>
 
           <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <li className="rounded-lg border border-border bg-card p-8 shadow-whisper">
-              <p className="font-serif text-3xl text-primary-deep">01</p>
-              <h3 className="mt-3 font-serif text-xl text-foreground">The note</h3>
-              <p className="mt-3 text-sm text-foreground/80 leading-relaxed">
-                A short message to the concierge — a date, a city pair, who is travelling. No form, no portal, no requirement to specify aircraft type. The mission is described; the rest is inferred.
-              </p>
-            </li>
-            <li className="rounded-lg border border-border bg-card p-8 shadow-whisper">
-              <p className="font-serif text-3xl text-primary-deep">02</p>
-              <h3 className="mt-3 font-serif text-xl text-foreground">The match</h3>
-              <p className="mt-3 text-sm text-foreground/80 leading-relaxed">
-                The aviation specialist sources the aircraft from the vetted operator panel — light, mid, super-mid, heavy, or ultra-long-range — matched to the route, the party, and the weight of the day. Three options at most are returned to the concierge, in plain language.
-              </p>
-            </li>
-            <li className="rounded-lg border border-border bg-card p-8 shadow-whisper">
-              <p className="font-serif text-3xl text-primary-deep">03</p>
-              <h3 className="mt-3 font-serif text-xl text-foreground">The hold</h3>
-              <p className="mt-3 text-sm text-foreground/80 leading-relaxed">
-                One option is selected. The aircraft is held. The slot is filed. Crew are briefed against the preferences already on the member's file. Cars are placed at both ends. The member receives a single, considered confirmation — never a thread.
-              </p>
-            </li>
-            <li className="rounded-lg border border-border bg-card p-8 shadow-whisper">
-              <p className="font-serif text-3xl text-primary-deep">04</p>
-              <h3 className="mt-3 font-serif text-xl text-foreground">The arrival</h3>
-              <p className="mt-3 text-sm text-foreground/80 leading-relaxed">
-                The driver is at wheels-down, not at published ETA. The household, restaurant, and onward arrangements are already in motion. The flight, the ground, and the day arrive together. The member is met by their day, not by a logistics queue.
-              </p>
-            </li>
+            {JOURNEY_STEPS.map(({ key, number }) => (
+              <li key={key} className="rounded-lg border border-border bg-card p-8 shadow-whisper">
+                <p className="font-serif text-3xl text-primary-deep">{number}</p>
+                <h3 className="mt-3 font-serif text-xl text-foreground">
+                  {t(`home.journey.${key}.title`)}
+                </h3>
+                <p className="mt-3 text-sm text-foreground/80 leading-relaxed">
+                  {t(`home.journey.${key}.body`)}
+                </p>
+              </li>
+            ))}
           </ol>
         </div>
       </section>
@@ -426,13 +281,13 @@ const Home = () => {
         <div className="container py-24">
           <div className="max-w-2xl mb-12">
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              The catalogue
+              {t("home.servicesIntro.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              Six channels, drawn from one relationship.
+              {t("home.servicesIntro.headline")}
             </h2>
             <p className="mt-6 text-foreground/85 leading-relaxed">
-              Aviation in U-CALM is not a single product. It splits into the four channels members ask for most — bespoke charter, on-demand response, membership-included flying, and group lift — and is held alongside the destination and protection desks that complete the day.
+              {t("home.servicesIntro.intro")}
             </p>
           </div>
 
@@ -450,15 +305,17 @@ const Home = () => {
                       <Icon className="h-5 w-5 text-primary-deep" strokeWidth={1.5} />
                     </div>
                     <p className="text-xs font-bold uppercase tracking-[0.15em] text-primary-deep">
-                      {service.title}
+                      {t(`services.catalogue.${service.i18nKey}.title`)}
                     </p>
                   </div>
-                  <h3 className="font-serif text-xl text-foreground leading-snug">{service.subtitle}</h3>
+                  <h3 className="font-serif text-xl text-foreground leading-snug">
+                    {t(`services.catalogue.${service.i18nKey}.subtitle`)}
+                  </h3>
                   <p className="mt-3 text-sm text-foreground/75 leading-relaxed flex-grow">
-                    {service.cardDescription}
+                    {t(`services.catalogue.${service.i18nKey}.cardDescription`)}
                   </p>
                   <p className="mt-5 inline-flex items-center text-sm text-primary-deep font-medium group-hover:gap-3 gap-2 transition-all">
-                    Read more
+                    {t("cta.readMore")}
                     <ArrowRight className="h-4 w-4" />
                   </p>
                 </Link>
@@ -474,40 +331,44 @@ const Home = () => {
                 "rounded-full bg-primary hover:bg-primary-deep text-primary-foreground",
               )}
             >
-              See the catalogue
+              {t("cta.seeCatalogue")}
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 6. Why us — icon grid */}
+      {/* 6. Why us */}
       <section className="bg-linen">
         <div className="container py-24">
           <div className="max-w-2xl mb-16">
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              Why us
+              {t("home.whyUs.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              Six things we hold for the member, every day.
+              {t("home.whyUs.headline")}
             </h2>
             <p className="mt-6 text-foreground/85 leading-relaxed">
-              Not slogans, not promises. Operational standards the desk is invited to be measured against at every booking.
+              {t("home.whyUs.intro")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
-            {WHY_ITEMS.map(({ Icon, title, body }) => (
-              <div key={title} className="flex flex-col items-start">
+            {WHY_ITEMS.map(({ Icon, key }) => (
+              <div key={key} className="flex flex-col items-start">
                 <Icon className="h-7 w-7 text-primary-deep mb-5" strokeWidth={1.5} aria-hidden="true" />
-                <h3 className="font-serif text-xl md:text-2xl text-foreground mb-3">{title}</h3>
-                <p className="text-sm md:text-base text-foreground/80 leading-relaxed">{body}</p>
+                <h3 className="font-serif text-xl md:text-2xl text-foreground mb-3">
+                  {t(`home.whyUs.${key}.title`)}
+                </h3>
+                <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
+                  {t(`home.whyUs.${key}.body`)}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 7. Standards held — narrative reinforcement */}
+      {/* 7. Standards held */}
       <section className="relative">
         <div className="absolute inset-0 overflow-hidden">
           <BrandImage id={SERVICES_SCENES.aviation} className="w-full h-full object-cover" />
@@ -522,43 +383,41 @@ const Home = () => {
         </div>
         <div className="relative container py-24 max-w-3xl">
           <p className="text-xs font-bold uppercase tracking-[0.15em] text-champagne">
-            Standards held
+            {t("home.standards.eyebrow")}
           </p>
           <h2 className="mt-4 font-serif text-3xl md:text-4xl font-light text-background">
-            The operational house behind the voice.
+            {t("home.standards.headline")}
           </h2>
           <p className="mt-8 text-background/85 leading-relaxed text-lg">
-            U-Calm Aviation does not source the cheapest aircraft on the market; it sources the right aircraft, from operators we have personally inspected and continue to inspect, at prices that reflect the standards held. Operator panel held to ARGUS Platinum, Wyvern Wingman, or IS-BAO Stage 2 equivalent. Insurance levels at the upper bound of industry practice. Crew currency re-confirmed before each flight. Privacy held under non-disclosure across the panel. Member identity filed only where aviation-authority compliance requires it.
+            {t("home.standards.body")}
           </p>
         </div>
       </section>
 
-      {/* 8. Destinations preview — 4 cards linking to /destinations */}
+      {/* 8. Destinations preview */}
       <section className="bg-background">
         <div className="container py-24">
           <div className="max-w-2xl mb-14">
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              Where we operate
+              {t("home.destinationsPreview.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              Held in deepest detail.
+              {t("home.destinationsPreview.headline")}
             </h2>
             <p className="mt-6 text-foreground/85 leading-relaxed">
-              The destination desk holds twelve regions and two-hundred-plus places — but four are held in the highest detail. Below is a glimpse; the full regional view sits one click away.
+              {t("home.destinationsPreview.intro")}
             </p>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              // Place-register cards (residence/coast/hall/lake), distinct from
-              // the aviation-coded "first light" register used in §3 Three Cities.
-              { name: "Lugano", country: "Switzerland", id: 25 },     // Villa terrace, 06:45 — Raf must-keep, residence on Lugano lake.
-              { name: "St. Moritz", country: "Switzerland", id: 37 }, // §4 Gstaad window, snow — Michael "Lovely". Alpine winter through a window. Replaces #43 (figure on impossibly cracked ice; Michael flagged 2026-05-05).
-              { name: "London", country: "United Kingdom", id: 23 },  // §2 Garden window, cloud-morning — London townhouse register, no figures. (Replaced #11 Knightsbridge hall — background figure issue.)
-              { name: "Monaco", country: "Principality", id: 49 },    // Monte Carlo balcony — direct Monaco-place. Replaces #8 (cabin window, not Monaco).
+              { key: "lugano", id: 25 },
+              { key: "stMoritz", id: 37 },
+              { key: "london", id: 23 },
+              { key: "monaco", id: 49 },
             ].map((d) => (
               <Link
-                key={d.name}
+                key={d.key}
                 to="/destinations"
                 className="group relative overflow-hidden rounded-lg aspect-[4/5] block shadow-whisper hover:shadow-lg transition-shadow"
               >
@@ -576,9 +435,11 @@ const Home = () => {
                 />
                 <div className="absolute bottom-5 left-5 right-5">
                   <p className="text-[0.7rem] tracking-[0.16em] uppercase text-background/75 mb-1">
-                    {d.country}
+                    {t(`home.destinationsPreview.${d.key}.country`)}
                   </p>
-                  <h3 className="font-serif text-2xl md:text-3xl text-background">{d.name}</h3>
+                  <h3 className="font-serif text-2xl md:text-3xl text-background">
+                    {t(`home.destinationsPreview.${d.key}.name`)}
+                  </h3>
                 </div>
               </Link>
             ))}
@@ -589,65 +450,39 @@ const Home = () => {
               to="/destinations"
               className="inline-flex items-center gap-2 text-primary-deep font-medium hover:gap-3 transition-all"
             >
-              See all destinations
+              {t("cta.seeAllDestinations")}
               <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 9. Quiet questions — restrained FAQ */}
+      {/* 9. Quiet questions */}
       <section className="bg-linen">
         <div className="container py-24 max-w-4xl">
           <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-            Quiet questions
+            {t("home.faq.eyebrow")}
           </p>
           <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-            What members tend to ask, before they have asked.
+            {t("home.faq.headline")}
           </h2>
 
           <div className="mt-12 divide-y divide-border">
-            <article className="py-8">
-              <h3 className="font-serif text-xl text-foreground">How do I become a member?</h3>
-              <p className="mt-3 text-foreground/85 leading-relaxed">
-                U-Calm Aviation is the aviation service line inside U-CALM. New members come through introduction — typically from an existing member, an introducer the house knows, or a quiet conversation directly with us. We do not run a sign-up form, and we do not advertise.
-              </p>
-            </article>
-            <article className="py-8">
-              <h3 className="font-serif text-xl text-foreground">What lead time do I need?</h3>
-              <p className="mt-3 text-foreground/85 leading-relaxed">
-                Twenty-four to seventy-two hours is preferred for most charter flights, particularly into slot-restricted European fields. Enrolled members hold a four-hour notice window on eligible aircraft for unforeseen days. Group and ultra-long-range arrangements are best held earlier — a week or more if the date can sit.
-              </p>
-            </article>
-            <article className="py-8">
-              <h3 className="font-serif text-xl text-foreground">How is this different from a charter broker?</h3>
-              <p className="mt-3 text-foreground/85 leading-relaxed">
-                A broker sells the flight. We arrange it inside a relationship. The flight, the cars at both ends, the household at the far end, the table at supper — all are coordinated by the same concierge against the same file. Aviation is one channel of a continuous arrangement, not a separate transaction with its own login.
-              </p>
-            </article>
-            <article className="py-8">
-              <h3 className="font-serif text-xl text-foreground">Are there membership tiers?</h3>
-              <p className="mt-3 text-foreground/85 leading-relaxed">
-                No. There is one membership in U-CALM, and aviation is included in it. We do not publish a tiered catalogue, because the work is bespoke to the member; price-list aviation tends to encourage the wrong kind of conversation.
-              </p>
-            </article>
-            <article className="py-8">
-              <h3 className="font-serif text-xl text-foreground">Do you do empty legs?</h3>
-              <p className="mt-3 text-foreground/85 leading-relaxed">
-                On request, where the route and aircraft genuinely fit the mission. We do not push them as a category — empty-leg pricing carries scheduling risk that does not always sit well with concierge-grade arrangements. If the right one is on the board for the right day, we will say so.
-              </p>
-            </article>
-            <article className="py-8">
-              <h3 className="font-serif text-xl text-foreground">How is billing done?</h3>
-              <p className="mt-3 text-foreground/85 leading-relaxed">
-                Aviation appears on the same monthly U-CALM statement as the rest of the member's arrangements. Pass-through operator costs are itemised; coordination is absorbed into membership. There are no positioning-leg surprises, no opaque mark-ups, and no second invoice from a separate brand.
-              </p>
-            </article>
+            {FAQ_KEYS.map((key) => (
+              <article key={key} className="py-8">
+                <h3 className="font-serif text-xl text-foreground">
+                  {t(`home.faq.${key}.q`)}
+                </h3>
+                <p className="mt-3 text-foreground/85 leading-relaxed">
+                  {t(`home.faq.${key}.a`)}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. Closing — the soul */}
+      {/* 10. Closing */}
       <section className="bg-background">
         <div className="container py-24 grid md:grid-cols-2 gap-12 items-center">
           <div className="md:order-2">
@@ -655,13 +490,13 @@ const Home = () => {
           </div>
           <div className="md:order-1">
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              The arrangement
+              {t("home.closing.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              No new brand. No new broker. No new inbox.
+              {t("home.closing.headline")}
             </h2>
             <p className="mt-6 text-foreground/85 leading-relaxed">
-              The same voice, from the table to the cabin door. The flight, the driver, the housekeeper, the dinner reservation — all arranged by the same concierge, on the same itinerary. The member never notices the seam, because there isn't one.
+              {t("home.closing.body")}
             </p>
             <div className="mt-8">
               <Link
@@ -671,7 +506,7 @@ const Home = () => {
                   "rounded-full bg-primary hover:bg-primary-deep text-primary-foreground",
                 )}
               >
-                Open a conversation
+                {t("home.closing.cta")}
               </Link>
             </div>
           </div>

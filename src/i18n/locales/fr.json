@@ -1,252 +1,854 @@
 {
   "brand": {
-    "name": "U-CALM Concierge",
-    "shortName": "U-CALM",
-    "expansion": "Ultimate Concierge and Lifestyle Management",
-    "strapline": "Considérez que c'est fait."
+    "name": "U-Calm Aviation",
+    "shortName": "U-Calm Aviation",
+    "expansion": "Aviation, arranged.",
+    "strapline": "Aviation, arranged.",
+    "description": "La ligne de service aviation au sein d'U-CALM, la maison de concierge. Lugano · Milan · Londres."
   },
   "nav": {
     "home": "Accueil",
     "services": "Services",
-    "whoWeServe": "À qui nous répondons",
-    "coolCalm": "Cool CALM",
-    "about": "À propos",
+    "destinations": "Destinations",
+    "about": "La maison",
     "contact": "Contact"
   },
   "cta": {
-    "speakSpecialist": "Parler à un spécialiste",
-    "exploreServices": "Découvrir nos services",
-    "getInTouch": "Nous contacter",
-    "readMore": "En lire plus",
-    "readOurStory": "Lire notre histoire",
-    "openConversation": "Ouvrir une conversation",
-    "planWeekend": "Préparer un week-end",
-    "briefOnArrival": "Nous confier une arrivée",
-    "openCoolCalm": "Ouvrir une conversation Cool CALM",
-    "enterCoolCalm": "Entrer dans Cool CALM",
-    "readCoolCalm": "En savoir plus sur Cool CALM",
-    "backToHome": "Retour à l'accueil"
+    "speakSpecialist": "Parlez à votre concierge",
+    "exploreArrangement": "Découvrir le service",
+    "openConversation": "Ouvrons une conversation",
+    "seeAllServices": "Voir tous les services",
+    "seeCatalogue": "Voir le catalogue",
+    "seeAllDestinations": "Voir toutes les destinations",
+    "whereWeOperate": "Où nous opérons",
+    "readMore": "Lire la suite",
+    "returnHome": "Retour à l'accueil",
+    "backToServices": "Retour aux services"
+  },
+  "common": {
+    "lastUpdated": "Dernière mise à jour"
+  },
+  "footer": {
+    "tagline": "La même voix, de la table à la porte de la cabine.",
+    "description": "Aviation, services au sol et protection — tenus à l'intérieur de la relation concierge d'U-CALM. Un spécialiste nommé, un dossier, un relevé.",
+    "speakWithConcierge": "Parlez à votre concierge",
+    "logoAlt": "U-Calm Aviation",
+    "homeAriaLabel": "U-Calm Aviation accueil",
+    "blurb": "La ligne de service aviation au sein d'U-CALM, la maison de concierge. Lugano · Milan · Londres.",
+    "services": "Services",
+    "explore": "Découvrir",
+    "practical": "Pratique",
+    "languages": "Langues",
+    "languagesList": "English · Italiano · Français · Deutsch",
+    "destinationsLabel": "Destinations",
+    "aboutLabel": "La maison",
+    "contactLabel": "Contacter le bureau",
+    "inquiries": "Demandes",
+    "hours": "Horaires",
+    "hoursValue": "24 / 7 · 365",
+    "desk": "Bureau",
+    "deskValue": "Lugano, Suisse",
+    "legal": "Mentions légales",
+    "privacyNotice": "Politique de confidentialité",
+    "copyright": "© {{year}} {{name}}. Une marque de la maison U-CALM."
   },
   "home": {
-    "eyebrow": "Une maison de conciergerie discrète",
-    "headline": "L'esprit rendu à sa tranquillité.",
-    "subheadline": "Un interlocuteur désigné, un plan mené avec soin, rien qui s'impose. Considérez que c'est fait.",
+    "meta": {
+      "title": "U-Calm Aviation — Aviation, arranged. Lugano · Milan · Londres",
+      "description": "La ligne de service aviation au sein d'U-CALM, la maison de concierge. Charter sur-mesure, à la demande, adhésion, groupe, gestion des destinations et protection rapprochée — tenus dans la même voix anglaise depuis Lugano, Milan et Londres."
+    },
+    "hero": {
+      "eyebrow": "Lugano · Milan · Londres",
+      "headline": "Aviation, arranged.",
+      "body": "La ligne de service aviation au sein d'U-CALM. Votre concierge existant organise le vol, le sol et l'itinéraire. Une seule relation. Un seul relevé.",
+      "videoAlt": "Cumulus défilant derrière un hublot ovale en altitude de croisière"
+    },
     "proof": {
-      "specialist": { "label": "Interlocuteur", "value": "Un seul, nommé" },
-      "notice": { "label": "Délai de prévenance", "value": "Heures, pas jours" },
-      "hours": { "label": "Disponible", "value": "Jour et nuit" },
-      "discretion": { "label": "Discrétion", "value": "Acquise" }
+      "cities": { "label": "Villes", "value": "Lugano · Milan · Londres" },
+      "notice": { "label": "Fenêtre de préavis", "value": "4 heures" },
+      "destinations": { "label": "Destinations", "value": "Plus de 200 dans 12 régions" },
+      "desk": { "label": "Bureau du concierge", "value": "24 / 7 · 365" }
     },
-    "signature": {
-      "eyebrow": "Comment cela finit, la plupart des matins",
-      "headline": "Un mot crème sur le noyer. Rien de signé, rien de promis — simplement fait.",
-      "body": "La partie de la semaine que vous redoutiez est close avant le petit-déjeuner. Une seule ligne manuscrite sur la console. Pas d'e-mail, pas de formulaire de suivi. Voilà à quoi ressemble vraiment « Considérez que c'est fait. »"
+    "continuity": {
+      "eyebrow": "Au sein de la relation",
+      "headline": "Le concierge qui organise votre semaine organise désormais l'avion.",
+      "p1": "U-Calm Aviation est la façon dont les membres d'U-CALM volent. Ce n'est pas une marque distincte à laquelle adhérer, ni une nouvelle application à apprendre, ni une seconde boîte de réception à gérer. Le concierge qui organise votre semaine organise l'avion. Les préférences inscrites au dossier sont les préférences que la cabine reçoit. Le sol est coordonné sur le même itinéraire. La facturation paraît sur le même relevé. Aviation, arranged, à l'intérieur de la relation que le membre possède déjà.",
+      "p2": "La maison opérationnelle derrière la voix est tenue selon les normes pleines de l'aviation — panel d'opérateurs vérifiés, quatre langues de travail, couverture vingt-quatre heures, spécialistes nommés qui connaissent le membre par dossier. Rien de tout cela ne doit remonter au membre. C'est, au sens ancien du mot, gardé.",
+      "imageAlt1": "Plateau de petit-déjeuner à la fenêtre à guillotine dans la résidence d'un membre — la semaine, tenue.",
+      "imageAlt2": "Carafe sur la table en noyer de la cabine en altitude de croisière — le même registre, en vol."
     },
-    "whoWeServe": {
-      "eyebrow": "À qui nous répondons",
-      "headline": "Quatre façons d'avoir une journée tranquille.",
-      "intro": "U-CALM est une maison au service des gens — quatre vies reconnaissables, une habitude : bien tenir chacune, en silence."
+    "threeCities": {
+      "eyebrow": "Où nous sommes",
+      "headline": "Lugano, Milan et Londres — tenues dans la même voix anglaise.",
+      "intro": "Le bureau a son siège à Lugano, avec une présence forte à Milan et à Londres. Les mêmes spécialistes anglophones qui tiennent un arrangement londonien tiennent un arrangement milanais ; le dossier ne change pas de forme à travers les frontières.",
+      "lugano": {
+        "country": "Suisse",
+        "name": "Lugano",
+        "body": "Le siège du bureau. Lugano-Agno (LSZA) est la seule ville suisse dotée d'un FBO privé dans sa propre vallée, avec un accès direct depuis Londres, Paris, Francfort et Madrid en jets légers et moyens. Hélicoptère vers les résidences au bord du lac de Castagnola et Morcote dans la même heure. Sol en quatre langues en trente minutes."
+      },
+      "milan": {
+        "country": "Italie",
+        "name": "Milan",
+        "body": "Un bureau concierge anglophone pour une communauté anglophone qui a choisi d'établir sa demeure en Italie. Linate (LIML) pour les vols courts, Malpensa (LIMC) pour le transcontinental. Les appels directs vers Milan sont pris en anglais par un spécialiste nommé ; sol, restaurants et maison tenus avec la même continuité que les membres attendent de Londres."
+      },
+      "london": {
+        "country": "Royaume-Uni",
+        "name": "Londres",
+        "body": "Tenu à travers la portée plus large de la maison concierge U-CALM. Farnborough et London City accueillent la plupart des arrivées des membres ; Biggin Hill pour le préavis court ; Luton lorsque la taille de la cabine ou la navette en hélicoptère vers Battersea l'exigent. Intégration concierge à Mayfair via la maison-mère."
+      }
     },
-    "midsummer": {
-      "eyebrow": "19 h 30, fin juillet",
-      "headline": "La table dressée, les invités à la balustrade.",
-      "body": "Une terrasse tessinoise dans la chaleur du soir. Deux chaises tirées, une carafe perlée de condensation fraîche, le lac derrière. Vous êtes arrivés il y a vingt minutes, et tout était déjà prêt."
+    "journey": {
+      "eyebrow": "Comment un voyage se tient",
+      "headline": "De la première note au décollage — quatre étapes discrètes.",
+      "intro": "La plupart des membres ne voient jamais l'arc opérationnel ; c'est précisément le but. Voici ce qui se déroule, pour le compte du membre, entre la première note au concierge et la fermeture de la porte de la cabine.",
+      "step1": {
+        "title": "La note",
+        "body": "Un bref message au concierge — une date, un couple de villes, qui voyage. Pas de formulaire, pas de portail, pas d'obligation de spécifier le type d'aéronef. La mission est décrite ; le reste se déduit."
+      },
+      "step2": {
+        "title": "L'appariement",
+        "body": "Le spécialiste aviation se procure l'aéronef auprès du panel d'opérateurs vérifiés — light, mid-size, super-mid, heavy ou ultra-long-range — assorti à la route, à la composition du voyage et au poids de la journée. Trois options au plus reviennent au concierge, en langage clair."
+      },
+      "step3": {
+        "title": "La confirmation",
+        "body": "Une option est choisie. L'aéronef est réservé. Le slot est déposé. L'équipage est briefé sur les préférences déjà présentes au dossier du membre. Les voitures sont placées aux deux extrémités. Le membre reçoit une seule confirmation, mûrement pensée — jamais un fil de messages."
+      },
+      "step4": {
+        "title": "L'arrivée",
+        "body": "Le chauffeur est à l'atterrissage, non à l'heure d'arrivée publiée. La maison, le restaurant et les arrangements suivants sont déjà en mouvement. Le vol, le sol et la journée arrivent ensemble. Le membre est accueilli par sa journée, non par une file logistique."
+      }
     },
-    "winter": {
-      "eyebrow": "17 h 15, janvier",
-      "headline": "La lumière du feu, et le chien déjà endormi.",
-      "body": "Un chalet à Saanen tenu à travers les mois les plus calmes. Le feu allumé, les chaussures séchées, les courses rangées — le foyer d'hiver que nous appelons Cool CALM."
+    "servicesIntro": {
+      "eyebrow": "Le catalogue",
+      "headline": "Six canaux, issus d'une seule relation.",
+      "intro": "L'aviation chez U-CALM n'est pas un produit unique. Elle se décline dans les quatre canaux que les membres demandent le plus — charter sur-mesure, réponse à la demande, vol inclus dans l'adhésion et trajet de groupe — et est tenue aux côtés des bureaux destinations et protection qui complètent la journée."
     },
-    "coolCalmEntry": {
-      "eyebrow": "Sous-marque saisonnière",
-      "headline": "Cool CALM — le foyer d'hiver."
+    "whyUs": {
+      "eyebrow": "Pourquoi nous",
+      "headline": "Six choses que nous tenons pour le membre, chaque jour.",
+      "intro": "Pas des slogans, pas des promesses. Des standards opérationnels sur lesquels le bureau invite à se mesurer à chaque réservation.",
+      "namedSpecialist": {
+        "title": "Un spécialiste nommé",
+        "body": "Chaque membre est tenu par un spécialiste aviation principal qui connaît le dossier. Le bureau fonctionne en équipes pour que les mêmes noms couvrent vingt-quatre heures par jour, chaque jour."
+      },
+      "noticeWindow": {
+        "title": "Une fenêtre de préavis de quatre heures",
+        "body": "Les membres inscrits disposent d'une fenêtre de préavis de quatre heures sur les aéronefs éligibles. Pour la journée qui ne s'est pas déroulée comme prévu, nous sommes déjà en mouvement pendant que l'appel est encore en cours."
+      },
+      "destinations": {
+        "title": "Plus de deux cents destinations",
+        "body": "Douze régions, fixers locaux nommés dans chaque destination signature, bureaux partenaires pour les lieux plus éloignés. Les aéronefs peuvent atterrir presque partout ; le bureau tient le jour qui suit."
+      },
+      "operators": {
+        "title": "Opérateurs vérifiés uniquement",
+        "body": "ARGUS Platinum, Wyvern Wingman ou IS-BAO Stage 2 équivalent. Revue annuelle, reconfirmation avant chaque vol, niveaux d'assurance à la limite supérieure de la pratique."
+      },
+      "languages": {
+        "title": "Quatre langues de travail",
+        "body": "Anglais, italien, français, allemand tenus en interne — avec espagnol et arabe disponibles via des bureaux partenaires nommés. La communauté anglophone est tenue par un spécialiste anglophone."
+      },
+      "billing": {
+        "title": "Un seul relevé mensuel",
+        "body": "L'aviation paraît sur le même relevé mensuel U-CALM que le reste des arrangements du membre. Coûts pass-through détaillés. Pas de seconde facture. Pas de tarification promotionnelle. Pas de surprises."
+      }
+    },
+    "standards": {
+      "eyebrow": "Standards tenus",
+      "headline": "La maison opérationnelle derrière la voix.",
+      "body": "U-Calm Aviation ne s'approvisionne pas en l'aéronef le moins cher du marché ; elle s'approvisionne en l'aéronef juste, auprès d'opérateurs que nous avons personnellement inspectés et continuons d'inspecter, à des prix qui reflètent les standards tenus. Panel d'opérateurs tenu à ARGUS Platinum, Wyvern Wingman ou IS-BAO Stage 2 équivalent. Niveaux d'assurance à la limite supérieure de la pratique du secteur. Validité d'équipage reconfirmée avant chaque vol. Confidentialité tenue sous accords de non-divulgation sur tout le panel. L'identité du membre n'est déposée que là où la conformité avec l'autorité aéronautique l'exige."
+    },
+    "destinationsPreview": {
+      "eyebrow": "Où nous opérons",
+      "headline": "Tenues dans le plus grand détail.",
+      "intro": "Le bureau destinations tient douze régions et plus de deux cents lieux — mais quatre sont tenus dans le détail le plus poussé. Voici un aperçu ; la vue régionale complète n'est qu'à un clic.",
+      "lugano": { "name": "Lugano", "country": "Suisse" },
+      "stMoritz": { "name": "St. Moritz", "country": "Suisse" },
+      "london": { "name": "Londres", "country": "Royaume-Uni" },
+      "monaco": { "name": "Monaco", "country": "Principauté" }
+    },
+    "faq": {
+      "eyebrow": "Questions discrètes",
+      "headline": "Ce que les membres tendent à demander, avant de l'avoir demandé.",
+      "q1": {
+        "q": "Comment devient-on membre ?",
+        "a": "U-Calm Aviation est la ligne de service aviation au sein d'U-CALM. Les nouveaux membres arrivent par recommandation — typiquement d'un membre existant, d'un introducteur que la maison connaît, ou par une conversation discrète directement avec nous. Nous n'utilisons pas de formulaire d'inscription et ne faisons pas de publicité."
+      },
+      "q2": {
+        "q": "Quel délai dois-je donner ?",
+        "a": "Vingt-quatre à soixante-douze heures sont préférables pour la plupart des vols charter, en particulier vers les terrains européens à slots restreints. Les membres inscrits disposent d'une fenêtre de préavis de quatre heures sur les aéronefs éligibles pour les journées imprévues. Les arrangements de groupe et ultra-long-range se tiennent mieux plus tôt — une semaine ou plus si la date peut attendre."
+      },
+      "q3": {
+        "q": "En quoi est-ce différent d'un courtier d'affrètement ?",
+        "a": "Un courtier vend le vol. Nous l'organisons à l'intérieur d'une relation. Le vol, les voitures aux deux extrémités, la maison à destination, la table au dîner — tout coordonné par le même concierge sur le même dossier. L'aviation est un canal d'un arrangement continu, non une transaction séparée avec son propre identifiant."
+      },
+      "q4": {
+        "q": "Y a-t-il des paliers d'adhésion ?",
+        "a": "Non. Il existe une seule adhésion chez U-CALM, et l'aviation y est incluse. Nous ne publions pas de catalogue à paliers, parce que le travail est sur-mesure pour le membre ; l'aviation à liste tend à encourager le mauvais type de conversation."
+      },
+      "q5": {
+        "q": "Faites-vous des empty legs ?",
+        "a": "Sur demande, lorsque la route et l'aéronef correspondent vraiment à la mission. Nous ne les promouvons pas comme une catégorie — la tarification empty leg comporte un risque de planification qui ne s'accorde pas toujours avec des arrangements de niveau concierge. Si le bon est disponible pour la bonne journée, nous le dirons."
+      },
+      "q6": {
+        "q": "Comment se fait la facturation ?",
+        "a": "L'aviation paraît sur le même relevé mensuel U-CALM que le reste des arrangements du membre. Les coûts opérateurs pass-through sont détaillés ; la coordination est absorbée dans l'adhésion. Pas de surprises de vols de positionnement, pas de marges opaques, pas de seconde facture d'une marque distincte."
+      }
+    },
+    "closing": {
+      "eyebrow": "L'arrangement",
+      "headline": "Pas de nouvelle marque. Pas de nouveau courtier. Pas de nouvelle messagerie.",
+      "body": "La même voix, de la table à la porte de la cabine. Le vol, le chauffeur, la gouvernante, la réservation au restaurant — tout organisé par le même concierge, sur le même itinéraire. Le membre ne remarque jamais la couture, parce qu'il n'y en a pas.",
+      "cta": "Ouvrons une conversation"
     }
   },
   "services": {
-    "eyebrow": "Ce que nous faisons",
-    "headline": "Une vie, tenue.",
-    "intro": "De la logistique quotidienne aux projets qui durent un mois, le travail est porté par une seule personne qui connaît votre dossier. Le reste se passe en arrière-plan.",
-    "tiles": {
-      "phone": { "title": "Conciergerie téléphonique", "blurb": "Une seule ligne, discrète. L'appel que vous remettiez à plus tard est passé, le formulaire signé, la question répondue — sans que cela n'atteigne jamais votre journée." },
-      "ground": { "title": "Conciergerie terrain", "blurb": "Retraits, livraisons, rendez-vous, courses du foyer. La porte est ouverte, le colis est pris, la préparation est simplement là à votre arrivée." },
-      "relocations": { "title": "Installation", "blurb": "Du premier appartement vide au matin où tout est installé. Les papiers, l'aménagement, les rituels tranquilles d'une nouvelle vie bien tenue." },
-      "corporate": { "title": "Entreprises", "blurb": "Conseils d'administration, dirigeants en visite, séminaires. La salle est prête, le hall est calme, l'invité est pris en charge du trottoir vers l'intérieur." },
-      "travelEvents": { "title": "Voyages & événements", "blurb": "Une table dressée, une chambre réservée, un calendrier tenu. Dîner à deux, week-end en famille, événement privé — le plan tient, vous n'avez pas à le faire." },
-      "aviation": { "title": "Aviation (sous-marque)", "blurb": "La route vers l'aire, le passage à l'avion, la voiture à l'arrivée. U-CALM Aviation est notre marque sœur pour les vols et les transferts." },
-      "coolCalm": { "title": "Cool CALM (hiver)", "blurb": "Le foyer d'hiver alpin — préparation du chalet, chaussures de ski qui sèchent, boissons chaudes dans des mains gantées. Notre conciergerie d'hiver saisonnière." }
+    "meta": {
+      "title": "Services — Six canaux, un concierge | U-Calm Aviation",
+      "description": "Charter sur-mesure, à la demande, adhésion, groupe, gestion des destinations et protection rapprochée — six canaux de service tenus par un concierge nommé, sur un seul itinéraire, sur un seul dossier."
     },
-    "disruption": {
-      "eyebrow": "Quand les plans changent",
-      "headline": "L'arrangement ne s'effondre pas. Il est simplement maintenu.",
-      "body": "Un portique luganais sous une averse soudaine. Le parapluie déjà ouvert, le paquet crème sur le banc sec, le membre pas encore arrivé. Un imprévu redouté a déjà été absorbé — et on ne vous a jamais demandé d'y faire quoi que ce soit."
+    "hero": {
+      "eyebrow": "Comment c'est organisé",
+      "headline": "Six canaux, un concierge.",
+      "body": "Aviation, sol et protection — tenus de la même main, sur le même itinéraire, sur le même dossier."
     },
-    "dinnerLaid": {
-      "eyebrow": "19 h 45, fin avril",
-      "headline": "De la porte à la table.",
-      "body": "Trois couverts sur du lin blanc, des asperges précoces dans un plat en céramique, le chat sur le rebord de la fenêtre qui observe la rue. Une chaise déjà tirée. Chaque service U-CALM se termine dans une pièce comme celle-ci — rien de triomphant, tout simplement en ordre."
+    "intro": {
+      "eyebrow": "Le catalogue",
+      "headline": "Six services, issus d'une seule relation.",
+      "body": "L'aviation chez U-CALM n'est pas un produit unique. Elle se décline dans les quatre canaux que les membres demandent le plus — charter sur-mesure, réponse à la demande, vol inclus dans l'adhésion et trajet de groupe — et est tenue aux côtés des bureaux destinations et protection qui complètent la journée. Tout est organisé par le même concierge, sur le même dossier."
+    },
+    "leadTimes": {
+      "eyebrow": "Délais de préavis",
+      "headline": "Fenêtres de préavis typiques.",
+      "intro": "Voici les fenêtres dans lesquelles le bureau travaille confortablement. Plus rapide est possible — et fréquemment organisé — mais le préavis est ce qui permet à la maison opérationnelle de produire son meilleur travail discret pour le membre.",
+      "rows": {
+        "intraEuropean": {
+          "label": "Charter, intra-européen",
+          "body": "24–72 heures préférables. Les terrains européens à slots restreints (London City, Lugano, certains terrains alpins en saison) se règlent plus aisément avec 48 heures."
+        },
+        "transcontinental": {
+          "label": "Charter, transcontinental",
+          "body": "3–7 jours préférables pour les routes ultra-long-range ; plus long pour les couples de villes inhabituels qui peuvent exiger des permis ou la coordination d'une escale technique."
+        },
+        "groupLift": {
+          "label": "Trajet de groupe",
+          "body": "10–14 jours minimum pour des groupes de plus de vingt personnes ; plus long pour des mariages ou des off-sites qui bénéficient d'une planification du côté opérateur."
+        },
+        "helicopter": {
+          "label": "Transferts en hélicoptère",
+          "body": "24 heures typiques ; arrangement le jour même fréquemment possible vers les vallées alpines et méditerranéennes lorsque les fenêtres météo le permettent."
+        },
+        "shortNotice": {
+          "label": "Fenêtre de préavis court",
+          "body": "Préavis de 4 heures sur les aéronefs éligibles pour les membres inscrits — pour la journée qui ne s'est pas déroulée comme prévu, l'appel que personne n'aurait voulu passer."
+        }
+      }
+    },
+    "closing": {
+      "eyebrow": "Ouvrons une conversation",
+      "headline": "Un itinéraire. Un relevé. Une voix.",
+      "body": "D'un déjeuner du dimanche à Londres à un dîner du mardi à Gstaad — tenu par le même concierge, dans la même voix, du début à la fin."
+    },
+    "catalogue": {
+      "bespokeCharter": {
+        "title": "Charter sur-mesure",
+        "subtitle": "Le vol, sourcé et tenu au poids de la journée.",
+        "cardDescription": "L'aéronef est assorti à la mission, à la composition du voyage et à la journée. Sourcé auprès d'un panel d'opérateurs vérifiés, proposé dans la voix de votre concierge, tenu sur le dossier sur lequel repose déjà le reste de votre arrangement.",
+        "cardFeatures": [
+          "Panel d'opérateurs vérifiés (ARGUS Platinum / Wyvern / IS-BAO Stage 2 équivalent)",
+          "Cabines de light à ultra-long-range, hélicoptères, trajet de groupe",
+          "Un seul relevé du membre ; pas de facture courtier distincte"
+        ],
+        "tagline": "L'aéronef choisi pour la journée, non au menu.",
+        "longDescription": [
+          "Le charter sur-mesure est le registre principal d'U-Calm Aviation. Une brève note au concierge — date, couple de villes, composition du voyage — suffit à commencer. Le spécialiste aviation se procure l'aéronef auprès du panel d'opérateurs vérifiés, assorti à la route, au poids de la journée et aux préférences déjà présentes au dossier du membre. Trois options au plus reviennent, en langage clair, dans la voix du concierge.",
+          "Le travail derrière la proposition se tient à voix basse : vérification des opérateurs face à ARGUS Platinum, Wyvern Wingman ou IS-BAO Stage 2 équivalent ; niveaux d'assurance à la limite supérieure de la pratique ; validité d'équipage reconfirmée avant chaque vol. Le membre voit une option choisie, un aéronef réservé, une voiture à l'atterrissage, un seul relevé en fin de mois."
+        ],
+        "keyBenefits": [
+          "Catégorie d'aéronef assortie à la route — jamais une norme unique de la maison",
+          "Équipage briefé sur les préférences déjà tenues au dossier",
+          "Voitures et sol aux deux extrémités, tissés dans le même itinéraire",
+          "Un seul relevé mensuel U-CALM ; pas de facture courtier distincte",
+          "Le même spécialiste nommé tout du long — jamais une file, jamais un inconnu"
+        ],
+        "features": [
+          "Cabines light, mid-size, super-mid, heavy, ultra-long-range",
+          "Hélicoptères pour transferts vallée et événements",
+          "Terrains européens à slots restreints traités (Lugano, London City, alpins)",
+          "Sélection FBO et coordination du sol aux deux extrémités",
+          "Préférences de catering et de cabine depuis le dossier du membre",
+          "Confidentialité tenue sous accords de non-divulgation sur tout le panel d'opérateurs"
+        ],
+        "howToBegin": "Une brève note au concierge — date, couple de villes, composition du voyage — suffit à commencer. Un spécialiste répond dans la journée de travail avec une proposition mûrement pensée."
+      },
+      "onDemand": {
+        "title": "À la demande",
+        "subtitle": "La fenêtre de préavis de quatre heures pour la journée qui ne s'est pas déroulée comme prévu.",
+        "cardDescription": "Les membres inscrits disposent d'une fenêtre de préavis de quatre heures sur les aéronefs éligibles. Pour l'appel que personne n'aurait voulu passer — la réunion qui doit avoir lieu, le proche qu'il faut joindre, la journée qui a glissé de travers — nous sommes déjà en mouvement pendant que la conversation est encore en cours.",
+        "cardFeatures": [
+          "Préavis de quatre heures sur les aéronefs éligibles pour les membres inscrits",
+          "Joignabilité vingt-quatre heures par le bureau du concierge",
+          "Mêmes standards tenus — aucun compromis sur la vérification des opérateurs sous pression"
+        ],
+        "tagline": "Déjà en mouvement pendant que la conversation est encore en cours.",
+        "longDescription": [
+          "La plupart des voyages s'organisent avec un préavis confortable. Certains non. À la demande, c'est la ligne que nous tenons pour la journée qui ne s'est pas déroulée comme prévu — la réunion urgente, le rappel médical, la situation familiale qui demande au membre d'être quelque part avant demain matin.",
+          "Les membres inscrits disposent d'une fenêtre de préavis de quatre heures sur les aéronefs éligibles à l'intérieur du panel d'opérateurs. Le bureau ne change pas ses standards sous la pression : vérification, assurances et validité d'équipage sont tenues à l'identique ; ce qui se raccourcit, c'est le préavis, non la rigueur. Le membre passe l'appel une fois ; le bureau s'occupe du reste."
+        ],
+        "keyBenefits": [
+          "Préavis minimum de quatre heures sur les aéronefs éligibles pour les membres inscrits",
+          "Couverture du bureau vingt-quatre heures, trois cent soixante-cinq jours",
+          "Aucune surprise de surcharge — prix tenus dans la fourchette d'adhésion",
+          "Voitures aux deux extrémités mobilisées en parallèle, non a posteriori",
+          "Un spécialiste nommé unique — jamais à réexpliquer depuis le début"
+        ],
+        "features": [
+          "Fenêtre de préavis de quatre heures sur les aéronefs éligibles",
+          "Mêmes standards du panel d'opérateurs sous pression de temps",
+          "Paiement pré-autorisé au dossier — aucune friction au moment du besoin",
+          "Mobilisation simultanée du sol (voitures, maison alertée, médecin si pertinent)",
+          "Solutions aux restrictions de slots sur les terrains européens",
+          "Confidentialité tenue à l'identique — aucun affaiblissement de l'NDA sous la vitesse"
+        ],
+        "howToBegin": "La disponibilité à la demande est ouverte aux membres inscrits lors de l'onboarding. Une brève conversation avec le concierge confirme l'éligibilité, l'autorité de paiement et le numéro de joignabilité préféré pour les appels à préavis court."
+      },
+      "membership": {
+        "title": "Adhésion",
+        "subtitle": "L'aviation, incluse dans la relation U-CALM.",
+        "cardDescription": "U-Calm Aviation est tenue à l'intérieur de l'adhésion U-CALM ; elle n'est pas vendue séparément, et n'est pas hiérarchisée. Le vol, le sol, les voitures aux deux extrémités — tout sur le même relevé mensuel que le reste des arrangements du membre.",
+        "cardFeatures": [
+          "Aviation incluse dans l'adhésion U-CALM — pas d'inscription séparée",
+          "Pas de catalogue à paliers — le travail est sur-mesure pour le membre",
+          "Un dossier, un spécialiste, un relevé"
+        ],
+        "tagline": "Une adhésion. Un dossier. Un concierge. Tout le reste suit.",
+        "longDescription": [
+          "U-Calm Aviation est la ligne de service aviation au sein d'U-CALM, la maison de concierge. Il n'existe pas d'adhésion aviation distincte à laquelle s'inscrire ; les membres existants d'U-CALM reçoivent l'aviation comme une extension continue de la même relation, sur le même dossier, contre le même relevé.",
+          "La maison ne publie pas de catalogue à paliers — Bronze, Argent, Or, Platine — parce que le travail est sur-mesure pour chaque membre, et l'aviation à liste tend à encourager le mauvais type de conversation. Ce que le membre reçoit en échange est un spécialiste principal nommé pour lui, une fenêtre de préavis de quatre heures sur les aéronefs éligibles, des tarifs membre appliqués sur tout le panel d'opérateurs et un relevé mensuel unique qui tient l'aviation aux côtés du reste de l'arrangement.",
+          "L'onboarding se fait par recommandation ou par introduction discrète. La première conversation est brève, en personne ou au téléphone, et porte sur la question de savoir si la relation convient aux deux parties — jamais sur la conclusion d'une affaire."
+        ],
+        "keyBenefits": [
+          "Aviation incluse dans l'adhésion U-CALM — pas d'inscription ni de palier séparé",
+          "Le même spécialiste nommé à chaque réservation — jamais un inconnu, jamais une file",
+          "Tarifs membre appliqués sur tout le panel d'opérateurs",
+          "Un relevé mensuel — aviation, sol, maison ensemble",
+          "Fenêtre de préavis de quatre heures sur les aéronefs éligibles",
+          "Dossier continu — les préférences se transmettent à chaque réservation"
+        ],
+        "features": [
+          "Onboarding mené par le concierge — recommandation ou introduction discrète",
+          "Le dossier du membre tient les préférences à travers chaque réservation",
+          "Joignabilité vingt-quatre heures par le bureau du concierge",
+          "Quatre langues de travail tenues en interne",
+          "Aviation, gestion des destinations et protection sur une seule relation",
+          "Aucun palier publié ; aucune tarification promotionnelle ; aucune seconde facture"
+        ],
+        "howToBegin": "L'adhésion commence par une conversation brève et mûrement pensée — par introduction, en personne ou au téléphone. Nous disons ouvertement si l'accord convient ; si oui, le dossier est mis en place et un spécialiste principal est nommé pour la relation. Il n'existe pas de pipeline d'adhésion à travers lequel pousser quiconque."
+      },
+      "groupCharter": {
+        "title": "Charter de groupe",
+        "subtitle": "Groupes de quinze personnes et plus, tenus aux mêmes standards.",
+        "cardDescription": "Mariages, off-sites, déplacements familiaux, délégations sportives. Avions de ligne et bizliners sourcés auprès du même panel vérifié ; sol, hébergement et tables coordonnés sur un seul itinéraire qui ne se brise pas à l'atterrissage.",
+        "cardFeatures": [
+          "Avions de ligne et bizliners (15–60+ sièges) sur le même panel vérifié",
+          "Itinéraire unique sur tout le groupe — pas de division à l'arrivée",
+          "Sol, hébergement, restauration coordonnés pour tous"
+        ],
+        "tagline": "Quinze personnes, un itinéraire, une voix.",
+        "longDescription": [
+          "Le trajet de groupe est l'endroit où la discipline opérationnelle du bureau se manifeste le plus clairement. Une fête de mariage de quarante personnes n'arrive pas comme quarante réservations individuelles ; elle arrive comme un seul arrangement, sur un seul itinéraire, avec un spécialiste qui tient toute la forme — l'aéronef, le sol au FBO, les voitures en convoi, les chambres réservées à l'hôtel, les tables déjà dressées.",
+          "Les aéronefs pour groupes sont sourcés auprès du même panel d'opérateurs que le charter sur-mesure, y compris des avions de ligne et des bizliners entre quinze et soixante sièges et au-delà. Le préavis est naturellement plus long — minimum dix à quatorze jours, plus long pour les off-sites et les mariages — mais le principe est identique : le bon aéronef pour la journée, les mêmes standards tenus, un dossier, un relevé."
+        ],
+        "keyBenefits": [
+          "Itinéraire unique tenu sur l'ensemble du groupe",
+          "Avions de ligne et bizliners (15–60+) sourcés auprès du même panel vérifié",
+          "Sol, hébergement, restauration coordonnés pour le groupe entier",
+          "Enfants, chiens, exigences alimentaires tenus dans le dossier central",
+          "Un spécialiste ; aucune fragmentation de la journée"
+        ],
+        "features": [
+          "Mariages, off-sites, déplacements familiaux, délégations sportives et d'entreprise",
+          "Coordination du manifeste passagers avant départ",
+          "Convois de sol multi-véhicules aux deux extrémités",
+          "Gestion des blocs hôteliers dans les propriétés préférées U-CALM",
+          "Registre alimentaire, d'accessibilité et d'exigences spéciales",
+          "Briefing de cabine adapté à l'occasion, non au modèle"
+        ],
+        "howToBegin": "Les réservations de groupe bénéficient d'une conversation plus précoce — minimum dix à quatorze jours, plus long pour les mariages et les off-sites. Un bref appel avec le concierge recueille la forme de la journée ; le bureau revient avec une seule proposition mûrement pensée."
+      },
+      "destinationManagement": {
+        "title": "Gestion des destinations",
+        "subtitle": "Le sol, tissé dans l'itinéraire.",
+        "cardDescription": "Voitures aux deux extrémités, hébergement dans les propriétés préférées d'U-CALM ou dans les vôtres, tables au restaurant, coordination de la maison, médecin sur appel, fixers locaux nommés dans chaque destination signature — tout tenu sur le même itinéraire que le vol.",
+        "cardFeatures": [
+          "Voitures aux deux extrémités — chauffeur en attente à l'atterrissage",
+          "Fixers locaux nommés dans chaque destination signature",
+          "Coordination absorbée dans l'adhésion ; coûts pass-through détaillés"
+        ],
+        "tagline": "La journée se poursuit, dans la même voix, du FBO à la porte d'entrée.",
+        "longDescription": [
+          "La gestion des destinations est la seconde moitié de chaque arrangement aviation. L'aéronef arrive ; la journée se poursuit. Le chauffeur est à l'atterrissage, non à l'heure d'arrivée publiée. La gouvernante prépare depuis mercredi. La table est tenue sans que personne ait à demander. Le membre est accueilli par sa journée, non par une file logistique.",
+          "Le bureau destinations opère aux côtés du bureau aviation, avec des fixers locaux nommés dans chaque destination signature, quatre langues de travail tenues en interne et des bureaux partenaires nommés dans les lieux plus éloignés. La coordination est absorbée dans l'adhésion ; les coûts pass-through (hôtel, voiture, restaurant) paraissent détaillés sur le même relevé mensuel."
+        ],
+        "keyBenefits": [
+          "Voitures aux deux extrémités, avec chauffeurs briefés sur les préférences depuis le dossier du membre",
+          "Hébergement dans les propriétés préférées U-CALM ou dans les propriétés du membre",
+          "Coordination de restaurant, table, maison, médecin — tout sur un seul itinéraire",
+          "Fixers locaux nommés dans chaque destination signature",
+          "Coûts pass-through détaillés sur le relevé mensuel U-CALM",
+          "Chauffeur en attente à l'atterrissage, non à l'heure d'arrivée publiée"
+        ],
+        "features": [
+          "Suisse, France et Monaco, Italie, Royaume-Uni, péninsule Ibérique, Grèce, Adriatique, Europe centrale, Afrique du Nord et Moyen-Orient, Amérique du Nord, Caraïbes, Asie, au-delà",
+          "Couverture quadrilingue en interne ; partenaires pour l'espagnol/l'arabe",
+          "Réseau des propriétés préférées U-CALM",
+          "Restaurant, maison, médecin, sécurité sur le même itinéraire",
+          "Coordination de voyages multi-étapes à travers plusieurs destinations",
+          "Soutien en temps réel le jour même via le bureau du concierge"
+        ],
+        "howToBegin": "La gestion des destinations s'ouvre automatiquement aux côtés de tout arrangement aviation ; ou peut être demandée indépendamment pour les voyages du membre qui n'ont pas commencé avec U-Calm Aviation. Le concierge l'amène au dossier."
+      },
+      "executiveProtection": {
+        "title": "Protection rapprochée",
+        "subtitle": "Coordonnée avec le vol.",
+        "cardDescription": "Évaluation du risque, protection rapprochée, sol sécurisé, équipe avancée — coordonnés à travers le même partenaire pour chaque ligne de service U-CALM, intégrés à l'aviation lorsque la mission l'exige.",
+        "cardFeatures": [
+          "Un partenaire de confiance unique sur toutes les lignes de service U-CALM",
+          "Évaluation obligatoire pilotée par la matrice de risque pour les destinations sensibles",
+          "Optionnelle pour toute autre mission ; intégrée à l'aviation lorsqu'elle s'y prête"
+        ],
+        "tagline": "Tenue dans la même main, sur le même itinéraire.",
+        "longDescription": [
+          "La protection rapprochée est tenue en partenariat avec un seul opérateur soigneusement choisi, utilisé sur toutes les lignes de service U-CALM. Le choix d'un partenaire unique — plutôt que d'une place de marché — est délibéré : continuité des standards, continuité de la discrétion et une seule relation que le membre peut conserver pendant de nombreuses années.",
+          "Pour les destinations sur la matrice de risque interne U-CALM, une évaluation est obligatoire ; pour toute autre mission, elle est offerte, optionnelle, et intégrée au reste de l'arrangement à la discrétion du membre. Les détachements de sécurité existants au domicile sont intégrés là où ils sont présents ; nous menons ou soutenons selon ce qui est requis."
+        ],
+        "keyBenefits": [
+          "Un partenaire de confiance unique sur toutes les lignes de service U-CALM",
+          "Évaluation obligatoire du risque pour les destinations sensibles",
+          "Optionnelle et intégrée pour toute autre mission",
+          "Les détails domestiques existants sont intégrés ; nous menons ou soutenons selon ce qui est requis",
+          "Sur le même itinéraire que le vol et le sol — jamais une troisième boîte de réception"
+        ],
+        "features": [
+          "Évaluation du risque avant voyage face à la matrice interne U-CALM",
+          "Protection rapprochée (individu, équipe, équipe avancée)",
+          "Transport terrestre sécurisé avec chauffeurs vérifiés",
+          "Protection résidentielle et événementielle",
+          "Capacité médicale exécutive sur demande",
+          "Confidentialité et discrétion tenues au même standard NDA que l'aviation"
+        ],
+        "howToBegin": "La protection est offerte lors de l'onboarding pour chaque membre ; obligatoire pour les destinations sur la matrice de risque interne ; sinon ouverte sur demande. Une brève conversation avec le concierge l'amène au dossier."
+      }
+    }
+  },
+  "serviceDetail": {
+    "fallbackMeta": {
+      "title": "Services — U-Calm Aviation",
+      "description": "Six canaux, un concierge."
+    },
+    "overview": {
+      "eyebrow": "Aperçu",
+      "headline": "Ce que ce service contient."
+    },
+    "keyBenefits": {
+      "eyebrow": "Bénéfices clés",
+      "headline": "Ce que reçoit le membre."
+    },
+    "features": {
+      "eyebrow": "Ce qui est inclus",
+      "headline": "Le détail derrière le service."
+    },
+    "howToBegin": {
+      "eyebrow": "Comment commencer",
+      "headline": "Ouvrons une conversation."
+    },
+    "heldThroughout": {
+      "label": "Tenu tout au long",
+      "items": [
+        "Le même spécialiste nommé à chaque réservation",
+        "Un dossier, quatre langues de travail",
+        "Un relevé mensuel U-CALM",
+        "Confidentialité tenue sous l'NDA du panel d'opérateurs"
+      ]
+    },
+    "related": {
+      "eyebrow": "Tenus à côté",
+      "headline": "D'autres canaux du même arrangement."
+    }
+  },
+  "destinations": {
+    "meta": {
+      "title": "Destinations — Douze régions, plus de deux cents lieux | U-Calm Aviation",
+      "description": "Lugano, Londres, St. Moritz, Monaco — tenues dans le plus grand détail. Douze bureaux régionaux couvrant la Suisse, la France, l'Italie, le Royaume-Uni, la péninsule Ibérique, la Grèce, la Méditerranée, l'Europe centrale, le Moyen-Orient, l'Amérique du Nord, les Caraïbes, l'Asie et au-delà. Les aéronefs peuvent atterrir presque partout ; le travail réside dans ce qui se passe dès que la porte s'ouvre."
+    },
+    "hero": {
+      "eyebrow": "Où nous opérons",
+      "headline": "Tenu dans le détail. Tenu partout.",
+      "body": "Les aéronefs peuvent atterrir presque partout. Le travail réside dans ce qui se passe dès que la porte s'ouvre. Voici les lieux que notre bureau de gestion des destinations tient dans le plus grand détail ; bien d'autres destinations, naturellement, sont arrangées avec le même soin sur demande."
+    },
+    "featured": {
+      "eyebrow": "Destinations en avant",
+      "headline": "Certains des lieux que nous tenons dans le plus grand détail.",
+      "intro": "Une petite sélection des destinations que le bureau tient dans le plus grand détail. Beaucoup d'autres se tiennent au dossier à leurs côtés ; les aéronefs peuvent atterrir presque partout, et notre bureau destinations suit.",
+      "highlightsLabel": "Ce que nous tenons pour la journée",
+      "lugano": {
+        "name": "Lugano",
+        "country": "Suisse",
+        "description": "Le siège du bureau et la seule ville suisse dotée d'un FBO privé dans sa propre vallée. Accès direct depuis Londres, Paris, Francfort, Madrid en jets légers et moyens ; hélicoptère vers les résidences au bord du lac de Castagnola et Morcote dans la même heure.",
+        "highlights": [
+          "Lugano-Agno (LSZA) — slots restreints, organisés localement",
+          "Hélicoptère vers St. Moritz, Verbier, lac de Côme",
+          "Propriétés préférées U-CALM au bord du lac",
+          "Sol en quatre langues en 30 minutes"
+        ]
+      },
+      "london": {
+        "name": "Londres",
+        "country": "Royaume-Uni",
+        "description": "Tenue à travers la portée plus large de la maison concierge U-CALM. Farnborough et London City accueillent la plupart des arrivées des membres ; Biggin Hill pour le préavis court ; Luton lorsque la taille de la cabine ou la navette en hélicoptère vers l'héliport l'exigent.",
+        "highlights": [
+          "Farnborough, London City, Biggin Hill, Luton",
+          "Intégration concierge à Mayfair via U-CALM",
+          "Hélicoptère vers Battersea sur demande",
+          "Fenêtres de retour le jour même tenues"
+        ]
+      },
+      "stMoritz": {
+        "name": "St. Moritz",
+        "country": "Suisse",
+        "description": "Samedan (LSZS) est l'aérodrome le plus haut d'Europe et l'un des plus sensibles aux conditions météo. Le bureau surveille le terrain quotidiennement pendant la saison d'hiver et organise le secours en hélicoptère par routine. Voitures, chalet et table tenus pour l'arrivée.",
+        "highlights": [
+          "Samedan (LSZS) — couverture spécialisée de la saison d'hiver",
+          "Secours en hélicoptère depuis Lugano ou Zurich",
+          "Réseau de chalets en Engadine",
+          "Tables au restaurant tenues selon les préférences du membre"
+        ]
+      },
+      "monaco": {
+        "name": "Monaco",
+        "country": "Principauté",
+        "description": "Nice (LFMN) est l'aéroport opérationnel ; Monaco même est desservie en hélicoptère via Heli Air Monaco depuis Nice en sept minutes. Le bureau tient la navette en hélicoptère, la voiture FBO et l'arrivée à Monte-Carlo de bout en bout.",
+        "highlights": [
+          "Arrangements FBO à Nice Côte d'Azur (LFMN)",
+          "Navette en hélicoptère vers Monte-Carlo",
+          "Coordination du calendrier nautique",
+          "Couverture spécialisée Grand Prix et Yacht Show"
+        ]
+      },
+      "mykonos": {
+        "name": "Mykonos",
+        "country": "Grèce",
+        "description": "Mykonos (JMK) est l'un des terrains privés les plus fréquentés de l'Égée pendant la saison d'été. Nous tenons le slot, la régulation au port, la coordination de la villa et la table en début de soirée — discrètement, à l'écart du centre.",
+        "highlights": [
+          "Mykonos JMK — spécialisation slots de la saison égéenne",
+          "Réseau de villas cycladiques sur la côte ouest",
+          "Coordination de yachts et de tenders",
+          "Continuité de restaurant dans les criques plus calmes"
+        ]
+      },
+      "tuscany": {
+        "name": "Toscane",
+        "country": "Italie",
+        "description": "Florence (FLR) et Pise (PSA) accueillent la plupart des arrivées ; Forte dei Marmi via la côte versilienne pour la maison d'été, Lucca et Sienne pour le séjour plus lent. La villa, le chauffeur, la trattoria que la famille connaît déjà — tout sur le même itinéraire.",
+        "highlights": [
+          "Florence FLR, Pise PSA, Olbia pour les traversées vers la Costa Smeralda",
+          "Réseau de villas en Chianti, Forte dei Marmi, Argentario",
+          "Hélicoptère vers les collines des cyprès",
+          "Continuité de restaurant à travers des séjours de plusieurs semaines"
+        ]
+      },
+      "mustique": {
+        "name": "Mustique",
+        "country": "Saint-Vincent-et-les-Grenadines",
+        "description": "L'île fonctionne par recommandation ; les aéronefs sont reçus à Saint-Vincent (SVD) avec navette en hélicoptère directement vers Mustique. Le bureau coordonne l'arrivée, la villa et le souper au terrain de cricket avec la même cadence que nous tenons pour une arrivée alpine.",
+        "highlights": [
+          "Saint-Vincent SVD avec navette en hélicoptère vers Mustique",
+          "Coordination des villas via la Mustique Company",
+          "Affrètement de bateaux et expertise des récifs",
+          "Terrain de cricket et dîner de plage tenus"
+        ]
+      },
+      "ibiza": {
+        "name": "Ibiza",
+        "country": "Espagne (Îles Baléares)",
+        "description": "Ibiza (IBZ) est l'un des terrains privés les plus fréquentés de la Méditerranée en été ; nous tenons le slot, la finca rurale sur la côte nord plus calme, et les excursions à la journée à Formentera. Discrétion à chaque étape.",
+        "highlights": [
+          "Ibiza IBZ — gestion des slots en haute saison",
+          "Réseau de fincas rurales sur la côte nord",
+          "Affrètement de bateaux et excursions à la journée à Formentera",
+          "Itinéraire côté calme, à l'écart de San Antonio"
+        ]
+      }
+    },
+    "regional": {
+      "eyebrow": "Le tableau plus large",
+      "headline": "Douze régions, plus de deux cents lieux.",
+      "intro": "Le bureau destinations est structuré par région, avec des fixers locaux nommés dans chaque destination signature et des bureaux partenaires nommés pour les lieux plus éloignés. La vue régionale ci-dessous est illustrative ; bien d'autres destinations se tiennent au dossier.",
+      "rows": {
+        "switzerland": {
+          "region": "Suisse",
+          "places": "Lugano · Genève · Zurich · Berne · Bâle · Sion · Samedan (St. Moritz) · St. Moritz · Verbier · Gstaad · Zermatt · Klosters · Davos · Crans-Montana · Andermatt · Engelberg · Lucerne · Interlaken · Lausanne · Montreux"
+        },
+        "franceMonaco": {
+          "region": "France et Monaco",
+          "places": "Paris (Le Bourget) · Nice · Cannes · Monaco · Saint-Tropez · Antibes · Cap Ferrat · Megève · Courchevel · Méribel · Val d'Isère · Chamonix · Avoriaz · Lyon · Bordeaux · Biarritz · Deauville · Aix-en-Provence · Cap d'Antibes · Île de Ré"
+        },
+        "italy": {
+          "region": "Italie",
+          "places": "Milan (Linate, Malpensa) · Rome (Ciampino) · Florence · Venise · Naples · Olbia (Costa Smeralda) · Cagliari · Capri · Ischia · Portofino · Forte dei Marmi · Lac de Côme · Lac Majeur · Lac de Garde · Bologne · Vérone · Turin · Palerme · Catane · Bari · Cortina d'Ampezzo"
+        },
+        "ukIreland": {
+          "region": "Royaume-Uni et Irlande",
+          "places": "Londres (City, Farnborough, Biggin Hill, Luton) · Oxford · les Cotswolds · Édimbourg · Glasgow · les Highlands · les Hébrides · Manchester · Birmingham · Bristol · Jersey · Guernesey · Dublin · Shannon · Belfast · Lake District · Cornouailles"
+        },
+        "iberia": {
+          "region": "Péninsule Ibérique et Îles Atlantiques",
+          "places": "Madrid · Barcelone · Marbella (Málaga) · Valence · Séville · Bilbao · Majorque · Minorque · Ibiza · Formentera · Lisbonne · Porto · Faro · Cascais · Madère · Açores · Tenerife · Lanzarote"
+        },
+        "greece": {
+          "region": "Grèce, Chypre et Méditerranée orientale",
+          "places": "Athènes · Mykonos · Santorin · Paros · Antiparos · Skiathos · Corfou · Rhodes · Crète · Hydra · Sifnos · Halkidiki · Limassol · Larnaca · Bodrum · Antalya · Istanbul"
+        },
+        "adriatic": {
+          "region": "Adriatique et Europe centrale",
+          "places": "Vienne · Salzbourg · Innsbruck · Kitzbühel · Munich · Francfort · Berlin · Hambourg · Düsseldorf · Prague · Budapest · Hvar · Split · Dubrovnik · Tivat · Ljubljana · Cracovie · Varsovie"
+        },
+        "africaMiddleEast": {
+          "region": "Afrique du Nord et Moyen-Orient",
+          "places": "Marrakech · Casablanca · Rabat · Tanger · Tunis · Le Caire · Charm el-Cheikh · Dubaï · Abou Dabi · Doha · Riyad · Djeddah · Mascate · Tel Aviv · Amman · Beyrouth"
+        },
+        "northAmerica": {
+          "region": "Amérique du Nord",
+          "places": "New York (Teterboro, Westchester) · Boston · Washington · Miami · Palm Beach · Aspen · Vail · Telluride · Sun Valley · Los Angeles (Van Nuys) · San Francisco · Las Vegas · Toronto · Montréal · Vancouver"
+        },
+        "caribbean": {
+          "region": "Caraïbes et Amérique latine",
+          "places": "Saint-Barthélemy · Antigua · Barbade · Sainte-Lucie · Mustique · Anguilla · Turques-et-Caïques · Nassau · Cabo San Lucas · Mexico · Punta Cana · Bermudes · Carthagène · São Paulo · Rio de Janeiro · Buenos Aires"
+        },
+        "asia": {
+          "region": "Asie et Océan Indien",
+          "places": "Singapour · Hong Kong · Tokyo · Shanghai · Bangkok · Phuket · Bali · Hanoï · Séoul · Mumbai · Delhi · Maldives · Maurice · Seychelles · Sri Lanka"
+        },
+        "furtherAfield": {
+          "region": "Plus loin",
+          "places": "Sydney · Melbourne · Auckland · Le Cap · Mahé · l'accès à l'Antarctique via Punta Arenas — arrangés à travers des bureaux partenaires nommés, avec des délais de préavis prolongés."
+        }
+      }
+    },
+    "gallery": {
+      "eyebrow": "Moments tenus",
+      "headline": "Quelques-uns de ce à quoi ressemble une arrivée.",
+      "intro": "La photographie du bureau est éditoriale, jamais mise en scène. Les images ci-dessous sont tirées de la bibliothèque de la marque U-CALM et illustrent le rythme d'un arrangement, sans être spécifiques à un membre en particulier."
+    },
+    "closing": {
+      "eyebrow": "Discuter d'une destination",
+      "headline": "Un lieu qui ne figure pas sur la liste ?",
+      "body": "Les destinations signature sont les lieux que nous tenons dans le plus grand détail. Tout autre lieu est arrangé avec le même soin, sur demande — à travers des bureaux partenaires nommés lorsque cela a du sens, directement lorsque le dossier détient déjà la connaissance locale."
     }
   },
   "about": {
-    "eyebrow": "La maison",
-    "headline": "Une petite équipe, un standard discret.",
-    "intro": "U-CALM est une maison de gestion de vie fondée sur la conviction qu'un bon service est surtout invisible. Nous accueillons un nombre limité de membres et nous y tenons.",
-    "newYear": {
-      "eyebrow": "07 h 45, 1er janvier",
-      "headline": "Là où l'année commence.",
-      "body": "Parco Ciani aux premières lueurs. Le Monte Brè encore une silhouette. Une écharpe crème pliée sur un banc vide. Treize ans après la première conversation ici, la même main tient encore la même ligne."
+    "meta": {
+      "title": "La maison — Une maison de concierge, prolongée | U-Calm Aviation",
+      "description": "U-Calm Aviation est la ligne de service aviation au sein d'U-CALM, fondée à Lugano en 2013. Aviation, à l'intérieur de la relation concierge — non séparée. Spécialistes nommés quadrilingues, panel d'opérateurs vérifiés, joignabilité vingt-quatre heures par le même bureau qui tient le reste des arrangements du membre."
     },
-    "parcoCiani": {
-      "eyebrow": "Le lac, l'heure",
-      "headline": "Lugano, là où tout a commencé.",
-      "body": "Fondée en 2013 un matin à Parco Ciani. Une conversation entre un membre aux trop nombreuses corvées redoutées et deux personnes qui décidèrent simplement de les lui enlever des mains."
+    "hero": {
+      "eyebrow": "La maison",
+      "headline": "Une maison de concierge, prolongée.",
+      "body": "U-Calm Aviation est la ligne de service aviation au sein d'U-CALM — la façon dont les membres existants de la maison volent."
     },
     "founding": {
-      "eyebrow": "2013",
-      "headline": "Là où le premier numéro fut décroché.",
-      "body": "Une petite table de café, deux tasses, deux chaises. La conversation qui devint U-CALM. L'habitude de répondre au téléphone, de terminer la course, de refermer la boucle en silence — tenue depuis."
+      "eyebrow": "La question fondatrice",
+      "headline": "L'aviation peut-elle disparaître dans la relation concierge à laquelle nos membres font déjà confiance ?",
+      "p1": "Les membres d'U-CALM ont l'habitude d'appeler une seule personne, ou d'envoyer un seul e-mail, pour faire arranger quelque chose — un restaurant, un chauffeur, une maison, le trajet à l'école, une table d'anniversaire. L'aviation privée, dans la vie de la plupart des membres, était la seule catégorie qui rompait ce schéma. Ils devaient passer à une autre marque, un autre identifiant, un autre courtier, un autre ton, une autre facture.",
+      "p2": "U-Calm Aviation est la réponse à cette discontinuité. Le membre n'apprend pas une marque d'aviation ; le service aviation paraît simplement dans la relation concierge, portant le même visage, parlant la même voix, facturant sur le même relevé.",
+      "vignette": "La même main, du petit-déjeuner au décollage.\nUn arrangement continu, tenu dans la discrétion."
     },
-    "acronymSection": { "eyebrow": "Ce que U-CALM signifie" },
-    "christmas": {
-      "eyebrow": "24 décembre, 18 h 00",
-      "headline": "Même les semaines calmes ont leur couvert.",
-      "body": "La maison s'est éclipsée. La table est dressée pour quatre — pin et hortensia séché, eau versée, une carte blanche glissée sous le couvert le plus proche. U-CALM est la raison pour laquelle la pièce est prête avant que les gens ne le soient."
+    "history": {
+      "eyebrow": "Comment cela s'est fait",
+      "headline": "Discrètement, sur plusieurs années.",
+      "p1": "U-CALM a été fondée à Lugano, en 2013, autour d'une seule proposition : la relation d'adhésion entre un membre et son concierge devait être la seule relation à laquelle un membre ait à penser. Dès les premiers mois, les membres ont demandé au bureau d'organiser des aéronefs aux côtés de tout le reste — et pendant longtemps le bureau l'a fait discrètement, au cas par cas, en travaillant en arrière-plan avec des opérateurs choisis avec soin.",
+      "p2": "Au fil des années, cet arrangement est devenu formel. Le bureau aviation a été constitué comme sa propre ligne de service, avec ses propres spécialistes, son propre panel d'opérateurs vérifiés et sa propre documentation de standards — mais toujours, délibérément, à l'intérieur d'U-CALM. Il n'a jamais été détaché comme une marque distincte, parce que tout l'enjeu était que les membres n'aient pas à composer avec une marque distincte.",
+      "p3": "U-Calm Aviation est aujourd'hui le nom public de cet arrangement interne de longue date. La voix que le membre entend est la même que toujours ; ce qui se tient derrière elle a simplement été amené plus clairement à la vue."
     },
-    "acronymEcho": {
-      "eyebrow": "Les quatre lettres tranquilles",
-      "headline": "Cinq mots, une habitude.",
-      "body": "Ultimate. Concierge. And. Lifestyle. Management. Cinq mots simples qui, mis ensemble, promettent une chose simple : votre vie, bien menée, pour que vous n'ayez pas à la mener."
-    },
-    "household": {
-      "title": "La maison, tenue ensemble.",
-      "body": "Le placard à linge, le col repassé, les fleurs pour la table. Les petites choses qui font qu'un foyer paraît entretenu."
+    "architecture": {
+      "eyebrow": "L'architecture",
+      "headline": "Aviation, à l'intérieur d'U-CALM.",
+      "p1": "U-CALM est la maison de concierge et de gestion du lifestyle. U-Calm Aviation est une ligne de service à l'intérieur d'U-CALM, servie aux membres existants. Nous ne commercialisons pas l'aviation à des inconnus ; nous prolongeons une relation concierge dans les airs.",
+      "p2": "L'opération derrière la voix est tenue selon des standards pleins de maison aviation — opérateurs vérifiés, quatre langues de travail, couverture vingt-quatre heures, spécialistes nommés, expertise dans les destinations signature. La voix est concierge. L'opération est aviation. Le membre n'a jamais à remarquer la couture, parce qu'il n'y en a pas.",
+      "p3": "Lorsqu'un membre envoie une brève note pour un vol du vendredi vers Cannes, la réponse qui revient — dans l'heure, dans la même voix, dans le même fil — contient déjà l'option de l'aéronef, les voitures aux deux extrémités, le FBO, la table au dîner. Le membre n'a pas été redirigé vers une seconde équipe ; la seconde équipe a été tissée discrètement dans le travail."
     },
     "team": {
-      "title": "L'équipe, en passant.",
-      "body": "Un petit bureau luganais, trois silhouettes calmes au travail. Jamais le visage de la maison — le travail de la maison."
-    }
-  },
-  "coolCalm": {
-    "eyebrow": "Une sous-marque saisonnière",
-    "headline": "Cool CALM — le foyer d'hiver tranquille.",
-    "subheadline": "Pierre froide du Val Verzasca, lumière d'âtre à Saanen, chaussures de ski qui sèchent sur le râtelier. L'habitude U-CALM, adaptée à l'hiver.",
-    "intro": "Cool CALM, c'est la manière dont U-CALM tient un chalet de décembre à mars. Un concierge sur place, le feu déjà allumé, les chaussures séchées, les courses livrées, la réservation maintenue. Vous arrivez dans une maison qui a été tenue — pas préparée à la hâte.",
-    "chaletKept": {
-      "eyebrow": "18 h 45, Saanen",
-      "headline": "Lumière d'âtre, pas décompte des invités.",
-      "body": "Un feu qui travaille, un plaid cachemire crème sur le bras du canapé, le chien endormi sur le tapis. Le chalet est une maison, pas un hôtel — nous le traitons comme tel."
+      "eyebrow": "L'équipe",
+      "headline": "Nommée, quadrilingue, au dossier.",
+      "p1": "Le bureau aviation opère depuis Lugano, avec des spécialistes aviation nommés travaillant en anglais, italien, français et allemand. Chaque membre est tenu par un spécialiste principal ; le bureau fonctionne en équipes pour que la joignabilité vingt-quatre heures soit véritable, non théorique.",
+      "p2": "Le bureau de gestion des destinations opère aux côtés, avec sa propre couverture quadrilingue et des fixers locaux nommés dans chaque destination signature. Le bureau de protection est tenu en partenariat avec un seul opérateur soigneusement choisi, utilisé sur toutes les lignes de service U-CALM pour la cohérence des standards et de la discrétion.",
+      "p3": "Le principe, sur chaque bureau, est le même : le membre connaît la personne à qui il parle, la personne à qui il parle connaît le dossier, et le dossier détient tout ce qui a jamais été arrangé. Il n'y a jamais de file, jamais d'inconnu, jamais de demande de « remplir le formulaire »."
     },
-    "mountainHabit": {
-      "eyebrow": "Habitude de montagne",
-      "headline": "Les chaussures, la tasse chaude, la porte ouverte.",
-      "body": "Après la journée de ski, une maison chaude. Avant les invités du soir, une table dressée. Entre les deux, une heure tranquille sans rien à faire — parce que tout est fait."
+    "principles": {
+      "eyebrow": "Ce à quoi nous nous tenons",
+      "headline": "Les principes, écrits dans la discrétion.",
+      "intro": "U-Calm Aviation opère selon un petit ensemble de standards internes que le bureau est invité à tenir — et est attendu à tenir — dans l'intérêt du membre à chaque tournant. Rien de tout cela ne doit remonter au membre ; tout cela est vrai en arrière-plan.",
+      "continuity": {
+        "title": "Continuité",
+        "body": "L'arrangement aviation ne brise pas la relation concierge. La même voix, dans le même fil, contre le même dossier. Les passations sont internes, non tournées vers le membre."
+      },
+      "restraint": {
+        "title": "Mesure",
+        "body": "Nous proposons au plus trois options sur la plupart des missions ; nous ne submergeons pas le membre de tableaux comparatifs. La mesure est elle-même un service."
+      },
+      "independence": {
+        "title": "Indépendance",
+        "body": "Nous ne possédons pas d'aéronefs et le bureau ne tire aucun bénéfice à orienter les membres vers un opérateur particulier. L'aéronef choisi est le bon pour la journée, non le plus rentable."
+      },
+      "privacy": {
+        "title": "Confidentialité",
+        "body": "Les membres sont tenus sous accords de non-divulgation sur tout le panel d'opérateurs, et les informations identifiantes ne sont déposées que là où la conformité avec l'autorité aéronautique l'exige."
+      },
+      "standards": {
+        "title": "Standards",
+        "body": "Les opérateurs satisfont à ARGUS Platinum, Wyvern Wingman ou IS-BAO Stage 2 équivalent ; les niveaux d'assurance se situent à la limite supérieure de la pratique du secteur ; la validité des équipages est vérifiée avant chaque vol."
+      },
+      "honesty": {
+        "title": "Honnêteté sur les délais de préavis",
+        "body": "Nous disons ce qui est véritablement possible, non ce qui clôt la conversation. Une demande à 24 heures pour un terrain européen à slots restreints reçoit d'abord la réponse honnête ; la solution suit s'il y en a une."
+      }
     },
-    "offSeason": {
-      "eyebrow": "21 h 00, juillet — la maison entre deux saisons",
-      "headline": "Même hors saison, la maison est tenue.",
-      "body": "Le chalet à l'heure bleue en juillet, un plaid de lin crème plié sur le transat, les fenêtres chaudes de l'autre rive. Les membres d'hiver arrivent dans une maison qui n'a jamais été fermée — simplement en attente tranquille."
+    "handshake": {
+      "eyebrow": "La poignée de main",
+      "headline": "Comment une recommandation devient un voyage.",
+      "intro": "Les nouveaux membres viennent par recommandation, non par publicité. Le chemin d'un mot discret avec la maison jusqu'au premier vol est court, mûrement pensé et presque entièrement tenu par le concierge — jamais par un processus de vente.",
+      "step1": {
+        "title": "Une conversation",
+        "body": "La plupart des nouveaux membres sont introduits par un membre existant ou par un introducteur que la maison connaît déjà. La première conversation est brève, en personne ou au téléphone, et porte sur la question de savoir si la relation convient aux deux parties — jamais sur la conclusion d'une affaire."
+      },
+      "step2": {
+        "title": "Le dossier",
+        "body": "Si nous avançons, le membre est mis en place sur le dossier U-CALM : maison, préférences, les personnes de la famille, les rythmes de l'année. Les préférences aviation se tiennent dans le même dossier — la température de la cabine, le catering, la place côté hublot, les arrangements de bagages au FBO."
+      },
+      "step3": {
+        "title": "Le spécialiste nommé",
+        "body": "Un spécialiste aviation principal est nommé pour le membre, travaillant dans la langue préférée du membre, sur le bureau qui tient le reste des arrangements du membre. Le membre reçoit la ligne directe du spécialiste, aux côtés du bureau du concierge toujours disponible."
+      },
+      "step4": {
+        "title": "Le premier voyage",
+        "body": "Le premier voyage est, délibérément, traité comme le centième. Le même arc opérationnel, la même mesure, le même relevé unique en fin de mois. Après, le membre se fait habituellement silencieux — ce qui est l'indicateur que la maison cherche : tout s'est passé comme il le fallait."
+      }
     },
-    "closing": {
-      "eyebrow": "Aux heures silencieuses",
-      "headline": "Le feu, le livre, le chien tranquille."
+    "soul": {
+      "eyebrow": "L'unique idée qui gouverne tout",
+      "headline": "Aviation, à l'intérieur de la relation concierge. Non séparée.",
+      "body": "Si le travail donne au membre le sentiment qu'il a dû quitter le concierge pour monter dans un avion, nous avons échoué. Si le travail donne au membre le sentiment que le vol a été arrangé par la même personne qui a arrangé le dîner de vendredi dernier, nous avons réussi."
     }
   },
   "contact": {
-    "eyebrow": "Comment nous joindre",
-    "headline": "Commençons par une conversation.",
-    "intro": "Dites-nous brièvement ce dont vous avez besoin. Nous répondrons personnellement, jamais depuis une file d'attente.",
-    "emailLabel": "Courriel",
-    "emailValue": "hello@u-calm.com",
-    "placeholder": "Le formulaire de contact complet sera en ligne à l'étape 3, une fois le backend déployé.",
-    "opening": {
-      "eyebrow": "08 h 40, mi-mars",
-      "headline": "La porte s'ouvre, tout simplement. La conversation commence.",
-      "body": "Un pâle bouton de magnolia sur une branche nue, le seuil Serene Teal qui accroche la première lumière. Les membres viennent à U-CALM au moment où leur liste pèse le plus — et quittent le premier appel avec une liste déjà plus courte."
+    "meta": {
+      "title": "Contact — Ouvrons une conversation | U-Calm Aviation",
+      "description": "Écrivez au bureau U-Calm Aviation à Lugano. Joignabilité vingt-quatre heures, spécialistes nommés en anglais, italien, français, allemand. Une réponse dans la journée de travail, dans la même voix qui tient le reste de votre arrangement."
     },
-    "firstConversation": {
-      "eyebrow": "Comment nous commençons",
-      "headline": "Une porte, un carnet, une conversation tranquille.",
-      "body": "Nous commençons par un appel de 30 minutes. Vous nous dites ce qui traîne sur votre liste depuis trop longtemps. Nous vous disons comment nous le clôturerions. Rien n'est précipité ; rien n'est promis que nous ne puissions tenir."
+    "hero": {
+      "eyebrow": "Comment nous joindre",
+      "headline": "Ouvrons une conversation."
     },
-    "closing": {
-      "eyebrow": "18 h 30, début novembre",
-      "headline": "Les épaules, d'un millimètre.",
-      "body": "Le test de toute cette maison : quand un membre passe la porte au crépuscule et voit l'appartement déjà chaud, les lampes allumées, le mot discret sur la console — ses épaules descendent-elles d'un millimètre ? Si oui, nous avons fait notre travail. Ouvrez une conversation, et venez voir."
+    "intro": "Décrivez-nous brièvement ce que vous avez à l'esprit. Un spécialiste nommé répondra personnellement — par la relation concierge qui tient déjà vos autres arrangements, ou, si vous êtes nouveau chez U-CALM, par voie d'une introduction discrète.",
+    "success": {
+      "eyebrow": "Merci",
+      "headline": "Nous reviendrons vers vous.",
+      "body": "Votre note a été reçue. Un spécialiste répondra dans un jour ouvrable."
+    },
+    "form": {
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Que pouvons-nous arranger ?",
+      "submitting": "Envoi en cours...",
+      "submit": "Ouvrons une conversation",
+      "errorPrefix": "Quelque chose n'est pas passé :",
+      "errorSuffix": "Veuillez réessayer, ou écrivez directement à {{email}}."
+    },
+    "directWrite": "Ou écrivez directement à",
+    "expectations": {
+      "eyebrow": "À quoi s'attendre",
+      "headline": "Comment se déroule habituellement une première conversation.",
+      "step1": {
+        "title": "Une réponse dans un jour ouvrable",
+        "body": "Les notes reçues pendant les heures de bureau européennes reçoivent réponse le jour même ; les notes reçues la nuit sont tenues jusqu'au matin, dans la langue dans laquelle le membre nous écrit. Il n'y a pas de réponse automatique ; le premier message en retour vient d'une personne qui a lu ce que vous avez écrit."
+      },
+      "step2": {
+        "title": "Un bref appel, si utile",
+        "body": "Si la demande le justifie, nous suggérons un bref appel — vingt minutes, dans la langue de travail de votre choix, avec l'un des spécialistes nommés qui tiendrait la relation. L'appel sert à découvrir si l'accord convient aux deux parties."
+      },
+      "step3": {
+        "title": "Une étape suivante mûrement pensée",
+        "body": "Si nous avançons, le bureau met en place le dossier, nomme un spécialiste pour la relation et invite au premier arrangement. Si le moment ou l'accord ne conviennent pas, nous le disons ouvertement — il n'existe pas de pipeline d'adhésion à travers lequel pousser quiconque."
+      }
+    },
+    "whereWeAre": {
+      "eyebrow": "Où le bureau opère",
+      "headline": "Lugano. Quatre langues de travail. Toujours joignable.",
+      "body": "Le bureau aviation opère depuis Lugano, en Suisse méridionale, avec des spécialistes nommés travaillant en anglais, italien, français et allemand. Le bureau de gestion des destinations opère aux côtés, avec des fixers locaux nommés dans chaque destination signature. La couverture en dehors des heures de bureau et les week-ends est véritable — le même bureau, en équipes, jamais une file.",
+      "emailLabel": "E-mail",
+      "hoursLabel": "Horaires",
+      "hoursValue": "Vingt-quatre heures, trois cent soixante-cinq jours, par le bureau du concierge. Réponses aux demandes pendant les heures de bureau européennes ; couverture opérationnelle en dehors des heures de bureau pour les membres inscrits.",
+      "languagesLabel": "Langues",
+      "languagesValue": "English · Italiano · Français · Deutsch · Español et العربية sur demande, à travers des bureaux partenaires nommés.",
+      "privacyLabel": "Confidentialité",
+      "privacyValue": "Les demandes et les dossiers des membres sont tenus sous accords de non-divulgation à travers toute la maison U-CALM, y compris sur le panel d'opérateurs. Les informations identifiantes ne sont déposées que là où la conformité avec l'autorité aéronautique l'exige."
     }
-  },
-  "whoWeServe": {
-    "eyebrow": "À qui nous répondons",
-    "headline": "Quatre façons d'avoir une journée tranquille.",
-    "intro": "U-CALM est une maison au service des gens — quatre vies reconnaissables, une habitude : bien tenir chacune, en silence. Lisez celle qui vous ressemble, ou celle que vous êtes sur le point de devenir.",
-    "personas": {
-      "expat": { "kicker": "Sarah — l'expatriée", "title": "Installée, pas encore chez soi.", "blurb": "Famille internationale qui s'installe au Tessin. La langue, l'école, les permis, les voisins. Nous lui enlevons l'administratif de la semaine pour que sa famille n'ait plus qu'à arriver." },
-      "ticinese": { "kicker": "Giovanni — le Tessinois", "title": "La villa familiale, après Milan.", "blurb": "De retour au sud après des décennies dans un cabinet milanais. Foyer multigénérationnel, étés au bord du lac, une bibliothèque qu'il ordonne enfin. Nous tenons la complexité silencieuse." },
-      "corporate": { "kicker": "RH d'entreprise", "title": "L'arrivée de l'exécutif.", "blurb": "Un associé en visite, un séminaire, le premier mois d'un directeur muté. De l'aéroport à l'appartement, du conseil au restaurant. Discret, documenté, livré." },
-      "visitor": { "kicker": "Le visiteur", "title": "Un week-end pensé.", "blurb": "Un week-end à Lugano entre Londres et ailleurs. L'hôtel, le lac, le restaurant, l'après-midi simplement tenu ouvert pour vous." }
-    },
-    "closing": {
-      "eyebrow": "L'heure avant les invités",
-      "headline": "Quelle que soit la porte, le même calme.",
-      "body": "Quatre vies très différentes, une heure très reconnaissable — la pièce dans la lumière de fin d'après-midi, le fauteuil de lecture, le livre fermé déjà posé, les invités pas encore arrivés. Cette heure, voilà ce que vend U-CALM. Elle prend juste la forme de maisons différentes."
-    }
-  },
-  "personas": {
-    "expat": {
-      "kicker": "Sarah — l'expatriée",
-      "headline": "Installée, pas encore chez soi.",
-      "subhead": "Nouvelle à Lugano. La famille est là, les meubles sont arrivés, et une petite pile de choses discrètement importantes attend dans une langue qu'elle apprend encore.",
-      "intro1": "Une famille internationale, en plein déménagement ou fraîchement installée — de Londres, Francfort, Dubaï, New York. TASIS ou Franklin University Switzerland pour les enfants, un quartier à moitié familier, un mari qui fait encore la navette. Le foyer tourne ; l'administration qui le fait tourner, moins.",
-      "intro2": "Nous intervenons comme la seconde paire de mains, discrète. Formulaires bilingues remplis, renouvellements de permis, correspondance scolaire, l'appel en italien qu'elle remet à plus tard. Chaque semaine une liste plus courte, chaque mois une maison plus calme.",
-      "schoolRun": { "eyebrow": "Jeudi, 08 h 12", "headline": "Le trottoir de l'école.", "body": "Un avis bilingue laissé vierge sur la console. Une main d'adulte posant une pomme crème sur le cartable. Pas d'enfant dans le cadre — l'enfant est déjà à l'école, parce que nous avons rempli le formulaire mardi dernier." },
-      "monday": { "eyebrow": "Lundi, 07 h 20", "headline": "Les chaussures sont prêtes. Le formulaire a été signé mardi dernier.", "body": "Une paire de chaussures d'école cirées sur un tapis en sisal, un petit sac à dos, un avis vierge sur la console. Le matin qui s'effilochait est simplement fait. L'enfant n'est pas dans le cadre. La panique non plus." }
-    },
-    "ticinese": {
-      "kicker": "Giovanni — le Tessinois",
-      "headline": "La villa familiale, après Milan.",
-      "subhead": "De retour au sud après trois décennies dans un cabinet de l'autre côté des Alpes. La maison est celle de son grand-père. Les habitudes sont les siennes. L'aide doit avoir l'air d'avoir toujours appartenu à ces lieux.",
-      "intro1": "Un Tessinois revenu — ou un local qui n'est jamais parti. Foyer multigénérationnel, étés au bord du lac, une bibliothèque qu'il ordonne enfin, une mère au rez-de-chaussée. La relation de concierge ne lui est pas nouvelle ; la version qui survit à la vie moderne, si.",
-      "intro2": "Nous tenons la complexité discrète — le rendez-vous du médecin pour la nonna, la trattoria où il allait avec son père, le vigneron à Mendrisio, le ramoneur, le jardinier qui ne parle que le dialecte. Rien de nouveau ; rien de perdu.",
-      "gandria": { "eyebrow": "Dimanche, Gandria", "headline": "Les lunettes du grand-père, le chat sur le rebord.", "body": "Une cuisine aux étagères de noyer, un livre de cuisine ouvert au risotto du dimanche, un chat tigré qui observe la ruelle. Les courses de la semaine sont déjà faites, l'ordonnance de nonna retirée, le maçon réservé pour le mur de la terrasse. Vous cuisinez, nous tenons le reste." },
-      "nonnaRoom": { "eyebrow": "16 h 30, fin octobre — la pièce de nonna", "headline": "Lumière d'ambre, le chat sur le plaid.", "body": "Un fauteuil de lecture bleu-sarcelle profond dans l'ambre de l'après-midi, un plaid anthracite qui glisse de l'accoudoir, le tigré déjà endormi. La pièce de lecture familiale, tenue comme elle l'a toujours été — parce que nous ne l'avons jamais laissée glisser." },
-      "cobbles": { "eyebrow": "10 h 15, dimanche — pavés de Gandria", "headline": "Un lévrier, un pas en avant.", "body": "Murs de pierre chaude, un volet bleu-sarcelle, feuilles de châtaignier sur les pavés. Le chien marche sans laisse parce que la maison a du temps pour cette heure-là désormais — parce que nous avons retiré lundi à vendredi de la table." }
-    },
-    "corporate": {
-      "kicker": "RH d'entreprise",
-      "headline": "L'arrivée de l'exécutif.",
-      "subhead": "Un associé en visite, un directeur muté, un séminaire de conseil. La personne à Lugano qui s'assure qu'aucun d'eux n'ait rien à retenir, sauf la réunion.",
-      "intro1": "Les cabinets financiers et family offices tessinois, les dirigeants en visite depuis Zurich, Genève, Londres, Singapour. Les équipes RH et assistantes de direction ont besoin d'un partenaire sur place à qui l'on peut confier la journée d'un principal. Nous sommes ce partenaire.",
-      "intro2": "De l'aire à l'appartement. Du conseil au restaurant. Une voiture, un dossier imprimé (ou non), un dîner discret pour trois qui n'a jamais été annoncé. Discret, documenté, livré — et invisible pour tous sauf le voyageur.",
-      "boardroom": { "eyebrow": "Lugano, 09 h 15", "headline": "Salle de conseil, séminaire confié.", "body": "La salle est prête, le sac en cuir est au pied du fauteuil, l'eau est servie, l'écran est sombre. Le séminaire nous a été confié ; votre équipe arrive et commence la réunion." },
-      "kerb": { "eyebrow": "08 h 00, le trottoir", "headline": "La voiture tourne déjà. La porte est entrebâillée.", "body": "Une berline noir mat au trottoir, une manchette de laine anthracite sur la poignée, un chien de la maison calmement au pied. Le principal n'est pas encore sorti — mais quand il le fera, les quatre prochaines heures de sa journée sont déjà décidées." },
-      "breakfast": { "eyebrow": "07 h 15, l'appartement", "headline": "Arrivée, le petit-déjeuner attend déjà.", "body": "Un îlot en noyer, une seule tasse de porcelaine de café noir, une serviette crème, un brin d'eucalyptus. Une main dans une manchette anthracite pose simplement le plateau. L'exécutif ne sait même pas que cela ait été une question." }
-    },
-    "visitor": {
-      "kicker": "Le visiteur",
-      "headline": "Un week-end pensé.",
-      "subhead": "Pas le résident et pas le touriste. Un week-end à Lugano entre un lieu où vous travaillez et un autre où vous vivez, tenu en silence par quelqu'un sur place.",
-      "intro1": "Un anniversaire. Un long vendredi-au-lundi. Une courte halte entre Milan et Zurich. Vous voulez la bonne table à la bonne heure, le lac dans sa meilleure lumière, l'après-midi simplement tenu ouvert. Vous ne voulez pas d'un chauffeur en casquette qui vous parle des vignobles.",
-      "intro2": "Nous dessinons la forme du week-end — les réservations, les horaires, l'heure tranquille sans rien de prévu — et nous sommes sur une seule ligne discrète quand le plan a besoin d'un petit ajustement. Chaleur d'itinéraire, pas aplomb d'hôtel.",
-      "firstLight": { "eyebrow": "06 h 45, au-dessus du lac", "headline": "Première lumière au jour du week-end.", "body": "Le Monte San Salvatore dans le pâle premier soleil, de la brume sur l'eau, un transat en teck avec une peau d'agneau pliée, une tasse de porcelaine sur le plateau. Vous ne vous êtes pas encore réveillé. Le week-end, si." },
-      "suite": { "eyebrow": "Chambre 214, 15 h 00", "headline": "La suite, installée.", "body": "Une valise en cuir ouverte, du linge plié à l'intérieur, un mot crème sur le bureau. La table pour deux est réservée pour huit heures. L'après-midi est à vous." }
-    }
-  },
-  "footer": {
-    "tagline": "Considérez que c'est fait.",
-    "description": "Une seule ligne discrète, et la liste raccourcit. Ouvrez une première conversation — 30 minutes, aucune présomption, entièrement à votre rythme.",
-    "rights": "© {{year}} U-CALM Concierge. Tous droits réservés.",
-    "registeredInfo": "Une marque de la maison U-CALM.",
-    "privacy": "Confidentialité",
-    "terms": "Conditions"
-  },
-  "language": {
-    "label": "Langue",
-    "en": "English",
-    "de": "Deutsch",
-    "fr": "Français",
-    "it": "Italiano"
   },
   "notFound": {
-    "title": "Introuvable",
-    "body": "Cette page n'existe pas. Retour à l'accueil.",
-    "back": "Retour à l'accueil"
+    "meta": {
+      "title": "Page introuvable — U-Calm Aviation",
+      "description": "La page que vous cherchiez a été déplacée, ou n'a jamais existé. Retournez à U-Calm Aviation, ou écrivez au bureau."
+    },
+    "eyebrow": "404 · le couloir tourne ici",
+    "headline": "Nous ne trouvons pas ce que vous cherchiez.",
+    "body": "La page a peut-être été déplacée, ou le lien est arrivé un peu de travers. Retournez à l'accueil, ou ouvrez une conversation avec le bureau — selon ce qui sert le moment."
+  },
+  "privacy": {
+    "meta": {
+      "title": "Politique de confidentialité — U-Calm Aviation",
+      "description": "Comment U-Calm Aviation traite les demandes, les dossiers des membres et les divulgations au panel d'opérateurs. Aligné sur la LPD suisse et le RGPD européen."
+    },
+    "eyebrow": "Mentions légales",
+    "headline": "Politique de confidentialité",
+    "intro": {
+      "p1": "U-Calm Aviation est la ligne de service aviation au sein d'U-CALM, la maison de concierge. La présente politique décrit comment le bureau traite les informations personnelles reçues à travers ce site, par e-mail à <0>{{inquiryEmail}}</0>, ou par recommandation. Elle s'applique aux visiteurs du site, aux membres potentiels et aux membres existants. Elle est rédigée en langage clair et ne constitue pas un conseil juridique.",
+      "p2": "Le responsable du traitement pour U-Calm Aviation est U-CALM, enregistrée en Suisse. Les membres et les membres potentiels peuvent contacter le bureau confidentialité à <0>{{privacyEmail}}</0> pour toute question, demande ou instruction relative à leurs informations personnelles."
+    },
+    "collect": {
+      "title": "Ce que nous collectons",
+      "p1": "À partir du formulaire de contact de ce site, nous ne collectons que ce que le visiteur saisit : un nom, une adresse e-mail et le corps du message. À partir de la correspondance par e-mail, nous tenons ce que le visiteur partage avec nous. À partir des recommandations, nous tenons généralement la note de l'introducteur et tous les détails que le membre potentiel partage lors de la première conversation.",
+      "p2": "Pour les membres, le dossier contient les détails opérationnels nécessaires à l'organisation de l'aviation, du sol, de la maison et de la protection : préférences de voyage, membres de la famille et personnes à charge, exigences alimentaires et d'accessibilité, résidences et destinations fréquentées, autorité de paiement, et l'historique de la relation avec le bureau. Nous ne tenons pas de numéros de passeport ni d'identifiants gouvernementaux dans le dossier central, à moins que la conformité avec l'autorité aéronautique ne l'exige spécifiquement pour un voyage particulier."
+    },
+    "why": {
+      "title": "Pourquoi nous les tenons",
+      "body": "Pour répondre aux demandes et organiser le travail. La base juridique est le contrat ou, dans le cas des demandes qui ne deviennent pas une relation, notre intérêt légitime à répondre avec attention aux personnes qui nous écrivent. Les arrangements des membres sont coordonnés sur ces informations ; c'est le dossier sur lequel chaque spécialiste du bureau travaille."
+    },
+    "where": {
+      "title": "Où elles vivent",
+      "body": "Les soumissions de demande depuis ce site sont stockées sur Supabase dans l'Union européenne. Les e-mails transactionnels de notification sont envoyés via Resend. Les dossiers des membres sont tenus à l'intérieur de la pile opérationnelle U-CALM, hébergée dans l'Union européenne, avec un accès restreint aux spécialistes nommés du bureau. Nous ne vendons, ne louons ni ne partageons d'aucune autre manière les informations personnelles avec des tiers à des fins de marketing ; nous ne permettons pas de traceurs tiers, de pixels publicitaires ni de surveillance analytique sur ce site."
+    },
+    "operators": {
+      "title": "Partage avec les opérateurs",
+      "body": "Pour organiser les vols, le bureau aviation partage le minimum d'informations requises par les opérateurs : noms des passagers, âges là où les autorités l'exigent, notes de manipulation spéciale et coordonnées pour la journée. Tous les opérateurs du panel sont liés par des accords de non-divulgation qui maintiennent les informations aux standards U-CALM. Lorsque les déclarations aux autorités (slot, douanes, immigration) requièrent des informations supplémentaires, celles-ci ne sont déposées que selon les exigences de conformité et sont par ailleurs tenues à l'intérieur du bureau."
+    },
+    "retention": {
+      "title": "Combien de temps nous les conservons",
+      "body": "Les demandes qui ne deviennent pas une relation sont généralement conservées pendant douze mois puis supprimées, à moins que le demandeur ne demande à les conserver au dossier. Les dossiers des membres sont conservés pendant la durée de la relation et pour une fenêtre statutaire limitée par la suite, comme l'exigent les règles de conservation comptable et de l'autorité aéronautique."
+    },
+    "rights": {
+      "title": "Vos droits",
+      "body": "En vertu de la Loi fédérale suisse sur la protection des données (LPD) et, le cas échéant, du Règlement général sur la protection des données de l'UE (RGPD), les individus disposent de droits d'accès, de rectification, de suppression, de limitation et de portabilité des données concernant leurs informations personnelles. Les membres peuvent exercer l'un quelconque de ces droits en écrivant à <0>{{privacyEmail}}</0>. Nous répondons dans les trente jours, souvent plus tôt."
+    },
+    "cookies": {
+      "title": "Cookies et traçage",
+      "body": "Ce site web ne place pas de cookies publicitaires, de traceurs tiers ni de surveillance analytique. Les cookies fonctionnels (préférence de langue, continuité de session) ne sont placés que dans la mesure où le site lui-même l'exige, et sont des cookies de première partie."
+    },
+    "changes": {
+      "title": "Modifications de la présente politique",
+      "body": "Nous mettons à jour la présente politique lorsque nos pratiques changent ou lorsque la loi l'exige. La date de « Dernière mise à jour » en haut de la page reflète la révision la plus récente. Les modifications matérielles sont communiquées aux membres directement par le bureau ; les visiteurs du site devraient consulter cette page périodiquement."
+    },
+    "contact": {
+      "title": "Contact",
+      "body": "Pour toute question, demande ou instruction relative à la confidentialité, veuillez écrire à <0>{{privacyEmail}}</0>. Pour les demandes générales, <1>ouvrez une conversation</1> avec le bureau du concierge."
+    }
   }
 }
