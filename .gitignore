@@ -58,3 +58,6 @@ Thumbs.db
 
 # Favicon-build intermediates (cairosvg leftovers — delete via Finder when convenient)
 public/_fav_*.png
+
+# Internal working files — never publish
+*.csv
