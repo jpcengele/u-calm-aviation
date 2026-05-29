@@ -177,6 +177,17 @@ const Footer = () => {
                   {t("footer.contactLabel")}
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://u-calm.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground/75 hover:text-primary-deep transition-colors"
+                  aria-label="U-CALM Concierge — the parent concierge house (opens in a new tab)"
+                >
+                  U-CALM Concierge ↗
+                </a>
+              </li>
             </ul>
 
             <h3 className="mt-8 text-xs font-bold uppercase tracking-[0.15em] text-primary-deep mb-4">
