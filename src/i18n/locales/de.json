@@ -13,6 +13,14 @@
     "about": "Das Haus",
     "contact": "Kontakt"
   },
+  "a11y": {
+    "openMenu": "Menü öffnen",
+    "close": "Schließen",
+    "enableSound": "Ton einschalten",
+    "muteSound": "Ton stummschalten",
+    "languageSwitcher": "Sprache",
+    "parentHouse": "U-CALM Concierge — das übergeordnete Concierge-Haus (öffnet in einem neuen Tab)"
+  },
   "cta": {
     "speakSpecialist": "Sprechen Sie mit Ihrem Concierge",
     "exploreArrangement": "Den Service entdecken",

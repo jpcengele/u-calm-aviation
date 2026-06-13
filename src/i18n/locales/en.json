@@ -13,6 +13,14 @@
     "about": "About",
     "contact": "Contact"
   },
+  "a11y": {
+    "openMenu": "Open the menu",
+    "close": "Close",
+    "enableSound": "Enable sound",
+    "muteSound": "Mute sound",
+    "languageSwitcher": "Language",
+    "parentHouse": "U-CALM Concierge — the parent concierge house (opens in a new tab)"
+  },
   "cta": {
     "speakSpecialist": "Speak with your concierge",
     "exploreArrangement": "Explore the arrangement",

@@ -8,13 +8,19 @@
     <title>U-Calm Aviation — Aviation, arranged. Lugano · Milan · London</title>
     <meta name="description" content="The aviation service line inside U-CALM, the concierge house. Bespoke charter, on-demand, membership, group, destination management, and executive protection — held in the same English voice from Lugano, Milan, and London." />
     <meta name="author" content="U-Calm Aviation" />
-    <meta name="keywords" content="private aviation, concierge aviation, U-CALM, member aviation, Lugano, Milan, London, bespoke charter, executive protection" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="canonical" href="https://u-calmaviation.com/" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Canonical host guard: the .pages.dev alias must never accrue its own
+         index — redirect to the custom domain before anything renders. -->
+    <script>
+      if (location.hostname.endsWith(".pages.dev")) {
+        location.replace("https://u-calmaviation.com" + location.pathname + location.search + location.hash);
+      }
+    </script>
 
     <!-- Fonts: Cormorant Garamond (display) + Lato (body fallback for Gill Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,9 +38,6 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="U-Calm Aviation — Aviation, arranged. Lugano · Milan · London" />
     <meta property="og:locale" content="en_GB" />
-    <meta property="og:locale:alternate" content="de_CH" />
-    <meta property="og:locale:alternate" content="fr_CH" />
-    <meta property="og:locale:alternate" content="it_CH" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />

@@ -15,7 +15,8 @@ const NotFound = () => {
   useDocumentMeta({
     title: t("notFound.meta.title"),
     description: t("notFound.meta.description"),
-    canonical: canonical("/"),
+    canonical: canonical(typeof window !== "undefined" ? window.location.pathname : "/"),
+    robots: "noindex",
   });
 
   return (

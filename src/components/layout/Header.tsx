@@ -74,7 +74,7 @@ const Header = () => {
               variant="ghost"
               size="icon"
               className="lg:hidden"
-              aria-label={t("nav.home")}
+              aria-label={t("a11y.openMenu")}
             >
               <Menu className="h-5 w-5" />
             </Button>

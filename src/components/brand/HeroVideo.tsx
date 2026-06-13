@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Volume2, VolumeX } from "lucide-react";
 import { BrandImage } from "./BrandImage";
 import { byId } from "@/brand/imagery";
@@ -41,6 +42,7 @@ export function HeroVideo({
   className,
   alt,
 }: HeroVideoProps) {
+  const { t } = useTranslation();
   const [reducedMotion, setReducedMotion] = useState<boolean>(false);
   const [muted, setMuted] = useState<boolean>(true);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -135,7 +137,7 @@ export function HeroVideo({
       <button
         type="button"
         onClick={toggleMuted}
-        aria-label={muted ? "Enable sound" : "Mute sound"}
+        aria-label={muted ? t("a11y.enableSound") : t("a11y.muteSound")}
         aria-pressed={!muted}
         className="absolute top-6 right-6 z-20 inline-flex items-center justify-center w-10 h-10 rounded-full bg-foreground/40 hover:bg-foreground/60 backdrop-blur-sm text-background transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne focus-visible:ring-offset-2 focus-visible:ring-offset-foreground"
       >

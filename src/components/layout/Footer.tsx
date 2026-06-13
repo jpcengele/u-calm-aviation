@@ -183,7 +183,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-foreground/75 hover:text-primary-deep transition-colors"
-                  aria-label="U-CALM Concierge — the parent concierge house (opens in a new tab)"
+                  aria-label={t("a11y.parentHouse")}
                 >
                   U-CALM Concierge ↗
                 </a>

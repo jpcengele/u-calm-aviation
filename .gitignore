@@ -63,3 +63,7 @@ public/_fav_*.png
 *.csv
 
 *.csv
+
+# Internal audit reports — never publish
+UCALM_AVIATION_*_Audit_*.html
+UCALM_AVIATION_*_Audit_*.pdf

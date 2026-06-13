@@ -29,6 +29,8 @@ export interface DocumentMeta {
   ogImage?: string;
   /** Optional og:type override. Defaults to "website". */
   ogType?: "website" | "article" | "profile";
+  /** e.g. "noindex" — omitted on normal pages; any stale tag is removed. */
+  robots?: string;
   /** Optional structured-data block(s) — array of JSON-serialisable objects. */
   jsonLd?: object | readonly object[];
 }
@@ -74,6 +76,15 @@ export function useDocumentMeta(meta: DocumentMeta): void {
     setMeta("description", meta.description);
     setLink("canonical", meta.canonical);
 
+    // robots: set when requested (e.g. 404 noindex), remove otherwise so an
+    // SPA navigation away from a noindex page never carries the tag along.
+    const robotsEl = document.head.querySelector<HTMLMetaElement>('meta[name="robots"]');
+    if (meta.robots) {
+      setMeta("robots", meta.robots);
+    } else if (robotsEl) {
+      robotsEl.remove();
+    }
+
     setMeta("og:title", meta.title, true);
     setMeta("og:description", meta.description, true);
     setMeta("og:url", meta.canonical, true);
@@ -107,6 +118,7 @@ export function useDocumentMeta(meta: DocumentMeta): void {
     meta.canonical,
     meta.ogImage,
     meta.ogType,
+    meta.robots,
     // jsonLd is intentionally excluded from the dependency list to avoid
     // re-stringifying on every parent re-render; it only updates when the
     // route changes (and the route change triggers a remount of the page
@@ -125,9 +137,16 @@ export function canonical(path: string): string {
 export const ORGANIZATION_JSONLD = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://u-calmaviation.com/#org",
   name: "U-Calm Aviation",
   legalName: "U-Calm Aviation, a service line of U-CALM",
-  alternateName: "U-CALM Aviation",
+  alternateName: [
+    "U-CALM Aviation",
+    "UCalm Aviation",
+    "Ucalm Aviation",
+    "U Calm Aviation",
+    "U-Calm Aviation Lugano",
+  ],
   url: "https://u-calmaviation.com",
   logo: "https://u-calmaviation.com/brand/logo-aviation.jpg",
   parentOrganization: {
@@ -148,6 +167,7 @@ export const LOCALBUSINESS_JSONLD = {
   "@type": "ProfessionalService",
   "@id": "https://u-calmaviation.com/#desk",
   name: "U-Calm Aviation",
+  alternateName: ["UCalm Aviation", "Ucalm Aviation"],
   url: "https://u-calmaviation.com",
   image: "https://u-calmaviation.com/brand/logo-aviation.jpg",
   email: "flyhigh@u-calmaviation.com",
@@ -165,8 +185,10 @@ export const LOCALBUSINESS_JSONLD = {
   address: {
     "@type": "PostalAddress",
     addressLocality: "Lugano",
+    addressRegion: "Ticino",
     addressCountry: "CH",
   },
+  geo: { "@type": "GeoCoordinates", latitude: 46.0037, longitude: 8.9511 },
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "Inquiries",
@@ -174,9 +196,5 @@ export const LOCALBUSINESS_JSONLD = {
     availableLanguage: ["English", "Italian", "French", "German"],
     areaServed: ["CH", "IT", "GB", "Worldwide"],
   },
-  parentOrganization: {
-    "@type": "Organization",
-    name: "U-CALM",
-    url: "https://u-calm.com",
-  },
+  parentOrganization: { "@id": "https://u-calm.com/#org" },
 } as const;

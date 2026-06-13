@@ -13,6 +13,14 @@
     "about": "Chi siamo",
     "contact": "Contatti"
   },
+  "a11y": {
+    "openMenu": "Aprire il menu",
+    "close": "Chiudere",
+    "enableSound": "Attivare l'audio",
+    "muteSound": "Disattivare l'audio",
+    "languageSwitcher": "Lingua",
+    "parentHouse": "U-CALM Concierge — la casa di conciergerie capogruppo (si apre in una nuova scheda)"
+  },
   "cta": {
     "speakSpecialist": "Parli con il suo concierge",
     "exploreArrangement": "Scopri il servizio",
