@@ -61,3 +61,5 @@ public/_fav_*.png
 
 # Internal working files — never publish
 *.csv
+
+*.csv
